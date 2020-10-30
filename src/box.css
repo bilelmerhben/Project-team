@@ -1,0 +1,26 @@
+.box1 {
+  margin-top: 50px;
+}
+.sub1 {
+  background-color: rgb(139, 163, 235);
+}
+.sub2 {
+  background-color: rgb(79, 109, 205);
+}
+.sub3 {
+  background-color: rgb(67, 213, 203);
+}
+.sub1,
+.sub2,
+.sub3 {
+  height: 350px;
+  width: 400px;
+  border-radius: 10px;
+}
+p {
+  text-align: center;
+}
+.sub:hover {
+  box-shadow: 0.5px 0.5px 0.5px rgb(68, 69, 70);
+  transition: 1s;
+}

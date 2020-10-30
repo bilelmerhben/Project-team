@@ -1,24 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Carousel from 'react-elastic-carousel';
+import "bootstrap/dist/css/bootstrap.min.css";
+import Card from "./components/slider";
+import Navbar from "./components/Navbar";
+import Box from "./components/Box";
+
+import "./App.css";
 
 function App() {
+  const breakPoints =[
+    {width : 1300 , itemsToShow:1},
+];
   return (
+    
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Navbar/>
+      <Carousel class="cars" breakPoints={breakPoints}>
+            <Card src ="/img2.jpg"/>
+            <Card src ="/img3.png"/>
+            <Card src ="/img1.jpg"/>
+           
+      
+      </Carousel>
+  
+      <Box/>
+      
+
+
+
+      <footer>Footer</footer>
     </div>
   );
 }
