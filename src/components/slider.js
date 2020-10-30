@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../slider.css";
+import "../Css/slider.css";
 
 const Card = ({src}) =>
 
@@ -7,6 +7,7 @@ const Card = ({src}) =>
 
      
      <img src ={src}/>
+     
      
      </div>;
 

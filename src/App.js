@@ -5,7 +5,7 @@ import Card from "./components/slider";
 import Navbar from "./components/Navbar";
 import Box from "./components/Box";
 
-import "./App.css";
+import "./Css/App.css";
 
 function App() {
   const breakPoints =[

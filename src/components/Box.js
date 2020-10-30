@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "../box.css";
+import "../Css/box.css";
 export default class Box  extends Component {
   render() {
     return (
