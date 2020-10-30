@@ -7,6 +7,7 @@ const Card = ({src}) =>
 
      
      <img src ={src}/>
+     <div>"hellooo"</div>
      
      </div>;
 
