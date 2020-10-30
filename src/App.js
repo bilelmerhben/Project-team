@@ -16,6 +16,7 @@ function App() {
     <div className="App">
 
       <Navbar/>
+      <p>Hello</p>
       <Carousel class="cars" breakPoints={breakPoints}>
             <Card src ="/img2.jpg"/>
             <Card src ="/img3.png"/>
