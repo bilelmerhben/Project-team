@@ -6,7 +6,9 @@ export default class Navbar extends Component {
      
       <nav >
         <p>Guide-Covid19-App</p>
+        <p>hello</p>
       </nav>
+
       
     );
   }
