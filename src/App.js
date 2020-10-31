@@ -1,11 +1,13 @@
 import React from "react";
-import Carousel from 'react-elastic-carousel';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navbar from "./components/Navbar";
-import Box from "./components/Box";
+import Btns from  "./components/testBtnLayout/buttons";
+
 
 import "./Css/App.css";
+
 
 function App() {
   
@@ -14,9 +16,9 @@ function App() {
     <div className="App">
 
       <Navbar/>
-      
+      <Btns/>
   
-      <Box/>
+     
       
 
 
