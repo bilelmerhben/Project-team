@@ -4,7 +4,7 @@ function Box  (props){
   
     return (
       
- <div class={props.classname}>
+ <div className={props.classname}>
     <img>{props.img}</img>
     <h2>{props.text}</h2>
  </div>
