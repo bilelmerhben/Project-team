@@ -1,10 +1,12 @@
 
-
 li:hover {
     background-color: #43d5cd ;
     transition: 0.6s;
   
   }
+  
+  .navbar { margin-bottom: 0;
+            padding-bottom: 0; }
   .navbar-brand {
     position: center;
     background: url(../img/logo.png);
