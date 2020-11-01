@@ -10,17 +10,11 @@
 .sub3 {
   background-color: rgb(67, 213, 203);
 }
-.sub1,
-.sub2,
-.sub3 {
-  height: 350px;
-  width: 400px;
-  border-radius: 10px;
-}
-p {
-  text-align: center;
-}
-.sub:hover {
-  box-shadow: 0.5px 0.5px 0.5px rgb(68, 69, 70);
-  transition: 1s;
+
+.box1 {
+  margin-left: 280px;
+  height: 400px;
+  margin-top: 200px;
+  width: 1000px;
+  background-color: rgb(225, 233, 232);
 }
