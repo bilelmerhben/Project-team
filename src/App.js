@@ -23,13 +23,13 @@ function App() {
     <div className="App">
        <Navbar/>
        <Switch>
-       <Route exact path="/" component={Test} />
-       <Route exact path="/Auto-Surveillance" component={Surveillance} />
-       <Route exact path="/Laboratoires" component={Laboratoire} />
-       <Route exact path="/Covid-19?" component={Question} />
-       <Route exact path="/Protégez-vous" component={Proteger} />
-       <Route exact path="/Dons" component={Dons} />
-       <Route exact path="/Contactez-nous" component={Contact} />
+       <Route  path="/" component={Test} />
+       <Route  path="/Auto-Surveillance" component={Surveillance} />
+       <Route  path="/Laboratoires" component={Laboratoire} />
+       <Route  path="/Covid-19?" component={Question} />
+       <Route  path="/Protégez-vous" component={Proteger} />
+       <Route  path="/Dons" component={Dons} />
+       <Route  path="/Contactez-nous" component={Contact} />
        </Switch>
      
       
