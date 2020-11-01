@@ -1,6 +1,6 @@
 import React from "react";
 import "./container"
-function conseils(title="",image="",container=""){
+function conseils(title,image,container){
     return(
         <div>
             <h1>{title}</h1>
