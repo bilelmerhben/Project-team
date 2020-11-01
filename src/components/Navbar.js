@@ -11,8 +11,8 @@ export default class Navbar extends Component {
   
   
   
-  <div className="collapse navbar-collapse pt-0 pb-0 mt-0 mb-0" id="navbarText">
-    <a className="navbar-brand pb-2 mb-2"></a>
+  <div className="collapse navbar-collapse pt-0 pb-0 mt-0 mb-2" id="navbarText">
+    <a className="navbar-brand "></a>
     <ul className="navbar-nav mr-auto">
       <li className="nav-item rounded ">
         <a className="nav-link" href="/"> Testez-Vous </a>

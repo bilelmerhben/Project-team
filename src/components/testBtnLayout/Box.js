@@ -1,17 +1,16 @@
-import React, {Component} from "react";
+import React from "react";
 import "../../Css/box.css";
 
-export class Box extends React.Component{
-  render(){
-    return (
-      
- <div className={this.props.classname}>
-    <img src={this.props.img}/>
-    <h2>{this.props.text}</h2>
-   
- </div>
- 
-    );
-  }
+export function Box({ text, classname, img }) {
+
+  return (
+
+    <div className={classname}>
+      <img src={img} alt={""} />
+      <h2>{text}</h2>
+    </div>
+
+  )
 }
+
 

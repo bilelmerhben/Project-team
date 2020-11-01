@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import Btns from "./testBtnLayout/buttons";
 
-function Test (props){
+function Test (){
   
     return (
        
- <div className={props.className}>
+ <div >
      <Btns/>
       
  </div>

@@ -1,15 +1,15 @@
-import react from react;
+import React from "react";
 import "./container"
-function conseils(props){
+function conseils(title="",image="",container=""){
     return(
         <div>
-            <h1>{this.props.title}</h1>
+            <h1>{title}</h1>
             <div className="row">
                 <div className="col">
-                {this.props.image}
+                {image}
                 </div>
                 <div className="col">
-                {props.container}
+                {container}
                 </div>
             </div>
         </div>
