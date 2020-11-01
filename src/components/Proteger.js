@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import "../Css/button.css";
 
-function Button (props){
+
+function Proteger (props){
   
     return (
        
  <div className={props.className}>
-    <button>{props.text}</button>
+    
  </div>
         
     );
   }
-  export default Button;
+  export default Proteger;

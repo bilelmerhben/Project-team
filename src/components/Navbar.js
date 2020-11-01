@@ -14,25 +14,25 @@ export default class Navbar extends Component {
   <div className="collapse navbar-collapse" id="navbarText">
     <ul className="navbar-nav mr-auto">
       <li className="nav-item rounded ">
-        <a className="nav-link" href="#"> Testez-Vous </a>
+        <a className="nav-link" href="/"> Testez-Vous </a>
       </li>
       <li className="nav-item rounded">
-        <a className="nav-link" href="#">Auto-Surveillance</a>
+        <a className="nav-link" href="/Auto-Surveillance">Auto-Surveillance</a>
       </li>
       <li className="nav-item rounded">
-        <a className="nav-link" href="#">Laboratoires</a>
+        <a className="nav-link" href="/Laboratoires">Laboratoires</a>
       </li>
       <li className="nav-item rounded">
-        <a className="nav-link" href="#">Covid-19?</a>
+        <a className="nav-link" href="/Covid-19?">Covid-19?</a>
       </li>
       <li className="nav-item rounded">
-        <a className="nav-link" href="#">Protégez-vous</a>
+        <a className="nav-link" href="/Protégez-vous">Protégez-vous</a>
       </li>
       <li className="nav-item rounded">
-        <a className="nav-link" href="#">Dons</a>
+        <a className="nav-link" href="/Dons">Dons</a>
       </li>
       <li className="nav-item rounded">
-        <a className="nav-link" href="#">Contactez-nous</a>
+        <a className="nav-link" href="/Contactez-nous">Contactez-nous</a>
       </li>
     </ul>
     <button class="btn btn-outline-success my-2 my-sm-0" >Connectez-vous!</button>
