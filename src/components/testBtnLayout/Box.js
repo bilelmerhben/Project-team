@@ -1,13 +1,14 @@
 import React from "react";
 import "../../Css/box.css";
 
-export function Box({ text, classname, img }) {
+export function Box({ title, classname, img , text }) {
 
   return (
 
     <div className={classname}>
       <img src={img} alt={""} />
-      <p classname={classname}>{text}</p>
+      <h4 classname={classname}>{title}</h4>
+  <p>{text}</p>
     </div>
 
   )
