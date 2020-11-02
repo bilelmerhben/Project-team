@@ -26,3 +26,17 @@ export var Connexion =()=>{
         </div>
     )
 }
+export var Inscription =()=>{
+    return(
+        <div>
+            <form>
+            <inputCase name="Email" type="email" textExt="Email" textInt="Entrer votre E-mail" classname="input"/>
+            <inputCase name="Password" type="password" textExt="Mot de passe" textInt="Entrer votre mot de passe" classname="input"/>
+            <inputCase name="Password" type="password" textExt="Ré-entrez votre mot de passe" textInt="Ré-entrez votre mot de passe" classname="input"/>
+            <inputCase name="Password" type="password" textExt="Mot de passe" textInt="Entrer votre mot de passe" classname="input"/>
+                
+                <submitButton textInt="Valider" classname="btn"/>
+            </form>
+        </div>
+    )
+}
