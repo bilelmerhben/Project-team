@@ -7,7 +7,7 @@ export function Box({ text, classname, img }) {
 
     <div className={classname}>
       <img src={img} alt={""} />
-      <h2>{text}</h2>
+      <p classname={classname}>{text}</p>
     </div>
 
   )
