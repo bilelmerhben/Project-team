@@ -36,7 +36,7 @@ export default class Navbar extends Component {
         <a className="nav-link" href="/Contactez-nous">Contactez-nous</a>
       </li>
     </ul>
-    <button class="btn btn-outline-success  " >Connectez-vous !</button>
+    <button class="btn btn-outline-success  " href="/Connexion">Connectez-vous !</button>
    
   </div>
 </nav>

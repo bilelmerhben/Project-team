@@ -11,9 +11,9 @@ import Question from "./components/Question";
 import Proteger from "./components/Proteger";
 import Dons from "./components/Dons";
 import Contact from "./components/Contact";
+import {Connexion} from "./components/Connexion";
 
 import "./Css/App.css";
-import Btns from "./components/testBtnLayout/buttons";
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
        <Route  path="/Protégez-vous" component={Proteger} />
        <Route  path="/Dons" component={Dons} />
        <Route  path="/Contactez-nous" component={Contact} />
+       <Route  path="/Connexion" component={Connexion.Connexion} />
        </Switch>
      
       
