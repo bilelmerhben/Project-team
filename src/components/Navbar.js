@@ -12,7 +12,7 @@ export default class Navbar extends Component {
   
   
   <div className="collapse navbar-collapse pt-0 pb-0 mt-0 mb-2" id="navbarText">
-    <a className="navbar-brand "></a>
+    <a className="navbar-brand " href="/"></a>
     <ul className="navbar-nav mr-auto">
       <li className="nav-item rounded ">
         <a className="nav-link" href="/"> Testez-Vous </a>
@@ -36,7 +36,7 @@ export default class Navbar extends Component {
         <a className="nav-link" href="/Contactez-nous">Contactez-nous</a>
       </li>
     </ul>
-    <button class="btn btn-outline-success  mb-2" >Connectez-vous !</button>
+    <button class="btn btn-outline-success  " >Connectez-vous !</button>
    
   </div>
 </nav>
