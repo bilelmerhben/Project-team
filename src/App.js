@@ -31,7 +31,7 @@ function App() {
        <Route  path="/Protégez-vous" component={Proteger} />
        <Route  path="/Dons" component={Dons} />
        <Route  path="/Contactez-nous" component={Contact} />
-       <Route  path="/Connexion" component={Connexion.Connexion} />
+       <Route  path="/Connexion" component={Connexion} />
        </Switch>
      
       
