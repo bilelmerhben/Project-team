@@ -4,7 +4,7 @@ import "../../Css/BtnTest.css";
 
 function Contact (props){
     const [show,setShow] = useState(false);
-    const closeModalHandler = () => setShow(false);
+    const closeModalHandler = () => setShow(false); 
     return (
        
  <div className={props.className}>
