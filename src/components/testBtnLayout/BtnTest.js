@@ -2,7 +2,7 @@ import React, { Component ,useState } from "react";
 import Container1 from "../Container1";
 import "../../Css/BtnTest.css";
 
-function Contact (props){
+function BtnTest (props){
     const [show,setShow] = useState(false);
     const closeModalHandler = () => setShow(false); 
     return (
@@ -14,4 +14,4 @@ function Contact (props){
         
     );
   }
-  export default Contact;
+  export default BtnTest;
