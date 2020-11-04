@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../Css/Container1.css";
 
-function Container1 ({props,show,close}){
+function Container1 ({show,close}){
   
     return (
        
@@ -14,6 +14,7 @@ function Container1 ({props,show,close}){
     
         <p>Etapes du Test---En cours du modification</p>
         <button  onClick={close} type="button" class="btn btn-info">Close</button>
+        
      
  </div>
         
