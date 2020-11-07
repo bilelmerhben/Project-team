@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import {Box} from "./Box";
+import Box from "./Box";
 import test from '../../img/temperature-sensor.png'
 
 class Btns extends Component{

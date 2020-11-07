@@ -1,7 +1,7 @@
 import React from "react";
 import "../../Css/box.css";
 
-export function Box({ title, classname, img , text }) {
+export default function Box({ title, classname, img , text }) {
 
   return (
 
