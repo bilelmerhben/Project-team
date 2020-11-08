@@ -1,12 +1,13 @@
 import React, { Component } from "react";
+import "../Css/laboratoire.css";
 
-
-function Laboratoire (props){
+function Laboratoire (){
   
     return (
        
- <div className={props.className}>
-    
+ <div className="lab">
+    <h1>Les Laboratoires Disponibles</h1>
+   
  </div>
         
     );

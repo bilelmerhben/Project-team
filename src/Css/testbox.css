@@ -1,0 +1,17 @@
+.bo1,
+.bo2,
+.bo3 {
+  width: 250px;
+  height: 250px;
+  text-align: center;
+  border-radius: 10px;
+}
+.bo1 {
+  background-color: darkcyan;
+}
+.bo2 {
+  background-color: rgb(4, 110, 110);
+}
+.bo3 {
+  background-color: rgb(4, 87, 87);
+}
