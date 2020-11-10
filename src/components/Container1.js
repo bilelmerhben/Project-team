@@ -17,7 +17,7 @@ function Container1 ({show,close}){
        
         <Testbox classname={"bo1 p-2 bd-highlight"}  title={"TEST1"} />
         <Testbox classname={"bo2 p-2 bd-highlight"}  title={"TEST2"} />
-        <Testbox classname={"bo3 p-2 bd-highlight"} top={"/Laboratoires"} title={"Laboratoire le plus proche"} />
+        <Testbox classname={"bo3 p-2 bd-highlight"} top={"/Laboratoires"} title={"Laboratoires les plus proches"} />
         <button  onClick={close} type="button" class="btn btn-info bt1 p-2 bd-highlight ">Close</button>
 
      
