@@ -43,7 +43,7 @@
     background: #19dcea;
   }
   25% {
-    background: #7315aa;
+    background: #6de9ba;
   }
   50% {
     background: #217d8d;
@@ -52,7 +52,7 @@
     background: rgb(71, 73, 172);
   }
   100% {
-    background: #4c098b;
+    background: #6d52e7;
   }
 }
 @keyframes color-change-5x {
@@ -60,15 +60,20 @@
     background: #19dcea;
   }
   25% {
-    background: #b22cff;
+    background: #0fb3c9;
   }
   50% {
     background: #1290a7;
   }
   75% {
-    background: #5c048f;
+    background: #3456f1;
   }
   100% {
     background: #5dd4f1;
   }
+}
+.bo1,
+.bo2,
+.bo3 :hover {
+  rotate: -180 deg;
 }
