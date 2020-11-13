@@ -32,8 +32,6 @@ function App() {
        <Route  path="/Contactez-nous" component={Contact} />
        <Route  path="/Connexion" component={Connexion} />
        </Switch>
-     
-     
     </div>
 
 
