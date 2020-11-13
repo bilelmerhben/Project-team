@@ -6,7 +6,7 @@ function Laboratoire (){
     return (
        
  <div className="lab">
-    <h1>Les Laboratoires Disponibles</h1>
+    <h1>Laboratoires Disponibles </h1>
    
  </div>
         
