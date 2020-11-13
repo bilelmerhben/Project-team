@@ -1,22 +1,27 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link,Route} from "react-router-dom";
 import "../../Css/box.css";
+import Test1 from "../Test1";
 
 export default function Box({ title, classname, img , text,lien }) {
 
   return (
-<Link to={lien}>
+   
+
+
     <div className={classname}>
        <img src={img} alt={""} />
-
-      <h4 classname={classname}>
+       <h4 classname={classname}>
+       <Link to={lien}>
        {title}
-      </h4>
-
-      <p>{text}</p>
-
+       </Link>
+       </h4>
+       <p>{text}</p>
+       
     </div>
-    </Link>
+ 
+
+
   )
 }
 

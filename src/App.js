@@ -12,7 +12,7 @@ import Proteger from "./components/Proteger";
 import Dons from "./components/Dons";
 import Contact from "./components/Contact";
 import {Connexion} from "./components/Connexion";
-
+import Test1 from "./components/Test1";
 
 
 function App() {
@@ -31,6 +31,7 @@ function App() {
        <Route  path="/Dons" component={Dons} />
        <Route  path="/Contactez-nous" component={Contact} />
        <Route  path="/Connexion" component={Connexion} />
+       <Route  path="/Test1" component={Test1} />
        </Switch>
     </div>
 

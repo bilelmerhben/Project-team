@@ -8,9 +8,6 @@ function Test (){
        
  <div >
      <Btns/>
-  
-    
-    
  </div>
         
     );
