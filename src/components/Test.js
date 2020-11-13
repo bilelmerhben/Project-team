@@ -8,7 +8,7 @@ function Test (){
        
  <div >
      <Btns/>
-     <BtnTest className="btntest"/>
+     
     
     
  </div>
