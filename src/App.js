@@ -1,9 +1,7 @@
 import React from "react";
 import { BrowserRouter , Route ,Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import Navbar from "./components/Navbar";
-
 import Test from "./components/Test";
 import Surveillance from "./components/Surveillance";
 import Laboratoire from "./components/Laboratoire";
