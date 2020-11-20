@@ -1,22 +1,33 @@
 .test1 {
   margin-top: 80px;
-  margin-left: 200px;
 }
 #bt1 {
   margin-top: 1em;
   margin-bottom: 1em;
-
+  background-color: rgb(128, 128, 247);
+  border-radius: 10px;
   width: 200px;
 }
 .div1 {
+  width: 1000px;
+  margin-left: 100px;
   text-align: center;
-  height: 200px;
-  width: 800px;
   background-color: rgb(244, 244, 245);
 }
+.div1 h4 {
+  color: rgb(15, 29, 233);
+}
 .div2 {
-  margin-top: 2em;
-  height: 150px;
+  display: center;
   width: 800px;
+  margin-top: 2em;
+  margin-left: 200px;
   background-color: rgb(244, 244, 245);
+}
+.div2 h4 {
+  text-align: center;
+  color: rgb(60, 105, 228);
+}
+.div2 p {
+  text-align: center;
 }
