@@ -5,7 +5,7 @@ import Navbar from "./components/Navbar";
 import Test from "./components/Test";
 import Surveillance from "./components/Surveillance";
 import Laboratoire from "./components/Laboratoire";
-import Question from "./components/Question";
+import Covid19 from "./components/Covid19";
 import Proteger from "./components/Proteger";
 import Dons from "./components/Dons";
 import Contact from "./components/Contact";
@@ -24,7 +24,7 @@ function App() {
        <Route  exact path="/" component={Test} />
        <Route  path="/Auto-Surveillance" component={Surveillance} />
        <Route  path="/Laboratoires" component={Laboratoire} />
-       <Route  path="/Covid-19?" component={Question} />
+       <Route  path="/Covid-19?" component={Covid19} />
        <Route  path="/Protégez-vous" component={Proteger} />
        <Route  path="/Dons" component={Dons} />
        <Route  path="/Contactez-nous" component={Contact} />

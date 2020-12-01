@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 
-function Question (props){
+function Covid19 (props){
   
     return (
        
@@ -11,4 +11,4 @@ function Question (props){
         
     );
   }
-  export default Question;
+  export default Covid19;
