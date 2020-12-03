@@ -9,19 +9,16 @@
 .div1 {
   width: 80%;
   text-align: justify;
-  background: rgb(218, 218, 219);
+  background: rgb(241, 241, 245);
 }
 
 .div1 h4 {
   text-align: center;
   color: rgb(43, 139, 123);
 }
-.div2 {
+.card {
   padding: 10px;
-  width: 700px;
   margin-top: 2rem;
-  text-align: justify;
-  background-color: rgb(216, 217, 218);
 }
 .div2 h4 {
   color: rgb(24, 69, 136);
@@ -31,6 +28,10 @@
   width: 7%;
 }
 .im {
-  margin-right: 2px;
+  margin-right: 5px;
   float: left;
+}
+.div2 {
+  margin-top: 20px;
+  background: rgb(241, 241, 245);
 }

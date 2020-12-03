@@ -55,13 +55,13 @@ function Question1() {
                     
                 </form>
             </div>
-            
-            <div className="div2 container-lg  ">
-            <img class="rounded float-left im" src={temperature}/>
-                <h4 >La température</h4>
-                <p>- La température se mesure avec un thermomètre.Le thermomètre indique un nombre,c'est la température de votre corps.</p>
-            </div>
-            
+            <div class="card border-info mb-3 mb-3 container-lg" style={{maxWidth:500}}>
+               <div class="card-header">La température</div>
+                <div class="card-body ">
+                <img src={temperature} class="im" alt="temp"/>
+                 <p class="card-text">-La température se mesure avec un thermomètre.Le thermomètre indique un nombre,c'est la température de votre corps.</p>
+             </div>
+</div>
         </div>
     );
 }
@@ -80,10 +80,13 @@ function Question2() {
             <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2 container-lg ">
-            <img class="rounded float-left im" src={toux}/>
-                <h4>La toux</h4>
-                <p>- Une augmentation de votre toux veut dire que vous toussez plus que d'habitude.</p>
+            <div class="card border-info mb-3 mb-3 container-lg" style={{maxWidth:500}}>
+               <div class="card-header">La toux</div>
+                <div class="card-body ">
+                <img src={toux} class="im" alt="toux"/>
+                 <p class="card-text">- Une augmentation de votre toux veut dire que vous toussez plus que d'habitude.</p>
+             </div>
+
             </div>
         </div>
 
