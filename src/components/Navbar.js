@@ -8,9 +8,6 @@ export default class Navbar extends Component {
     return (
      
   <nav className="navbar shadow  bg-white rounded fixed-top navbar-expand-lg navbar-light background-color:#6e6e6e">
-  
-  
-  
   <div className="collapse navbar-collapse pt-0 pb-0 mt-0 mb-2" id="navbarText">
     <a className="navbar-brand " href="/"></a>
     <ul className="navbar-nav mr-auto">

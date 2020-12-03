@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import { Link, Route, Switch } from "react-router-dom";
 import "../Css/Test1.css";
-
+import temperature from  "../img/temperature.png";
+import toux from  "../img/toux.png";
 class Test1 extends Component {
 
     render() {
 
         return (
             <div>
+                
                 <Switch>
-                    <Route exact path="/Test1" component={Question1} />
+                    <Route exact path="/Test1/Question1" component={Question1} />
                     <Route path="/Test1/Question2" component={Question2} />
                     <Route path="/Test1/Question3" component={Question3} />
                     <Route path="/Test1/Question4" component={Question4} />
@@ -42,19 +44,24 @@ class Test1 extends Component {
 function Question1() {
 
     return (
-        <div className="test1">
-            <div className="div1 ">
+        <div className="test1 ">
+
+            <div className="div1 container-lg   ">
                 <br /><Link><h4>Question1 sur 22</h4></Link>
-                <p>Ces dernières 48 heures, quelle a été votre température la plus élevée ?</p>
+                <p>- Ces dernières 48 heures, quelle a été votre température la plus élevée ?</p>
                 <form action="/Test1/Question2">
-                    Remplissez le champ : <input type="number" name="Temperature" placeholder="37.0" min="34" max="42" step="0.1" autoComplete autoFocus required /> :Degrés <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                    Remplissez le champ : <input class="input" type="number" name="Temperature" placeholder="37.0" min="34" max="42" step="0.1" autoComplete autoFocus required /> :Degrés <br />
+                    <input class=" btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" /> 
+                    
                 </form>
             </div>
-            <div className="div2 ">
-                <h4>La température</h4>
-                <p>La température se mesure avec un thermomètre.Le thermomètre indique un nombre,c'est la température de votre corps.</p>
+            
+            <div className="div2 container-lg  ">
+            <img class="rounded float-left im" src={temperature}/>
+                <h4 >La température</h4>
+                <p>- La température se mesure avec un thermomètre.Le thermomètre indique un nombre,c'est la température de votre corps.</p>
             </div>
+            
         </div>
     );
 }
@@ -63,19 +70,20 @@ function Question2() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg">
                 <br /><Link><h4>Question2 sur 22</h4></Link>
-                <p>Ces derniers jours, avez-vous une toux ou votre toux habituelle s’est-elle modifiée ?</p>
+                <p>- Ces derniers jours, avez-vous une toux ou votre toux habituelle s’est-elle modifiée ?</p>
                 <form action="/Test1/Question3">
                     Sélectionnez une option :
             OUI :<input type="radio" name="radio" required />
-            NON :<input type="radio" name="radio" required />  <br />  <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+            NON :<input type="radio" name="radio" required />  <br />  
+            <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
+            <img class="rounded float-left im" src={toux}/>
                 <h4>La toux</h4>
-                <p>Une augmentation de votre toux veut dire que vous toussez plus que d'habitude.</p>
+                <p>- Une augmentation de votre toux veut dire que vous toussez plus que d'habitude.</p>
             </div>
         </div>
 
@@ -86,21 +94,21 @@ function Question3() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question3 sur 22</h4></Link>
-                <p>Ces derniers jours, avez-vous noté une perte ou une forte diminution de votre goût ou de votre odorat ?</p>
+                <p>- Ces derniers jours, avez-vous noté une perte ou une forte diminution de votre goût ou de votre odorat ?</p>
                 <form action="/Test1/Question4">
                     Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required />  <br />  <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required />  <br /> 
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>La perte du goût</h4>
-                <p>La perte du goût, c'est quand vous ne pouvez plus reconnaître le goût d'un aliment.Par exemple, le poulet a le même goût que le poisson.</p>
+                <p>- La perte du goût, c'est quand vous ne pouvez plus reconnaître le goût d'un aliment.Par exemple, le poulet a le même goût que le poisson.</p>
                 <h4>La perte de l'odorat</h4>
-                <p>La perte de l'odorat, c'est quand vous ne sentez plus les odeurs.Par exemple, vous ne pouvez plus sentir l'odeur du poulet qui sort du four.</p>
+                <p>- La perte de l'odorat, c'est quand vous ne sentez plus les odeurs.Par exemple, vous ne pouvez plus sentir l'odeur du poulet qui sort du four.</p>
            
             </div>
         </div>
@@ -112,21 +120,21 @@ function Question4() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 4 sur 22</h4></Link>
-                <p>Ces derniers jours, avez-vous eu un mal de gorge et/ou des douleurs musculaires et/ou des courbatures inhabituelles et/ou des maux de tête inhabituels ?</p>
+                <p>- Ces derniers jours, avez-vous eu un mal de gorge et/ou des douleurs musculaires et/ou des courbatures inhabituelles et/ou des maux de tête inhabituels ?</p>
                 <form action="/Test1/Question5">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required />  <br />  <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required />  <br /> 
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>Le mal de gorge</h4>
-                <p>Un mal de gorge,c’est quand vous ressentez un irritation ou une gêne au niveau de votre gorge.</p>
+                <p>- Un mal de gorge,c’est quand vous ressentez un irritation ou une gêne au niveau de votre gorge.</p>
                 <h4>La courbature</h4>
-                <p>La courbature, c'est une douleur musculaire.On peut ressentir des courbatures quand on a fait trop de sport ou quand on est malade. Les muscles du corps sont fatigués,donc ils font mal.</p>
+                <p>- La courbature, c'est une douleur musculaire.On peut ressentir des courbatures quand on a fait trop de sport ou quand on est malade.Les muscles du corps sont fatigués,donc ils font mal.</p>
              </div>
         </div>
 
@@ -137,19 +145,19 @@ function Question5() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 5 sur 22</h4></Link>
-                <p>Ces dernières 24 heures, avez-vous de la diarrhée ? Avec au moins 3 selles molles.</p>
+                <p>- Ces dernières 24 heures, avez-vous de la diarrhée ? Avec au moins 3 selles molles.</p>
                 <form action="/Test1/Question6">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required />  <br />  <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required />  <br/>
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>La diarrhée</h4>
-                <p>La diarrhée, c'est aller aux toilettes plus souvent que d'habitude.Il faut être allé aux toilettes au moins 3 fois dans la journée.La consistance de votre caca est molle ou liquide.La quantité est plus importante.</p>
+                <p>- La diarrhée, c'est aller aux toilettes plus souvent que d'habitude.Il faut être allé aux toilettes au moins 3 fois dans la journée.La consistance de votre caca est molle ou liquide.La quantité est plus importante.</p>
             </div>
         </div>
 
@@ -160,19 +168,19 @@ function Question6() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 6 sur 22</h4></Link>
-                <p>Ces derniers jours, avez-vous une fatigue inhabituelle ?</p>
+                <p>- Ces derniers jours, avez-vous une fatigue inhabituelle ?</p>
                 <form action="/Test1/Question7">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required />  <br />  <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required />  <br/>
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>La fatigue inhabituelle</h4>
-                <p>La fatigue inhabituelle, c'est une forme de fatigue que vous n'avez pas l'habitude de ressentir.Votre corps est plus faible.Les douleurs liées à cette fatigue sont plus importantes.</p>
+                <p>- La fatigue inhabituelle, c'est une forme de fatigue que vous n'avez pas l'habitude de ressentir.Votre corps est plus faible.Les douleurs liées à cette fatigue sont plus importantes.</p>
             </div>
         </div>
 
@@ -183,19 +191,19 @@ function Question7() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 7 sur 22</h4></Link>
-                <p>Cette fatigue vous oblige-t-elle à vous reposer plus de la moitié de la journée ?</p>
+                <p>- Cette fatigue vous oblige-t-elle à vous reposer plus de la moitié de la journée ?</p>
                 <form action="/Test1/Question8">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required />  <br />  <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required />  <br />
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>Le repos</h4>
-                <p>La fatigue que vous ressentez est tellement importante que vous avez besoin de vous reposer souvent.Vous vous reposez la moitié de la journée.</p>
+                <p>- La fatigue que vous ressentez est tellement importante que vous avez besoin de vous reposer souvent.Vous vous reposez la moitié de la journée.</p>
             </div>
         </div>
 
@@ -206,18 +214,18 @@ function Question8() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 8 sur 22</h4></Link>
-                <p>Depuis 24 heures ou plus, êtes-vous dans l'impossibilité de vous alimenter ou de boire ?</p>
+                <p>- Depuis 24 heures ou plus, êtes-vous dans l'impossibilité de vous alimenter ou de boire ?</p>
                 <form action="/Test1/Question9">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required />  <br />  <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required />  <br />
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
-            <h4>L'impossibilité de manger ou de boire</h4>
+            <div className="div2 container-lg ">
+            <h4>- L'impossibilité de manger ou de boire</h4>
                 <p>Être dans l'impossibilité de manger ou de boire,c'est que vous n'arrivez plus à avaler ni nourriture ni boisson.Vous ressentez du dégoût quand vous voyez de la nourriture.</p>
             </div>
         </div>
@@ -229,19 +237,19 @@ function Question9() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 9 sur 22</h4></Link>
-                <p>Ces dernières 24 heures, avez-vous noté un manque de souffle inhabituel lorsque vous parlez ou faites un petit effort ?</p>
+                <p>- Ces dernières 24 heures, avez-vous noté un manque de souffle inhabituel lorsque vous parlez ou faites un petit effort ?</p>
                 <form action="/Test1/Question10">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required />  <br />  <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required />   <br />
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>Le manque de souffle</h4>
-                <p>Un manque de souffle est inhabituel,quand vous avez plus de mal à respirer que les autres jours.Par exemple vous êtes plus essouflé quand vous parlez ou quand vous montez l'escalier.</p>
+                <p>- Un manque de souffle est inhabituel,quand vous avez plus de mal à respirer que les autres jours.Par exemple vous êtes plus essouflé quand vous parlez ou quand vous montez l'escalier.</p>
             </div>
         </div>
 
@@ -252,17 +260,17 @@ function Question10() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 10 sur 22</h4></Link>
-                <p>Quel est votre âge ? Ceci, afin de calculer un facteur de risque spécifique.</p>
+                <p>- Quel est votre âge ? Ceci, afin de calculer un facteur de risque spécifique.</p>
                 <form action="/Test1/Question11">
-                Remplissez le champ : <input type="number" name="Age" placeholder="votre age" min="1" max="110" step="1" autoComplete autoFocus required /> :Ans <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                Remplissez le champ : <input class="input" type="number" name="Age"  placeholder=" Age" min="1" max="110" step="1" autoComplete autoFocus required /> :Ans <br />
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>L'âge</h4>
-                <p>Votre âge peut être un facteur de risque.Un facteur de risque est quelque chose qui augmente la possibilité d’avoir une maladie.Plus votre âge est élevé et plus vous êtes fragile.</p>
+                <p>- Votre âge peut être un facteur de risque.Un facteur de risque est quelque chose qui augmente la possibilité d’avoir une maladie.Plus votre âge est élevé et plus vous êtes fragile.</p>
             </div>
         </div>
 
@@ -273,17 +281,17 @@ function Question11() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 11 sur 22</h4></Link>
-                <p>Quel est votre taille ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.</p>
+                <p>- Quel est votre taille ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.</p>
                 <form action="/Test1/Question12">
-                Remplissez le champ : <input type="number" name="Taille" placeholder="votre taille" min="80" max="250" step="1" autoComplete autoFocus required /> cm <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                Remplissez le champ : <input class="input" type="number" name="Taille" placeholder="Taille" min="80" max="250" step="1" autoComplete autoFocus required /> Cm <br />
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>La taille</h4>
-                <p>Vous avez votre taille en vous mesurant des pieds à la tête.
+                <p>- Vous avez votre taille en vous mesurant des pieds à la tête.<br/>
                    Votre poids et votre taille sont des facteurs de risque.Il faut calculer votre Indice de Masse Corporelle (IMC).L’IMC donne votre corpulence en faisant un calcul avec votre poids et votre taille.L’IMC permet de dire si vous être trop gros ou trop maigre,et donc plus ou moins fragile.</p>
             </div>
         </div>
@@ -295,17 +303,17 @@ function Question12() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 12 sur 22</h4></Link>
-                <p>Quel est votre poids ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.</p>
+                <p>- Quel est votre poids ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.</p>
                 <form action="/Test1/Question13">
-                Remplissez le champ : <input type="number" name="Poids" placeholder="votre poids" min="20" max="250" step="1" autoComplete autoFocus required />Kg<br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                Remplissez le champ : <input class="input"type="number" name="Poids" placeholder="Poids" min="20" max="250" step="1" autoComplete autoFocus required />Kg<br />
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>Le poids</h4>
-                <p>Vous avez votre poids en vous pesant sur une balance.Votre poids et votre taille sont des facteurs de risque.Il faut calculer votre Indice de Masse Corporelle (IMC).L’IMC donne votre corpulence en faisant un calcul avec votre poids et votre taille.L’IMC permet de dire si vous être trop gros ou trop maigre,et donc plus ou moins fragile.</p>
+                <p>- Vous avez votre poids en vous pesant sur une balance.Votre poids et votre taille sont des facteurs de risque.Il faut calculer votre Indice de Masse Corporelle (IMC).L’IMC donne votre corpulence en faisant un calcul avec votre poids et votre taille.L’IMC permet de dire si vous être trop gros ou trop maigre,et donc plus ou moins fragile.</p>
             </div>
         </div>
 
@@ -316,21 +324,21 @@ function Question13() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 13 sur 22</h4></Link>
-                <p>Avez-vous des antécédents de maladie cardiovasculaire : hypertension artérielle compliquée (avec complications cardiaques, rénales), accident vasculaire cérébral, maladie coronaire (infarctus), chirurgie cardiaque, insuffisance cardiaque avec essoufflement au moindre effort ?</p>
+                <p>- Avez-vous des antécédents de maladie cardiovasculaire : hypertension artérielle compliquée (avec complications cardiaques, rénales), accident vasculaire cérébral, maladie coronaire (infarctus), chirurgie cardiaque, insuffisance cardiaque avec essoufflement au moindre effort ?</p>
                 <form action="/Test1/Question14">
                 OUI :<input type="radio" name="radio" required />
                 NON :<input type="radio" name="radio" required />  
-                Je sais pas :<input type="radio" name="radio" required /><br />  <br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                Je sais pas :<input type="radio" name="radio" required /><br /> 
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>L'hypertension artérielle</h4>
-                <p>Une hypertension artérielle mal équilibrée,c'est une augmentation trop importante de la tension artérielle.La circulation du sang est trop rapide,donc le sang exerce une trop forte pression sur les artères.</p>
+                <p>- Une hypertension artérielle mal équilibrée,c'est une augmentation trop importante de la tension artérielle.La circulation du sang est trop rapide,donc le sang exerce une trop forte pression sur les artères.</p>
             <h4>La maladie cardiaque ou vasculaire</h4>
-            <p>L'augmentation de la tension artérielle peut entraîner des maladies cardiaques ou vasculaires,c'est-à-dire des maladies du cœur.Ces maladies sont liées à un mauvais fonctionnement du cœur ou des vaisseaux sanguins qui alimentent le cœur.Le cœur est un muscle,ce muscle devient faible.Cette maladie nécessite un traitement qu'on appelle traitement cardiologique.</p>
+            <p>- L'augmentation de la tension artérielle peut entraîner des maladies cardiaques ou vasculaires,c'est-à-dire des maladies du cœur.Ces maladies sont liées à un mauvais fonctionnement du cœur ou des vaisseaux sanguins qui alimentent le cœur.Le cœur est un muscle,ce muscle devient faible.Cette maladie nécessite un traitement qu'on appelle traitement cardiologique.</p>
             </div>
         </div>
 
@@ -341,18 +349,18 @@ function Question14() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 14 sur 22</h4></Link>
-                <p>Avez-vous un diabète mal équilibré ou avec des complications (yeux, reins) ?</p>
+                <p>- Avez-vous un diabète mal équilibré ou avec des complications (yeux, reins) ?</p>
                 <form action="/Test1/Question15">
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required /> <br></br>
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required /> <br/>
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>Le diabète</h4>
-                <p>Être diabétique c'est avoir trop de sucre dans le sang.Quand vous avez du diabète, c'est que votre corps ne sait plus réguler le sucre dans le sang.Il a des difficultés à utiliser le sucre consommé.Ce n'est pas parce que vous avez mangé trop de sucre.Le sucre est nécessaire au fonctionnement de votre corps.Si votre corps n'utilise pas bien ce sucre,il reste dans votre sang.Le diabète abîme les autres organes et on peut avoir des maladies.</p>
+                <p>- Être diabétique c'est avoir trop de sucre dans le sang.Quand vous avez du diabète, c'est que votre corps ne sait plus réguler le sucre dans le sang.Il a des difficultés à utiliser le sucre consommé.Ce n'est pas parce que vous avez mangé trop de sucre.<br/>Le sucre est nécessaire au fonctionnement de votre corps.Si votre corps n'utilise pas bien ce sucre,il reste dans votre sang.Le diabète abîme les autres organes et on peut avoir des maladies.</p>
             </div>
         </div>
 
@@ -363,18 +371,18 @@ function Question15() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 15 sur 22</h4></Link>
-                <p>Avez-vous un cancer évolutif sous traitement (hors hormonothérapie) ?</p>
+                <p>- Avez-vous un cancer évolutif sous traitement (hors hormonothérapie) ?</p>
                 <form action="/Test1/Question16">
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required /> <br></br>
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required /> <br/>
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>Le cancer</h4>
-                <p>Le cancer, c'est une maladie liée à une trop grande et trop rapide multiplication des cellules dans le corps.Elles sont donc trop nombreuses et inutiles au fonctionnement du corps.Elles sont cancéreuses.Ces cellules cancéreuses peuvent toucher différentes parties du corps,par exemple l'estomac, les poumons, les seins, la peau, les os, ...
+                <p>- Le cancer, c'est une maladie liée à une trop grande et trop rapide multiplication des cellules dans le corps.Elles sont donc trop nombreuses et inutiles au fonctionnement du corps.Elles sont cancéreuses.Ces cellules cancéreuses peuvent toucher différentes parties du corps,par exemple l'estomac, les poumons, les seins, la peau, les os,ect...
 Il faut répondre oui à cette question,si vous avez encore un cancer,ou vous avez eu un cancer il y a 3 ans maximum.</p>
             </div>
         </div>
@@ -386,20 +394,20 @@ function Question16() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 16 sur 22</h4></Link>
-                <p>Avez-vous une maladie respiratoire chronique (bronchopneumopathie obstructive, asthme sévère, fibrose pulmonaire, syndrome d’apnées du sommeil, mucoviscidose) ou êtes-vous suivi par un pneumologue ?</p>
+                <p>- Avez-vous une maladie respiratoire chronique (bronchopneumopathie obstructive, asthme sévère, fibrose pulmonaire, syndrome d’apnées du sommeil, mucoviscidose) ou êtes-vous suivi par un pneumologue ?</p>
                 <form action="/Test1/Question17">
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required /> <br></br>
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required /><br/>
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>La maladie respiratoire</h4>
-                <p>Une maladie respiratoire, c'est une maladie qui empêche de bien respirer.Cette maladie touche les organes qui sont nécessaires pour la respiration comme les poumons.Par exemple, on est vite essouflé quand on fait du sport et on tousse.</p>
+                <p>- Une maladie respiratoire, c'est une maladie qui empêche de bien respirer.Cette maladie touche les organes qui sont nécessaires pour la respiration comme les poumons.Par exemple, on est vite essouflé quand on fait du sport et on tousse.</p>
                 <h4>Le pneumologue</h4>
-                <p>Un pneumologue, c'est le médecin des poumons,et des maladies liées aux poumons.Quand on a une maladie respiratoire,on va voir le pneumologue.</p>
+                <p>- Un pneumologue, c'est le médecin des poumons,et des maladies liées aux poumons.Quand on a une maladie respiratoire,on va voir le pneumologue.</p>
             </div>
         </div>
 
@@ -410,19 +418,19 @@ function Question17() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 17 sur 22</h4></Link>
-                <p>Avez-vous une insuffisance rénale chronique avec besoin de faire de la dialyse ?</p>
+                <p>- Avez-vous une insuffisance rénale chronique avec besoin de faire de la dialyse ?</p>
                 <form action="/Test1/Question18">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required /> <br></br>
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required /> <br/>
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>L'insuffisance rénale chronique</h4>
-                <p>Une insuffisance rénale chronique, c'est une maladie des reins.Les reins ne fonctionnent plus correctement,ils filtrent mal le sang.Les reins n'éliminent plus les déchets qui sont dans le sang.Les déchets sont de plus en plus nombreux dans le sang,et le corps s'empoisonne.Ça nécessite un traitement par une dialyse.Une dialyse est une machine qui peut filtrer le sang.La dialyse filtre le sang à la place des reins de la personne.</p>
+                <p>- Une insuffisance rénale chronique, c'est une maladie des reins.Les reins ne fonctionnent plus correctement,ils filtrent mal le sang.Les reins n'éliminent plus les déchets qui sont dans le sang.Les déchets sont de plus en plus nombreux dans le sang,et le corps s'empoisonne.Ça nécessite un traitement par une dialyse.Une dialyse est une machine qui peut filtrer le sang.La dialyse filtre le sang à la place des reins de la personne.</p>
             </div>
         </div>
 
@@ -433,19 +441,19 @@ function Question18() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 18 sur 22</h4></Link>
-                <p>Avez-vous une cirrhose ?</p>
+                <p>- Avez-vous une cirrhose ?</p>
                 <form action="/Test1/Question19">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required /> <br></br>
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required /> <br/>
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>La maladie chronique du foie</h4>
-                <p>La maladie chronique du foie,c'est lorsque notre foie ou une partie de notre foie ne fonctionne plus.Le foie nettoie le sang et donc le corps,et fabrique ce qui est essentiel pour la digestion et pour la bonne santé des muscles, de la peau, des os.Par exemple quand on boit beaucoup d'alcool ça peut abîmer notre foie.</p>
+                <p>- La maladie chronique du foie,c'est lorsque notre foie ou une partie de notre foie ne fonctionne plus.Le foie nettoie le sang et donc le corps,et fabrique ce qui est essentiel pour la digestion et pour la bonne santé des muscles, de la peau, des os.Par exemple quand on boit beaucoup d'alcool ça peut abîmer notre foie.</p>
             </div>
         </div>
 
@@ -456,20 +464,20 @@ function Question19() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 19 sur 22</h4></Link>
-                <p>Êtes-vous une femme enceinte au 3ème trimestre de votre grossesse ?</p>
+                <p>- Êtes-vous une femme enceinte au 3ème trimestre de votre grossesse ?</p>
                 <form action="/Test1/Question20">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
                 NON :<input type="radio" name="radio" required />
-                Non applicable :<input type="radio" name="radio" required /> <br></br>
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                Non applicable :<input type="radio" name="radio" required /> <br/>
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>Enceinte</h4>
-                <p>Une femme est enceinte quand elle attend un bébé.</p>
+                <p>- Une femme est enceinte quand elle attend un bébé.</p>
             </div>
         </div>
 
@@ -480,20 +488,20 @@ function Question20() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 20 sur 22</h4></Link>
-                <p>Avez-vous une immunodépression, par exemple : médicamenteuse (chimiothérapie anti cancéreuse, traitement immunosuppresseur, biothérapie et/ou corticothérapie à dose immunosuppressive depuis plus de 15 jours) ; infection à VIH non contrôlée ou avec des CD4 200/mm3 ; consécutive à une greffe d’organe solide ou de cellules souches hématopoïétiques ; liée à une hémopathie maligne en cours de traitement ?</p>
+                <p>- Avez-vous une immunodépression, par exemple : médicamenteuse (chimiothérapie anti cancéreuse, traitement immunosuppresseur, biothérapie et/ou corticothérapie à dose immunosuppressive depuis plus de 15 jours) ,Infection à VIH non contrôlée ou avec des CD4 200/mm3 , consécutive à une greffe d’organe solide ou de cellules souches hématopoïétiques , liée à une hémopathie maligne en cours de traitement ?</p>
                 <form action="/Test1/Question21">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
                 NON :<input type="radio" name="radio" required />
-                Je sais pas :<input type="radio" name="radio" required /> <br></br>
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                Je sais pas :<input type="radio" name="radio" required /> <br/>
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
             <h4>Les défenses immunitaires</h4>
-                <p>Les défenses immunitaires, ce sont les défenses du corps.Le corps a un système qui le protège contre toutes les infections, des microbes : bactéries, virus, ...
+                <p>- Les défenses immunitaires, ce sont les défenses du corps.Le corps a un système qui le protège contre toutes les infections, des microbes : bactéries, virus, etc...
 C'est le système immunitaire.Si vous avez une maladie qui diminue vos défenses immunitaires,vous avez plus de risque de tomber malade,car le corps gère déjà une autre infection,il a du mal à se protéger.</p>
             </div>
         </div>
@@ -505,14 +513,14 @@ function Question21() {
 
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 21 sur 22</h4></Link>
-                <p>Avez-vous une drépanocytose homozygote (forme majeure) ou bénéficié d’une splénectomie (ablation de la rate) à cause de la drépanocytose ?</p>
+                <p>- Avez-vous une drépanocytose homozygote (forme majeure) ou bénéficié d’une splénectomie (ablation de la rate) à cause de la drépanocytose ?</p>
                 <form action="/Test1/Question22">
                 Sélectionnez une option :
                 OUI :<input type="radio" name="radio" required />
-                NON :<input type="radio" name="radio" required /> <br></br>
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                NON :<input type="radio" name="radio" required /> <br/>
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
         </div>
@@ -522,20 +530,21 @@ function Question21() {
 
 function Question22() {
 
+
     return (
         <div className="test1">
-            <div className="div1">
+            <div className="div1 container-lg ">
                 <br /><Link><h4>Question 22 sur 22</h4></Link>
-                <p>Quel est le code postal de votre résidence actuelle ? Cette information nous permet de réaliser un suivi épidémiologique</p>
+                <p>- Quel est le code postal de votre résidence actuelle ? Cette information nous permet de réaliser un suivi épidémiologique.</p>
                 <form >
-                Remplissez le champ : <input type="number" name="Code Postal" placeholder="code postal" min="1000" max="9999" step="1" autoComplete autoFocus required /> :Votre code postal <br />
-                <input type="checkbox" name="check"  /> : Je suis en dehors de la Tunisie ou je ne souhaite pas répondre.<br />
-                    <input id="bt1" type="submit" value=" Enregistrer et Continuer" name="submit" />
+                Remplissez le champ : <input class="input" type="number" name="Code Postal" placeholder="code" min="1000" max="9999" step="1" autoComplete autoFocus required /> :Votre code postal <br />
+                <input  type="checkbox" name="check" onClick={()=>(console.log("e.value"))}/> : Je suis en dehors de la Tunisie ou je ne souhaite pas répondre.<br />
+                <input class="btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
                 </form>
             </div>
-            <div className="div2">
+            <div className="div2 container-lg ">
                 <h4>Le code postal</h4>
-                <p>Votre code postal est sur votre adresse.Il permet d'identifier le département et la ville où vous habitez.Le code postal est composé de 4 chiffres.Par exemple pour Tunis c'est le 1002 ; pour Ariana c'est le 2080</p>
+                <p>- Votre code postal est sur votre adresse.Il permet d'identifier le département et la ville où vous habitez.Le code postal est composé de 4 chiffres.Par exemple pour Tunis c'est le 1002 , pour Ariana c'est le 2080.</p>
             </div>
         </div>
 

@@ -1,7 +1,7 @@
 import React from "react";
-import {Link,Route} from "react-router-dom";
+import {Link} from "react-router-dom";
 import "../../Css/box.css";
-import Test1 from "../Test1";
+
 
 export default function Box({ title, classname, img , text,lien }) {
 
