@@ -8,7 +8,7 @@ class Btns extends Component{
         <div className="container text-center box1">
             <div className="row justify-content-md-center mx-0">
                 <div className="col px-0 text-center">
-        <Box classname={"sub1"} img={test} title={"TEST 1"} text={"Some text "} lien={"/Test1/Question1"}/>
+        <Box classname={"sub1"} img={test} title={"TEST 12"} text={"Some text "} lien={"/Test1/Question1"}/>
         </div>
         <div className="col px-0 text-center">
         <Box classname={"sub2"} img={test} title={"TEST 2"} text={"Some text "} lien={"/Test2"} />
