@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter , Route ,Switch } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/Navbar";
-import Test from "./components/Test";
+import Home from "./components/Home";
 import Surveillance from "./components/Surveillance";
 import Laboratoire from "./components/Laboratoire";
 import Covid19 from "./components/Covid19";
@@ -21,7 +21,7 @@ function App() {
     <div className="App">
        <Navbar/>
        <Switch>
-       <Route  exact path="/" component={Test} />
+       <Route  exact path="/" component={Home} />
        <Route  path="/Auto-Surveillance" component={Surveillance} />
        <Route  path="/Laboratoires" component={Laboratoire} />
        <Route  path="/Covid-19?" component={Covid19} />
