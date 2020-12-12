@@ -9,8 +9,9 @@ import Covid19 from "./components/Covid19";
 import Proteger from "./components/Proteger";
 import Dons from "./components/Dons";
 import Contact from "./components/Contact";
-import {Connexion} from "./components/Connexion";
+import Connexion from "./components/Connexion";
 import Test1 from "./components/Test1";
+import Inscription from "./components/Inscription";
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
        <Route  path="/Dons" component={Dons} />
        <Route  path="/Contactez-nous" component={Contact} />
        <Route  path="/Connexion" component={Connexion} />
+       <Route  path="/Inscription" component={Inscription} />
        <Route  path="/Test1" component={Test1} />
        </Switch>
     </div>
