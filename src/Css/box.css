@@ -2,7 +2,7 @@
   background: none;
   color: rgb(128, 124, 124);
 
-  height: 150px;
+  height: 200px;
 
   border: 1px solid rgb(79, 109, 205);
   font-size: 18px;
@@ -63,7 +63,7 @@
   background: none;
   color: #ccc;
 
-  height: 150px;
+  height: 200px;
   border: 1px solid rgb(139, 163, 235);
   font-size: 18px;
 
@@ -124,7 +124,7 @@
   background: none;
   color: #ccc;
 
-  height: 150px;
+  height: 200px;
   border: 1px solid rgb(67, 213, 203);
   font-size: 18px;
   border-radius: 0px 8px 8px 0px;
@@ -182,4 +182,8 @@
 
 .box1 {
   margin-top: 90px;
+}
+img {
+  height: 50px;
+  width: 50px;
 }
