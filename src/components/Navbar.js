@@ -12,7 +12,7 @@ export default class Navbar extends Component {
     <a className="navbar-brand " href="/"></a>
     <ul className="navbar-nav mr-auto">
       <li className="nav-item rounded ">
-        <a className="nav-link" href="/"> Testez-Vous </a>
+        <a className="nav-link" href="/Test1/Question1"> Testez-Vous </a>
       </li>
       <li className="nav-item rounded">
         <a className="nav-link" href="/Auto-Surveillance">Auto-Surveillance</a>

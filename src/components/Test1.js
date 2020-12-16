@@ -8,7 +8,7 @@ class Test1 extends Component {
     return (
       <div>
         <Switch>
-          <Route exact path="/Test1/Question1" component={Question1} />
+          <Route path="/Test1/Question1" component={Question1} />
           <Route path="/Test1/Question2" component={Question2} />
           <Route path="/Test1/Question3" component={Question3} />
           <Route path="/Test1/Question4" component={Question4} />
