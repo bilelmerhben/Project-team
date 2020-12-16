@@ -23,6 +23,7 @@ function App() {
        <Navbar/>
        <Switch>
        <Route  exact path="/" component={Home} />
+       <Route  path="/Test1/Question1" component={Test1} />
        <Route  path="/Auto-Surveillance" component={Surveillance} />
        <Route  path="/Laboratoires" component={Laboratoire} />
        <Route  path="/Covid-19?" component={Covid19} />

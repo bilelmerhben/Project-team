@@ -1,15 +1,42 @@
+.questionsTitle{
+  color: #333;
+    font-size: 26px;
+    margin-bottom: 35px;
+    padding: 0 40px;
+    font-weight: 600;
+
+}
+.questionsIndication{
+  color: #7b7070;
+    font-weight: 500;
+    margin-bottom: 21px;
+    padding: 0 40px;
+}
 .test1 {
   margin-top: 80px;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 60px;
+    box-sizing: inherit;
 }
+
+.div1 {
+  width: 100%;
+  margin: 0 10vw;
+  background-color: #f8f8f8;
+  max-width: 1200px;
+  padding: 39px 8px 8px;
+  box-sizing: inherit;
+}
+
 .bt1 {
   background-color: rgb(83, 83, 170);
-  margin: 2px 0 10px 40%;
-  width: 200px;
-}
-.div1 {
-  width: 80%;
-  text-align: justify;
-  background: rgb(241, 241, 245);
+  justify-content: flex-end;
+   
+    max-width: 1200px;
+    margin: 2px 0 10px 40%;
+ 
 }
 
 .div1 h4 {
@@ -23,10 +50,44 @@
 .div2 h4 {
   color: rgb(24, 69, 136);
 }
-
+ .questionsOptions{
+  align-items: flex-start;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-size: 26px;
+  justify-content: space-between;
+  padding: 47px 0 11px;
+  box-sizing: inherit;
+  width: 100%;
+ }
 .input {
   width: 7%;
+  overflow: visible;
+  margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    height: 64px;
+    width: auto;
+    padding: 0 16px;
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+    border: 3px solid #333;
+    box-sizing: border-box;
+    
 }
+.questionsOptions .costumText {
+  font-weight: 600;
+    font-size: 28px;
+    margin-left: 15px;
+    margin-top: .5em;
+    display: inline-block;
+    box-sizing: inherit;
+}
+
+
 .im {
   margin-right: 5px;
   float: left;
