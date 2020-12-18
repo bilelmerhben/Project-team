@@ -1,9 +1,20 @@
 .surveille {
   margin-top: 80px;
   text-align: center;
+  width: 100%;
+  background-color: #f8f8f8;
+  max-width: 1200px;
+  padding: 39px 8px 8px;
+  box-sizing: inherit;
 }
 .fleche {
   vertical-align: top;
   height: 30px;
   width: 30px;
+}
+.inp {
+  background: white;
+}
+.bt {
+  background-color: rgb(83, 83, 170);
 }

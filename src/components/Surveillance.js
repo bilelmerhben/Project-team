@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../Css/surveillance.css";
 import back from "../img/back.png";
 const obj={
-   question:['Question 1 sur 10','Question 2 sur 10','Question 3 sur 10', 'Question 4 sur 10','Question 5 sur 10','Question 6 sur 10','Question 7 sur 10','Question 8 sur 10','Question 9 sur 10'],
+   question:[' Question 1 sur 10',' Question 2 sur 10',' Question 3 sur 10', ' Question 4 sur 10',' Question 5 sur 10',' Question 6 sur 10',' Question 7 sur 10',' Question 8 sur 10',' Question 9 sur 10'],
    titre:['Si vous (ou votre proche) ressentez un manque de souffle quand vous parlez ou faites un petit effort, comment cela a-t-il évolué depuis hier (ou depuis la dernière connexion) ?',
    'Comment vous (ou votre proche) vous sentez-vous par rapport à hier (ou depuis la dernière connexion) ?',
    'Quelle a été la température maximale des 24 dernières heures ?',
@@ -20,11 +20,14 @@ class Surveillance extends Component{
      count:0
   }
    changequestion =(e)=>{
-      e.preventDefault();
+     
       if(this.state.count <10){
+         e.preventDefault();
          this.setState(
            {
+           
             count:this.state.count + 1
+
            });}}
            comeback =()=>{
            
@@ -36,16 +39,16 @@ class Surveillance extends Component{
                             }}
 render(){
     return (
-       
- <div className="surveille">
+     
+ <div className="surveille  container-lg">
     <img className="fleche" onClick={this.comeback} src={back} alt=""></img>
     <h4 className="d-inline">{obj.question[this.state.count]}</h4>
    <h5>{obj.titre[this.state.count]}</h5>
    <h5>{obj.contenu[this.state.count]}</h5><br/>
-<form  onSubmit={this.changequestion}>
+<form className="inp  " onSubmit={this.changequestion}>
 
-   {(this.state.count ==0)?( <div>
-<input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[0]}</label><br/>
+   {(this.state.count ==0)?( <div >
+<input className="mr-2  " type="radio" name="radio" required /><label>{obj.label[0]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[1]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[2]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[3]}</label><br/>
@@ -93,7 +96,7 @@ render(){
            )
          )}
   
-<input  type="submit" name="submit" value="Enregistrer et Continuer" /> 
+<input  className="bt  btn btn-primary" type="submit" name="submit" value="Continuer" /> 
            
 </form>
 
