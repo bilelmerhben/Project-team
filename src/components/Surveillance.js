@@ -40,7 +40,7 @@ class Surveillance extends Component{
 render(){
     return (
      <div>
-        {(this.state.count ==9)?(<div className="card-body card border-info mb-3 mb-3 container-lg"
+        {(this.state.count ==9)?(<div className="card-body cad card border-info mb-3 mb-3 container-lg"
 style={{ maxWidth: 900 ,marginTop:200}}>
   <p class="card-text">
   La recommandation affichée peut évoluer suivant les informations en provenance des autorités de santé et des chercheurs. Elle ne constitue pas un avis médical. En cas de doute, demandez conseil à votre médecin ou pharmacien.
