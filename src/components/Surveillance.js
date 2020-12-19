@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../Css/surveillance.css";
 import back from "../img/back.png";
 const obj={
-   question:[' Question 1 sur 10',' Question 2 sur 10',' Question 3 sur 10', ' Question 4 sur 10',' Question 5 sur 10',' Question 6 sur 10',' Question 7 sur 10',' Question 8 sur 10',' Question 9 sur 10'],
+   question:[' Question 1 sur 9',' Question 2 sur 9',' Question 3 sur 9', ' Question 4 sur 9',' Question 5 sur 9',' Question 6 sur 9',' Question 7 sur 9',' Question 8 sur 9',' Question 9 sur 9'],
    titre:['Si vous (ou votre proche) ressentez un manque de souffle quand vous parlez ou faites un petit effort, comment cela a-t-il évolué depuis hier (ou depuis la dernière connexion) ?',
    'Comment vous (ou votre proche) vous sentez-vous par rapport à hier (ou depuis la dernière connexion) ?',
    'Quelle a été la température maximale des 24 dernières heures ?',
@@ -20,9 +20,9 @@ class Surveillance extends Component{
      count:0
   }
    changequestion =(e)=>{
-     
-      if(this.state.count <10){
-         e.preventDefault();
+      e.preventDefault();
+      if(this.state.count <9){
+        
          this.setState(
            {
            
@@ -39,7 +39,15 @@ class Surveillance extends Component{
                             }}
 render(){
     return (
-     
+     <div>
+        {(this.state.count ==9)?(<div className="card-body card border-info mb-3 mb-3 container-lg"
+style={{ maxWidth: 900 ,marginTop:200}}>
+  <p class="card-text">
+  La recommandation affichée peut évoluer suivant les informations en provenance des autorités de santé et des chercheurs. Elle ne constitue pas un avis médical. En cas de doute, demandez conseil à votre médecin ou pharmacien.
+  </p>
+  <p class="card-text">
+  Votre situation nécessite l'avis immédiat d'un médecin.Contactez immédiatement votre médecin traitant par téléphone pour lui faire part de votre situation et organiser un rendez-vous de consultation. Vous pouvez également essayer d'obtenir un rendez-vous de téléconsultation.Si vous n'arrivez pas à joindre un médecin rapidement pour lui détailler vos symptômes, appelez le 190.</p>
+</div>):(
  <div className="surveille  container-lg">
     <img className="fleche" onClick={this.comeback} src={back} alt=""></img>
     <h4 className="d-inline">{obj.question[this.state.count]}</h4>
@@ -81,26 +89,16 @@ render(){
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[1]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[2]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[3]}</label><br/></div>):(
-   <div>
-      <p>La recommandation affichée peut évoluer suivant les informations en provenance des autorités de santé et des chercheurs. Elle ne constitue pas un avis médical. En cas de doute, demandez conseil à votre médecin ou pharmacien.</p>
-      <p>Votre situation nécessite l'avis immédiat d'un médecin.Contactez immédiatement votre médecin traitant par téléphone pour lui faire part de votre situation et organiser un rendez-vous de consultation. Vous pouvez également essayer d'obtenir un rendez-vous de téléconsultation.Si vous n'arrivez pas à joindre un médecin rapidement pour lui détailler vos symptômes, appelez le 15.</p>
-   </div>
-
-)
-            )
-            )
-            )
-            )
-            )
-           )
-           )
-         )}
-  
-<input  className="bt  btn btn-primary" type="submit" name="submit" value="Continuer" /> 
+   <></>
+)))))))))}
+  {(this.state.count ==9)?(<></>):
+(<input  className="bt  btn btn-primary" type="submit" name="submit" value="Continuer" /> )}
            
 </form>
 
- </div>    
+   
+</div>)}
+ </div>   
     )
    }
 }
