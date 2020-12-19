@@ -5,7 +5,7 @@ import React from "react"
     
     return (
        
-        <div className="lab card pt-5 align-items-center dark ">
+        <div className="lab card pt-5 align-items-center dark  container-lg" style={{width:500,marginTop:150,height:400}}>
             <form>
                 <div className="form-group">
     <label for="InputEmail1">Email address</label>
