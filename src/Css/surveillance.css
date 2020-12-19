@@ -13,11 +13,12 @@
   width: 30px;
 }
 .inp {
+  margin-top: -15px;
   background: white;
 }
 .bt {
   position: relative;
-  margin-top: 5px;
+  margin-top: 2em;
   margin-bottom: 5px;
   background-color: rgb(83, 83, 170);
 }
