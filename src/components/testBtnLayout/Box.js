@@ -11,11 +11,13 @@ export default function Box({ title, classname, img , text,lien }) {
 
     <div className={classname}>
        <img src={img} alt={""} />
+       <br/>
        <h4 classname={classname}>
-       <Link to={lien}>
+       <a href={lien}  style={{textDecoration:"none", color:"white"}} >
        {title}
-       </Link>
+       </a>
        </h4>
+       <br/>
        <p>{text}</p>
        
     </div>
