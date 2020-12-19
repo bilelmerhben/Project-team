@@ -1,0 +1,37 @@
+.surveille {
+  margin-top: 80px;
+  text-align: center;
+  width: 100%;
+  background-color: #f8f8f8;
+  max-width: 1200px;
+  padding: 39px 8px 8px;
+  box-sizing: inherit;
+}
+.fleche {
+  vertical-align: top;
+  height: 30px;
+  width: 30px;
+}
+.inp {
+  margin-top: -15px;
+  background: white;
+}
+.bt {
+  position: relative;
+  margin-top: 2em;
+  margin-bottom: 5px;
+  background-color: rgb(83, 83, 170);
+}
+.cad {
+  background: none;
+  color: rgb(17, 15, 15);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 18px;
+  border-radius: 8px 8px 8px 8px;
+}
+.cad:hover {
+  transition: 0.6s;
+  background: rgb(170, 242, 247);
+  cursor: pointer;
+  border: solid !important;
+}
