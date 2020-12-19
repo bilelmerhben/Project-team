@@ -23,7 +23,11 @@ function Home() {
       </div>
     </div>
     <div className="secondLayerHome">
-        <h1>hello second layer home</h1>
+        <h3>MÉDICAMENTS</h3>
+        <h1>Vous avez actuellement un traitement médicamenteux et vous présentez des symptômes du COVID-19 ?</h1>
+        <h5>Fièvre, fatigue, maux de tête, toux et maux de gorge, courbatures, gêne respiratoire.
+         Pour vérifier si un médicament présente un risque d’aggraver vos symptômes :</h5>
+         <button>Covid19 - medicaments.com</button>
     </div>
     </div>
     
