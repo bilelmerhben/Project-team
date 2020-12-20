@@ -125,8 +125,21 @@ function Question2() {
   return (
     <div className="test1">
       <div className="div1 container-lg">
+<<<<<<< HEAD
         <h4>Question 2 sur 22</h4>
 
+=======
+        <h4>Question 2 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        <p className="questionsTitle">
+          Ces derniers jours, avez-vous une toux ou votre toux habituelle
+          s’est-elle modifiée ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question3">
           <div className="question">
             <p className="questionsTitle">
@@ -187,7 +200,12 @@ function Question3() {
       <div className="div1 container-lg ">
         <br />
 
-        <h4>Question 3 sur 22</h4>
+        <h4>Question 3 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
 
         <form action="/Test1/Question4">
           <div className="question">
@@ -261,7 +279,12 @@ function Question4() {
       <div className="div1 container-lg ">
         <br />
 
-        <h4>Question 4 sur 22</h4>
+        <h4>Question 4 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
 
         <form action="/Test1/Question5">
           <div className="question">
@@ -337,7 +360,21 @@ function Question5() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 5 sur 22</h4>
+=======
+        <br />
+        <h4>Question 5 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        <p className="questionsTitle">
+          - Ces dernières 24 heures, avez-vous de la diarrhée ? Avec au moins 3
+          selles molles.
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question6">
           <div className="question">
             <p className="questionsTitle">
@@ -399,7 +436,22 @@ function Question6() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 6 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 6 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Ces derniers jours, avez-vous une fatigue inhabituelle ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question7">
           <div className="question">
             <p className="questionsTitle">
@@ -459,8 +511,24 @@ function Question7() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 7 sur 22</h4>
 
+=======
+        <br />
+        <Link>
+          <h4>Question 7 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Cette fatigue vous oblige-t-elle à vous reposer plus de la moitié de
+          la journée ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question8">
           <div className="question">
             <p className="questionsTitle">
@@ -503,7 +571,23 @@ function Question8() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 8 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 8 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Depuis 24 heures ou plus, êtes-vous dans l'impossibilité de vous
+          alimenter ou de boire ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question9">
           <div className="question">
             <p className="questionsTitle">
@@ -564,8 +648,24 @@ function Question9() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 9 sur 22</h4>
 
+=======
+        <br />
+        <Link>
+          <h4>Question 9 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Ces dernières 24 heures, avez-vous noté un manque de souffle
+          inhabituel lorsque vous parlez ou faites un petit effort ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question10">
           <div className="question">
             <p className="questionsTitle">
@@ -627,7 +727,23 @@ function Question10() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 10 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 10 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Quel est votre âge ? Ceci, afin de calculer un facteur de risque
+          spécifique.
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question11">
           <div className="question">
             <p className="questionsTitle">
@@ -690,7 +806,24 @@ function Question11() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 11 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 11 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Quel est votre taille ? Afin de calculer l’indice de masse
+          corporelle qui est un facteur influençant le risque de complications
+          de l’infection.
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question12">
           <div className="question">
             <p className="questionsTitle">
@@ -763,7 +896,24 @@ function Question12() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 12 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 12 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Quel est votre poids ? Afin de calculer l’indice de masse corporelle
+          qui est un facteur influençant le risque de complications de
+          l’infection.
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question13">
           <div className="question">
             <p className="questionsTitle">
@@ -833,7 +983,26 @@ function Question13() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 13 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 13 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Avez-vous des antécédents de maladie cardiovasculaire : hypertension
+          artérielle compliquée (avec complications cardiaques, rénales),
+          accident vasculaire cérébral, maladie coronaire (infarctus), chirurgie
+          cardiaque, insuffisance cardiaque avec essoufflement au moindre effort
+          ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question14">
           <div className="question">
             <p className="questionsTitle">
@@ -922,7 +1091,23 @@ function Question14() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 14 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 14 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Avez-vous un diabète mal équilibré ou avec des complications (yeux,
+          reins) ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question15">
           <div className="question">
             <p className="questionsTitle">
@@ -993,7 +1178,23 @@ function Question15() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 15 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 15 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Avez-vous un cancer évolutif sous traitement (hors hormonothérapie)
+          ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question16">
           <div className="question">
             <p className="questionsTitle">
@@ -1064,7 +1265,24 @@ function Question16() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 16 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 16 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Avez-vous une maladie respiratoire chronique (bronchopneumopathie
+          obstructive, asthme sévère, fibrose pulmonaire, syndrome d’apnées du
+          sommeil, mucoviscidose) ou êtes-vous suivi par un pneumologue ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question17">
           <div className="question">
             <p className="questionsTitle">
@@ -1146,7 +1364,23 @@ function Question17() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 17 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 17 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Avez-vous une insuffisance rénale chronique avec besoin de faire de
+          la dialyse ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question18">
           <div className="question">
             <p className="questionsTitle">
@@ -1210,7 +1444,20 @@ function Question18() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 18 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 18 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">- Avez-vous une cirrhose ?</p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question19">
           <div className="question">
             <p className="questionsTitle">Avez-vous une cirrhose ?</p>
@@ -1269,7 +1516,22 @@ function Question19() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 19 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 19 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Êtes-vous une femme enceinte au 3ème trimestre de votre grossesse ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question20">
           <div className="question">
             <p className="questionsTitle">
@@ -1333,7 +1595,28 @@ function Question20() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 20 sur 22</h4>
+=======
+        <br />
+        <Link>
+          <h4>Question 20 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Avez-vous une immunodépression, par exemple : médicamenteuse
+          (chimiothérapie anti cancéreuse, traitement immunosuppresseur,
+          biothérapie et/ou corticothérapie à dose immunosuppressive depuis plus
+          de 15 jours) ,Infection à VIH non contrôlée ou avec des CD4 200/mm3 ,
+          consécutive à une greffe d’organe solide ou de cellules souches
+          hématopoïétiques , liée à une hémopathie maligne en cours de
+          traitement ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question21">
           <div className="question">
             <p className="questionsTitle">
@@ -1410,8 +1693,24 @@ function Question21() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 21 sur 22</h4>
 
+=======
+        <br />
+        <Link>
+          <h4>Question 21 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Avez-vous une drépanocytose homozygote (forme majeure) ou bénéficié
+          d’une splénectomie (ablation de la rate) à cause de la drépanocytose ?
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form action="/Test1/Question22">
           <div className="question">
             <p className="questionsTitle">
@@ -1456,8 +1755,24 @@ function Question22() {
   return (
     <div className="test1">
       <div className="div1 container-lg ">
+<<<<<<< HEAD
         <h4>Question 22 sur 22</h4>
 
+=======
+        <br />
+        <Link>
+          <h4>Question 22 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
+        </Link>
+        <p className="questionsTitle">
+          - Quel est le code postal de votre résidence actuelle ? Cette
+          information nous permet de réaliser un suivi épidémiologique.
+        </p>
+>>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
         <form>
           <div className="question">
             <p className="questionsTitle">
