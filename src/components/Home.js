@@ -39,8 +39,8 @@ function Home() {
 <br/>
 <br/>
       <div className="container">
-        <div class="row align-items-center">
-          <div class="col-md-2 col-lg-4 align-items-center justify-content-center d-flex lg-padding-right-60">
+        <div className="row align-items-center">
+          <div className="col-md-2 col-lg-4 align-items-center justify-content-center d-flex lg-padding-right-60">
             <div className="section-advices-icon">
               <img
                 src={conseil}
@@ -49,7 +49,7 @@ function Home() {
               alt=""/>
             </div>
           </div>
-          <div class="col-md-8 col-lg-7 offset-md-1 offset-lg-0">
+          <div className="col-md-8 col-lg-7 offset-md-1 offset-lg-0">
             <h2 className="title">
               <span className="category">Conseils </span> <hr />
               Comment se protéger et protéger les autres au quotidien ?
