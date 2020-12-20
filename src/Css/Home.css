@@ -46,44 +46,42 @@
   vertical-align: baseline;
   outline: 0;
 }
-.secondLayerHome {
-  border-radius: 20px;
-  border: 1px solid rgb(131, 131, 131);
-  background-image: url("https://health.sunnybrook.ca/wp-content/uploads/2013/10/meds-hospital.jpg");
-  background-size: cover;
-  margin-bottom: 50px;
-  height: 80vh;
-  opacity: 0.8;
-}
-#titre {
-  margin-left: -700px;
-  font-weight: 500;
-  opacity: 0.5;
-}
-#question {
-  font-weight: 500;
-}
-.contenu {
-  padding: 100px;
-}
-.symptome {
-  font-size: 1.3em;
-  margin-left: 100px;
-  font-weight: 600;
-}
-.site {
-  opacity: 0.8;
-  margin-top: 40px;
-  margin-left: 700px;
-}
-.btnclass {
-  font-weight: bolder;
-  font-size: 6mm;
-}
 
-.thirdLayerHome {
+.secondLayerHome {
   background: rgb(254, 254, 254);
   padding: 200px;
+}
+
+.row {
+  flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+}
+.section-advices-icon{
+  text-align: left;
+}
+img{
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+  border-style: none;
+  margin-right: 2em;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+.list-icon-item {
+  font-size: 20px;
+  line-height: 1.5;
+  margin: 64px 0;
+  align-items: center;
+  display: flex;
+  font-weight: 500;
+  padding-left: 80px;
+  position: relative;
 }
 .home {
   padding-top: 125px;

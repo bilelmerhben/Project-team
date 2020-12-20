@@ -1,61 +1,116 @@
 import React from "react";
 import Btns from "./testBtnLayout/buttons";
 import "../Css/Home.css";
-import conseil from "../img/conseil.png";
-import icon1cons from "../img/icon1cons.png";
+import conseil from "../img/healthcare.png";
+import distance from "../img/social-distancing.png";
+import mask from "../img/mask.png";
+import home from "../img/home.png";
+import hands from "../img/wash-your-hands.png";
+import cough from "../img/cough.png";
+import hi from "../img/hi.png";
+import tissue from "../img/tissue-paper.png";
 
 function Home() {
   return (
     <div className="container-fluid ">
       <div className="container-fluid firstLayerHome">
-      <div className="firstLayerHome ">
-        <div className="container">
-              <div className="tp-caption home">Welcome to</div>
-              <div className="tp-caption ">CoronaVirus.tn</div>
-
-        </div>
-        
-          <Btns />
-       
-      </div>
-      </div>
-      <div className="container-fluid secondLayerHome" style={{width:1200}}>
-
-      <div className="contenu" >
-        
-        <h1 id="titre">MÉDICAMENTS</h1><br/>
-        <h1 id="question">
-          Vous avez actuellement un traitement médicamenteux et vous présentez
-          des symptômes du COVID-19 ?
-        </h1><br/><br/>
-        <div className="symptome">
-          <p>Fièvre, fatigue, maux de tête, toux et maux de gorge, courbatures,
-          gêne respiratoire.<br/>Pour vérifier si un médicament présente un risque
-          d’aggraver vos symptômes :</p>
-        </div><br/><br/>
-          <div className="site ">
-        <h5>Visitez Notre Site :</h5>
-        <a href="https://www.covid19-medicaments.com/" >
-         <p class="btnclass"><span  style={{color:"rgb(141, 235, 208)"}}>Covid19</span>
-          <span  style={{color:"rgb(69, 187, 235)"}}>-medicaments.com</span>
-          </p> </a>
+        <div className="firstLayerHome ">
+          <div className="container">
+            <div className="tp-caption home">Welcome to</div>
+            <div className="tp-caption ">CoronaVirus.tn</div>
           </div>
+          <Btns />
+        </div>
       </div>
-    </div>
-    <div className="thirdLayerHome container-fluid ">
-      <img src={conseil} href="conseil" style={{width:300,height:100}}/>
+
+    
+        <div className="container">
+          <div class="row align-items-center">
+            <div class="col-md-2 col-lg-4 align-items-center justify-content-center d-flex lg-padding-right-60">
+              <div className="section-advices-icon">
+                <img
+                  src={conseil}
+                  href="conseil"
+                  style={{ width: 200, height: 250 }}
+                />
+              </div>
+            </div>
+            <div class="col-md-8 col-lg-7 offset-md-1 offset-lg-0">
+              <h2 className="title">
+                <span className="category">Conseils </span> <hr/>
+                Comment se protéger et protéger les autres au quotidien ?
+              </h2>
+              <ul className="list-icon">
+                <li className="list-icon-item">
+                 
+                    <img src={distance}  alt="" />
+                 
+                  <span>
+                    <strong> Respectez au maximum </strong> les mesures de distanciation sociales.
+                  </span>
+                </li>
+                <li className="list-icon-item">
+                  
+                    <img src={mask}  alt="" />
+              
+                  <span>
+                    <strong> Portez un masque. </strong>
+                  </span>
+                </li>
+                <li className="list-icon-item">
+             
+                    <img src={home}alt="" />
+            
+                  <span>
+                    <strong > Limitez les interactions sociales </strong>,
+                    certaines personnes transmettent le virus sans en ressentir
+                    les symptômes.
+                  </span>
+                </li>
+                <li className="list-icon-item">
+                
+                    <img src={hands} alt="" />
+                
+                  <span>
+                    Lavez-vous
+                    <strong> très régulièrement </strong>
+                    les mains.
+                  </span>
+                </li>
+                <li className="list-icon-item">
+              
+                    <img src={cough}alt="" />
+               
+                  <span>
+                    Toussez ou éternuez
+                    <strong> dans votre coude ou dans un mouchoir. </strong>
+                  </span>
+                </li>{" "}
+                <li className="list-icon-item">
       
-        <h1>Comment se protéger et protéger les autres au quotidien ?</h1>
-        <img src={icon1cons} href="" />
-       <h5>Respectez au maximum les mesures de distanciation sociales.</h5>
-       <h5>Portez un masque.</h5>
-       <h5>Limitez les interactions sociales, certaines personnes transmettent le virus sans en ressentir les symptômes.</h5>
-       <h5>Lavez-vous très régulièrement les mains.</h5>
-       <h5>Toussez ou éternuez dans votre coude ou dans un mouchoir.</h5>
-       <h5>Saluez sans serrer la main, n'embrassez personne.</h5>
-       <h5>Utilisez un mouchoir à usage unique et jetez-le.</h5>
-    </div>
-    </div>
+                    <img src={hi} alt="" />
+           
+                  <span>
+                    Saluez
+                    <strong> sans serrer la main, n'embrassez personne. </strong>
+                  </span>
+                </li>{" "}
+                <li className="list-icon-item">
+      
+                    <img src={tissue} alt="" />
+           
+                  <span>
+                    Utilisez un 
+                    <strong> mouchoir à usage unique </strong>
+                    et jetez-le.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
   );
 }
 export default Home;
