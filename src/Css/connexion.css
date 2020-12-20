@@ -21,11 +21,11 @@ h1 {
   .sign-in-card{
     position: absolute;
     top : 20%;
-    left : 25%;
+    left : 20%;
     bottom: auto;
     right: 15%;
     background-color: #F7F7F7;
-    width: 50%;
+    width: 60%;
     border-radius: 2px;
     box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     overflow: hidden;

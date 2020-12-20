@@ -9,11 +9,13 @@ function Connexion() {
       <form>
       <hr/>
       <div className="form-group ">
-        <div>
+        <div className="row">
+          <div className="col">
           <input type="radio" value="None" id="radioOne" name="account" checked />
-          <label for="radioOne" className="radio1" >Personnel</label>
+          <label for="radioOne" className="radio1" >Patient</label> </div>
+          <div className="col">
           <input type="radio" value="None" id="radioTwo" name="account" />
-          <label for="radioTwo" className="radio1">Professionnel</label>
+          <label for="radioTwo" className="radio1">Laboratoire</label></div>
         </div>
       </div>
         <div className="form-group margin-input">
