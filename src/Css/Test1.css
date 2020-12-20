@@ -7,18 +7,19 @@
 
 }
 .questionsIndication{
-  color: #7b7070;
+    color: #7b7070;
     font-weight: 500;
     margin-bottom: 21px;
     padding: 0 40px;
 }
 .test1 {
-  margin-top: 80px;
-  display: flex;
+    margin-top: 80px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 60px;
     box-sizing: inherit;
+    
 }
 
 .div1 {
@@ -31,12 +32,25 @@
 }
 
 .bt1 {
-  background-color: rgb(83, 83, 170);
-  justify-content: flex-end;
-   
+    background-color: rgb(83, 83, 170);
+    justify-content: flex-end;
     max-width: 1200px;
     margin: 2px 0 10px 40%;
  
+}
+.input-text{
+  height: 64px;
+    width: auto;
+    
+    font-size: 28px;
+    font-weight: 500;
+    color: #333;
+    border: 3px solid #333;
+    box-sizing: border-box;
+    text-align: right;
+    overflow: visible;
+    margin: 0;
+    padding-left: 5em;
 }
 
 .div1 h4 {
@@ -62,9 +76,9 @@
   width: 100%;
  }
 .input {
-  width: 7%;
-  overflow: visible;
-  margin: 0;
+    width: 7%;
+    overflow: visible;
+    margin: 0;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;

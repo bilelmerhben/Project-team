@@ -3,6 +3,7 @@ import "../Css/Navbar.css";
 
 
 
+
 export default class Navbar extends Component {
   render() {
     return (
@@ -33,8 +34,11 @@ export default class Navbar extends Component {
         <a className="nav-link" href="/Contactez-nous">Contactez-nous</a>
       </li>
     </ul>
-    <a class="btn btn-outline-success  " href="/Connexion">Connectez-vous !</a>
-   
+    <div className="Buttons-nav">
+    <a class="btn connecter  " href="/Connexion">Se connecter</a>
+    <a class="btn inscription  " href="/Inscription">S'inscrire</a>
+
+    </div>
   </div>
 </nav>
 

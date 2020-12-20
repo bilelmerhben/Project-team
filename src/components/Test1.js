@@ -3,6 +3,7 @@ import { Link, Route, Switch } from "react-router-dom";
 import "../Css/Test1.css";
 import temperature from "../img/temperature.png";
 import toux from "../img/toux.png";
+
 class Test1 extends Component {
   render() {
     return (
@@ -41,6 +42,12 @@ function Question1() {
     <div className="test1 ">
       <div className="div1 container-lg   ">
         <h4>Question 1 sur 22</h4>
+        <a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         <p className="questionsTitle">
           Ces dernières 48 heures, quelle a été votre température la plus élevée
           ?
@@ -48,19 +55,21 @@ function Question1() {
         <form action="/Test1/Question2">
           <p className="questionsIndication">Remplissez le champ : </p>
           <div className="questionsOptions">
-            <input
-              class="input"
-              type="number"
-              name="Temperature"
-              placeholder="37.0"
-              min="34"
-              max="42"
-              step="0.1"
-              autoComplete
-              autoFocus
-              required
-            />
-            <div className="customText">degrés</div>
+            <p className="customText">
+              <input
+                class="input-text"
+                type="number"
+                name="Temperature"
+                placeholder="37.0"
+                min="34"
+                max="42"
+                step="0.1"
+                autoComplete
+                autoFocus
+                required
+              />
+              degrés
+            </p>
           </div>
           <br />
           <input
@@ -92,20 +101,27 @@ function Question2() {
   return (
     <div className="test1">
       <div className="div1 container-lg">
-          <h4>Question 2 sur 22</h4>
+        <h4>Question 2 sur 22</h4>
         <p className="questionsTitle">
           Ces derniers jours, avez-vous une toux ou votre toux habituelle
           s’est-elle modifiée ?
         </p>
         <form action="/Test1/Question3">
-        <p className="questionsIndication">Sélectionnez une option :</p>
-         <div className="questionsOptions">OUI :<input type="radio" name="radio" required />NON :<input type="radio" name="radio" required /> <br />
-          <input
-            class="btn btn-primary bt1"
-            type="submit"
-            name="submit"
-            value=" Enregistrer et Continuer"
-          /></div>
+          <p className="questionsIndication">Sélectionnez une option :</p>
+          <div className="questionsOptions">
+            <p>
+              OUI :<input type="radio" name="radio" required />
+            </p>
+            <p>
+              NON :<input type="radio" name="radio" required />{" "}
+            </p>
+            <input
+              class="btn btn-primary bt1"
+              type="submit"
+              name="submit"
+              value=" Enregistrer et Continuer"
+            />
+          </div>
         </form>
       </div>
       <div
@@ -130,25 +146,29 @@ function Question3() {
     <div className="test1">
       <div className="div1 container-lg ">
         <br />
-        
-          <h4>Question 3 sur 22</h4>
-    
+
+        <h4>Question 3 sur 22</h4>
+
         <p className="questionsTitle">
           Ces derniers jours, avez-vous noté une perte ou une forte diminution
           de votre goût ou de votre odorat ?
         </p>
         <form action="/Test1/Question4">
-        <p className="questionsIndication">Sélectionnez une option :</p>
-        <div className="questionsOptions">
-         OUI :
-          <input type="radio" name="radio" required />
-          NON :<input type="radio" name="radio" required /> <br />
-          <input
-            class="btn btn-primary bt1"
-            type="submit"
-            name="submit"
-            value=" Enregistrer et Continuer"
-          /></div>
+          <p className="questionsIndication">Sélectionnez une option :</p>
+          <div className="questionsOptions">
+            <p>
+              OUI :<input type="radio" name="radio" required />
+            </p>
+            <p>
+              NON :<input type="radio" name="radio" required />{" "}
+            </p>
+            <input
+              class="btn btn-primary bt1"
+              type="submit"
+              name="submit"
+              value=" Enregistrer et Continuer"
+            />
+          </div>
         </form>
       </div>
       <div class="row row-cols-1 row-cols-md-2">
@@ -190,9 +210,9 @@ function Question4() {
     <div className="test1">
       <div className="div1 container-lg ">
         <br />
-        
-          <h4>Question 4 sur 22</h4>
-    
+
+        <h4>Question 4 sur 22</h4>
+
         <p className="questionsTitle">
           Ces derniers jours, avez-vous eu un mal de gorge et/ou des douleurs
           musculaires et/ou des courbatures inhabituelles et/ou des maux de tête
@@ -201,15 +221,16 @@ function Question4() {
         <form action="/Test1/Question5">
           <p className="questionsIndication">Sélectionnez une option :</p>
           <div className="questionsOptions">
-           OUI :
-          <input type="radio" name="radio" required />
-          NON :<input type="radio" name="radio" required /> <br />
-          <input
-            class="btn btn-primary bt1"
-            type="submit"
-            name="submit"
-            value=" Enregistrer et Continuer"
-          /></div>
+            OUI :
+            <input type="radio" name="radio" required />
+            NON :<input type="radio" name="radio" required /> <br />
+            <input
+              class="btn btn-primary bt1"
+              type="submit"
+              name="submit"
+              value=" Enregistrer et Continuer"
+            />
+          </div>
         </form>
       </div>
       <div class="row row-cols-1 row-cols-md-2">
@@ -294,9 +315,11 @@ function Question6() {
         <Link>
           <h4>Question 6 sur 22</h4>
         </Link>
-        <p className="questionsTitle">- Ces derniers jours, avez-vous une fatigue inhabituelle ?</p>
+        <p className="questionsTitle">
+          - Ces derniers jours, avez-vous une fatigue inhabituelle ?
+        </p>
         <form action="/Test1/Question7">
-        <p className="questionsIndication">Sélectionnez une option :</p> OUI :
+          <p className="questionsIndication">Sélectionnez une option :</p> OUI :
           <input type="radio" name="radio" required />
           NON :<input type="radio" name="radio" required /> <br />
           <input
@@ -338,7 +361,7 @@ function Question7() {
           la journée ?
         </p>
         <form action="/Test1/Question8">
-        <p className="questionsIndication">Sélectionnez une option :</p> OUI :
+          <p className="questionsIndication">Sélectionnez une option :</p> OUI :
           <input type="radio" name="radio" required />
           NON :<input type="radio" name="radio" required /> <br />
           <input
@@ -422,7 +445,7 @@ function Question9() {
           inhabituel lorsque vous parlez ou faites un petit effort ?
         </p>
         <form action="/Test1/Question10">
-        <p className="questionsIndication">Sélectionnez une option :</p> OUI :
+          <p className="questionsIndication">Sélectionnez une option :</p> OUI :
           <input type="radio" name="radio" required />
           NON :<input type="radio" name="radio" required /> <br />
           <input
@@ -518,7 +541,7 @@ function Question11() {
           de l’infection.
         </p>
         <form action="/Test1/Question12">
-        <p className="questionsIndication">Remplissez le champ :</p>{" "}
+          <p className="questionsIndication">Remplissez le champ :</p>{" "}
           <input
             class="input"
             type="number"
@@ -575,7 +598,7 @@ function Question12() {
           l’infection.
         </p>
         <form action="/Test1/Question13">
-        <p className="questionsIndication">Remplissez le champ :</p>{" "}
+          <p className="questionsIndication">Remplissez le champ :</p>{" "}
           <input
             class="input"
             type="number"
@@ -850,7 +873,7 @@ function Question17() {
           la dialyse ?
         </p>
         <form action="/Test1/Question18">
-        <p className="questionsIndication">Sélectionnez une option :</p> OUI :
+          <p className="questionsIndication">Sélectionnez une option :</p> OUI :
           <input type="radio" name="radio" required />
           NON :<input type="radio" name="radio" required /> <br />
           <input
@@ -893,7 +916,7 @@ function Question18() {
         </Link>
         <p className="questionsTitle">- Avez-vous une cirrhose ?</p>
         <form action="/Test1/Question19">
-        <p className="questionsIndication">Sélectionnez une option :</p> OUI :
+          <p className="questionsIndication">Sélectionnez une option :</p> OUI :
           <input type="radio" name="radio" required />
           NON :<input type="radio" name="radio" required /> <br />
           <input
@@ -936,7 +959,7 @@ function Question19() {
           - Êtes-vous une femme enceinte au 3ème trimestre de votre grossesse ?
         </p>
         <form action="/Test1/Question20">
-        <p className="questionsIndication">Sélectionnez une option : </p>OUI :
+          <p className="questionsIndication">Sélectionnez une option : </p>OUI :
           <input type="radio" name="radio" required />
           NON :<input type="radio" name="radio" required />
           Non applicable :<input type="radio" name="radio" required /> <br />
@@ -1028,7 +1051,7 @@ function Question21() {
           d’une splénectomie (ablation de la rate) à cause de la drépanocytose ?
         </p>
         <form action="/Test1/Question22">
-        <p className="questionsIndication">Sélectionnez une option :</p>OUI :
+          <p className="questionsIndication">Sélectionnez une option :</p>OUI :
           <input type="radio" name="radio" required />
           NON :<input type="radio" name="radio" required /> <br />
           <input
@@ -1056,7 +1079,7 @@ function Question22() {
           information nous permet de réaliser un suivi épidémiologique.
         </p>
         <form>
-        <p className="questionsIndication">Remplissez le champ :</p>{" "}
+          <p className="questionsIndication">Remplissez le champ :</p>{" "}
           <input
             class="input"
             type="number"
