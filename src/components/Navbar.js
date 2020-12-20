@@ -35,8 +35,8 @@ export default class Navbar extends Component {
       </li>
     </ul>
     <div className="Buttons-nav">
-    <a class="btn connecter  " href="/Connexion">Se connecter</a>
-    <a class="btn inscription  " href="/Inscription">S'inscrire</a>
+    <a className="btn connecter  " href="/Connexion">Se connecter</a>
+    <a className="btn inscription  " href="/Inscription">S'inscrire</a>
 
     </div>
   </div>

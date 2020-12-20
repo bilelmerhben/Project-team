@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "../Css/Test1.css";
 
 import toux from "../img/toux.png";
@@ -79,10 +79,9 @@ function Question1() {
                   type="number"
                   name="Temperature"
                   placeholder="37.0"
-                  min="34"
+                  min="36"
                   max="42"
                   step="0.1"
-                  autoComplete
                   autoFocus
                   required
                 />
@@ -92,7 +91,7 @@ function Question1() {
           </div>
           <br />
           <input
-            class=" btn btn-primary bt1"
+            className=" btn btn-primary bt1"
             type="submit"
             name="submit"
             value=" Enregistrer et Continuer"
@@ -152,7 +151,7 @@ function Question2() {
             </div>
             <br />
             <input
-              class="btn btn-primary bt1"
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -215,7 +214,7 @@ function Question3() {
             <br />
 
             <input
-              class="btn btn-primary bt1"
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -288,8 +287,8 @@ function Question4() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -362,8 +361,8 @@ function Question5() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -423,8 +422,8 @@ function Question6() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -485,8 +484,8 @@ function Question7() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -528,8 +527,8 @@ function Question8() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -590,8 +589,8 @@ function Question9() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -655,7 +654,7 @@ function Question10() {
           </div>
           <br />
           <input
-            class="btn btn-primary bt1"
+            className="btn btn-primary bt1"
             type="submit"
             name="submit"
             value=" Enregistrer et Continuer"
@@ -719,7 +718,7 @@ function Question11() {
           </div>
           <br />
           <input
-            class="btn btn-primary bt1"
+            className="btn btn-primary bt1"
             type="submit"
             name="submit"
             value=" Enregistrer et Continuer"
@@ -793,7 +792,7 @@ function Question12() {
           </div>
           <br />
           <input
-            class="btn btn-primary bt1"
+            className="btn btn-primary bt1"
             type="submit"
             name="submit"
             value=" Enregistrer et Continuer"
@@ -867,8 +866,8 @@ function Question13() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -947,8 +946,8 @@ function Question14() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -1018,8 +1017,8 @@ function Question15() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -1090,8 +1089,8 @@ function Question16() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -1171,8 +1170,8 @@ function Question17() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -1232,8 +1231,8 @@ function Question18() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -1300,8 +1299,8 @@ function Question19() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -1369,8 +1368,8 @@ function Question20() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -1437,8 +1436,8 @@ function Question21() {
               </div>
             </div>
             <br />
-            <input
-              class="btn btn-primary bt1"
+<input
+              className="btn btn-primary bt1"
               type="submit"
               name="submit"
               value=" Enregistrer et Continuer"
@@ -1494,7 +1493,7 @@ function Question22() {
 
           <br />
           <input
-            class="btn btn-primary bt1"
+            className="btn btn-primary bt1"
             type="submit"
             name="submit"
             value=" Enregistrer et Continuer"
