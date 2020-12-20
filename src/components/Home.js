@@ -19,24 +19,30 @@ function Home() {
         </div>
       </div>
       </div>
-      <div className="container-fluid secondLayerHome">
+      <div className="container-fluid secondLayerHome" style={{width:1200}}>
 
-      <div className="secondLayerHome">
+      <div className="contenu" >
         
-        <h3>MÉDICAMENTS</h3>
-        <h1>
+        <h1 id="titre">MÉDICAMENTS</h1><br/>
+        <h1 id="question">
           Vous avez actuellement un traitement médicamenteux et vous présentez
           des symptômes du COVID-19 ?
-        </h1>
-        <h5>
-          Fièvre, fatigue, maux de tête, toux et maux de gorge, courbatures,
-          gêne respiratoire. Pour vérifier si un médicament présente un risque
-          d’aggraver vos symptômes :
-        </h5>
-        <button>Covid19 - medicaments.com</button>
+        </h1><br/><br/>
+        <div className="symptome">
+          <p>Fièvre, fatigue, maux de tête, toux et maux de gorge, courbatures,
+          gêne respiratoire.<br/>Pour vérifier si un médicament présente un risque
+          d’aggraver vos symptômes :</p>
+        </div><br/><br/>
+          <div className="site ">
+        <h5>Visitez Notre Site :</h5>
+        <a href="https://www.covid19-medicaments.com/" >
+         <p class="btnclass"><span  style={{color:"rgb(141, 235, 208)"}}>Covid19</span>
+          <span  style={{color:"rgb(69, 187, 235)"}}>-medicaments.com</span>
+          </p> </a>
+          </div>
       </div>
     </div>
-    <div className="thirdLayerHome">
+    <div className="thirdLayerHome container-fluid ">
       <img src={conseil} href="conseil" style={{width:300,height:100}}/>
       
         <h1>Comment se protéger et protéger les autres au quotidien ?</h1>
