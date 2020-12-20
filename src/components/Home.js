@@ -8,15 +8,15 @@ function Home() {
   return (
     <div className="container-fluid ">
       <div className="container-fluid firstLayerHome">
-      <div className="firstLayerHome pt-3 mt-5">
+      <div className="firstLayerHome ">
         <div className="container">
-              <div className="tp-caption">Welcome to</div>
-              <div className="tp-caption">CoronaVirus.tn</div>
+              <div className="tp-caption home">Welcome to</div>
+              <div className="tp-caption ">CoronaVirus.tn</div>
 
         </div>
-        <div className="buttons">
+        
           <Btns />
-        </div>
+       
       </div>
       </div>
       <div className="container-fluid secondLayerHome" style={{width:1200}}>
