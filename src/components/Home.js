@@ -46,7 +46,7 @@ function Home() {
                 src={conseil}
                 href="conseil"
                 style={{ width: 200, height: 250 }}
-              />
+              alt=""/>
             </div>
           </div>
           <div class="col-md-8 col-lg-7 offset-md-1 offset-lg-0">

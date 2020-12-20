@@ -40,7 +40,7 @@ class Surveillance extends Component{
 render(){
     return (
      <div>
-        {(this.state.count ==9)?(<div className="card-body cad card border-info mb-3 mb-3 container-lg"
+        {(this.state.count ===9)?(<div className="card-body cad card border-info mb-3 mb-3 container-lg"
 style={{ maxWidth: 900 ,marginTop:200}}>
   <p class="card-text">
   La recommandation affichée peut évoluer suivant les informations en provenance des autorités de santé et des chercheurs. Elle ne constitue pas un avis médical. En cas de doute, demandez conseil à votre médecin ou pharmacien.
@@ -55,43 +55,43 @@ style={{ maxWidth: 900 ,marginTop:200}}>
    <h5>{obj.contenu[this.state.count]}</h5><br/>
 <form className="inp  " onSubmit={this.changequestion}>
 
-   {(this.state.count ==0)?( <div >
+   {(this.state.count ===0)?( <div >
 <input className="mr-2  " type="radio" name="radio" required /><label>{obj.label[0]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[1]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[2]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[3]}</label><br/>
-</div> ):((this.state.count ==1) ? (
+</div> ):((this.state.count ===1) ? (
           <div>
           <input className="mr-2 " type="radio" name="radio2" required /><label>{obj.label[0]}</label><br/>
           <input className="mr-2 " type="radio" name="radio2" required /><label>{obj.label[1]}</label><br/>
           <input className="mr-2 " type="radio" name="radio2" required /><label>{obj.label[2]}</label><br/>
           <input className="mr-2 " type="radio" name="radio2" required /><label>{obj.label[3]}</label><br/>
-          </div>):(  (this.state.count ==2) ? 
+          </div>):(  (this.state.count ===2) ? 
            (<div>
                 <input type="number" name="Temperature" placeholder="37.0" min="34" max="42" step="0.1" autoComplete autoFocus required /> :Degrés <br />             
            </div> )
-           :(   (this.state.count ==3) ?
+           :(   (this.state.count ===3) ?
                 (<div> 
                  OUI : <input type="radio" name="radio" required />
                    NON : <input type="radio" name="radio" required />
                  </div>)
-            :((this.state.count ==4) ?
+            :((this.state.count ===4) ?
             (<div> OUI : <input type="radio" name="radio" required />
             NON : <input type="radio" name="radio" required />
             </div>)
-            :((this.state.count ==5) ?(<div> OUI : <input type="radio" name="radio" required />
+            :((this.state.count ===5) ?(<div> OUI : <input type="radio" name="radio" required />
             NON : <input type="radio" name="radio" required />
-            </div>):((this.state.count ==6)?(<div> OUI : <input type="radio" name="radio" required />
+            </div>):((this.state.count ===6)?(<div> OUI : <input type="radio" name="radio" required />
             NON : <input type="radio" name="radio" required />
-            </div>):((this.state.count ==7) ?(<div>OUI : <input type="radio" name="radio" required />
+            </div>):((this.state.count ===7) ?(<div>OUI : <input type="radio" name="radio" required />
             NON : <input type="radio" name="radio" required /></div>) :( 
-(this.state.count ==8) ? (<div><input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[0]}</label><br/>
+(this.state.count ===8) ? (<div><input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[0]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[1]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[2]}</label><br/>
 <input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[3]}</label><br/></div>):(
    <></>
 )))))))))}
-  {(this.state.count ==9)?(<></>):
+  {(this.state.count ===9)?(<></>):
 (<input  className="bt  btn btn-primary" type="submit" name="submit" value="Continuer" /> )}
            
 </form>
