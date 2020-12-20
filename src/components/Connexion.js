@@ -3,55 +3,49 @@ import "../Css/connexion.css";
 
 function Connexion() {
   return (
-    <div
-      className="lab card pt-5 align-items-center dark  container-lg"
-      style={{ width: 500, marginTop: 150, height: 400 }}
-    >
+    <div className="login-card">
+      <div className="login-content">
       <h1>Connectez-vous</h1>
       <form>
       <hr/>
-      <div className="form-group">
-        <div className="accounttype">
-          <input type="radio" value="None" id="radioOne" name="account" checked/>
-          <label for="radioOne" class="radio1" chec>Personal</label>
+      <div className="form-group ">
+        <div>
+          <input type="radio" value="None" id="radioOne" name="account" checked />
+          <label for="radioOne" className="radio1" >Personnel</label>
           <input type="radio" value="None" id="radioTwo" name="account" />
-          <label for="radioTwo" class="radio1">Company</label>
+          <label for="radioTwo" className="radio1">Professionnel</label>
         </div>
       </div>
-        <div className="form-group">
-        <label for="InputEmail1">Email address</label>
+        <div className="form-group margin-input">
+        <label for="InputEmail1">Adresse Email</label>
           <input
             type="email"
-            class="form-control"
-            id="exampleInputEmail1"
+            className="form-control"
+            id="Email"
             aria-describedby="emailHelp"
-            placeholder="Enter email"
+            placeholder="Entrer email"
           />
         </div>
-        <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
+        <div class="form-group margin-input">
+          <label for="exampleInputPassword1">Mot de passe</label>
           <input
             type="password"
             class="form-control"
             id="exampleInputPassword1"
-            placeholder="Password"
+            placeholder="Mot de passe"
           />
         </div>
-        <div class="form-check pb-2">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1">
-            Check me out
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary">
+        
+        <button type="submit" className="connecter">
           Valider
         </button>
         <div className="form-group pt-2">
-          <a type="button" class="btn btn-success" href="/Inscription">
+          <a type="button" className="inscription" href="/Inscription">
             S'inscrire
           </a>
         </div>
       </form>
+      </div>
     </div>
   );
 }
