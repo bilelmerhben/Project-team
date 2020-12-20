@@ -101,7 +101,12 @@ function Question2() {
   return (
     <div className="test1">
       <div className="div1 container-lg">
-        <h4>Question 2 sur 22</h4>
+        <h4>Question 2 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         <p className="questionsTitle">
           Ces derniers jours, avez-vous une toux ou votre toux habituelle
           s’est-elle modifiée ?
@@ -147,7 +152,12 @@ function Question3() {
       <div className="div1 container-lg ">
         <br />
 
-        <h4>Question 3 sur 22</h4>
+        <h4>Question 3 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
 
         <p className="questionsTitle">
           Ces derniers jours, avez-vous noté une perte ou une forte diminution
@@ -211,7 +221,12 @@ function Question4() {
       <div className="div1 container-lg ">
         <br />
 
-        <h4>Question 4 sur 22</h4>
+        <h4>Question 4 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
 
         <p className="questionsTitle">
           Ces derniers jours, avez-vous eu un mal de gorge et/ou des douleurs
@@ -271,7 +286,12 @@ function Question5() {
     <div className="test1">
       <div className="div1 container-lg ">
         <br />
-        <h4>Question 5 sur 22</h4>
+        <h4>Question 5 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         <p className="questionsTitle">
           - Ces dernières 24 heures, avez-vous de la diarrhée ? Avec au moins 3
           selles molles.
@@ -313,7 +333,12 @@ function Question6() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 6 sur 22</h4>
+          <h4>Question 6 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Ces derniers jours, avez-vous une fatigue inhabituelle ?
@@ -354,7 +379,12 @@ function Question7() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 7 sur 22</h4>
+          <h4>Question 7 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Cette fatigue vous oblige-t-elle à vous reposer plus de la moitié de
@@ -396,7 +426,12 @@ function Question8() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 8 sur 22</h4>
+          <h4>Question 8 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Depuis 24 heures ou plus, êtes-vous dans l'impossibilité de vous
@@ -438,7 +473,12 @@ function Question9() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 9 sur 22</h4>
+          <h4>Question 9 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Ces dernières 24 heures, avez-vous noté un manque de souffle
@@ -480,7 +520,12 @@ function Question10() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 10 sur 22</h4>
+          <h4>Question 10 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Quel est votre âge ? Ceci, afin de calculer un facteur de risque
@@ -533,7 +578,12 @@ function Question11() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 11 sur 22</h4>
+          <h4>Question 11 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Quel est votre taille ? Afin de calculer l’indice de masse
@@ -590,7 +640,12 @@ function Question12() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 12 sur 22</h4>
+          <h4>Question 12 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Quel est votre poids ? Afin de calculer l’indice de masse corporelle
@@ -648,7 +703,12 @@ function Question13() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 13 sur 22</h4>
+          <h4>Question 13 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Avez-vous des antécédents de maladie cardiovasculaire : hypertension
@@ -714,7 +774,12 @@ function Question14() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 14 sur 22</h4>
+          <h4>Question 14 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Avez-vous un diabète mal équilibré ou avec des complications (yeux,
@@ -760,7 +825,12 @@ function Question15() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 15 sur 22</h4>
+          <h4>Question 15 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Avez-vous un cancer évolutif sous traitement (hors hormonothérapie)
@@ -806,7 +876,12 @@ function Question16() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 16 sur 22</h4>
+          <h4>Question 16 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Avez-vous une maladie respiratoire chronique (bronchopneumopathie
@@ -866,7 +941,12 @@ function Question17() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 17 sur 22</h4>
+          <h4>Question 17 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Avez-vous une insuffisance rénale chronique avec besoin de faire de
@@ -912,7 +992,12 @@ function Question18() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 18 sur 22</h4>
+          <h4>Question 18 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">- Avez-vous une cirrhose ?</p>
         <form action="/Test1/Question19">
@@ -953,7 +1038,12 @@ function Question19() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 19 sur 22</h4>
+          <h4>Question 19 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Êtes-vous une femme enceinte au 3ème trimestre de votre grossesse ?
@@ -993,7 +1083,12 @@ function Question20() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 20 sur 22</h4>
+          <h4>Question 20 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Avez-vous une immunodépression, par exemple : médicamenteuse
@@ -1044,7 +1139,12 @@ function Question21() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 21 sur 22</h4>
+          <h4>Question 21 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Avez-vous une drépanocytose homozygote (forme majeure) ou bénéficié
@@ -1072,7 +1172,12 @@ function Question22() {
       <div className="div1 container-lg ">
         <br />
         <Link>
-          <h4>Question 22 sur 22</h4>
+          <h4>Question 22 sur 22</h4><a href="javascript:history.back()">
+        Retour
+        
+        &nbsp;
+        
+      </a>
         </Link>
         <p className="questionsTitle">
           - Quel est le code postal de votre résidence actuelle ? Cette
