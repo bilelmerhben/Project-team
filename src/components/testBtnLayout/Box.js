@@ -10,8 +10,9 @@ export default function Box({ title, classname, img , text,lien }) {
 
 
     <div className={classname}>
-       <img src={img} alt={""} />
        <br/>
+       <img src={img} alt={""} />
+       <br/><br/>
        <h4 classname={classname}>
        <a href={lien}  style={{textDecoration:"none", color:"white"}} >
        {title}

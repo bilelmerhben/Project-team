@@ -35,7 +35,7 @@ class Btns extends Component {
               classname={"sub3"}
               img={labo}
               title={"Laboratoire plus Proche"}
-              text={"Some text "}
+              text={"Cliquez ici pour consulter les informations sur le laboratoire le plus proche de chez vous "}
               lien={"/Laboratoires"}
             />
           </div>

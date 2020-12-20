@@ -1,8 +1,8 @@
 /*sub1*/
 .sub1 {
   background-color: #435ba1;
-  height: 200px;
-  font-size: 18px;
+  height: 250px;
+  font-size: 16px;
   border-radius: 10px 0px 0px 10px;
   transition: 0.6s;
   overflow: hidden;
@@ -63,8 +63,8 @@
 /*sub2*/
 .sub2 {
   background-color: #4f6dcd;;
-  height: 200px;
-  font-size: 18px;
+  height: 250px;
+  font-size: 16px;
   border-radius: 0 0 0 0;
   transition: 0.6s;
   overflow: hidden;
@@ -122,8 +122,8 @@
 /*sub3*/
 .sub3 {
   background-color: #43d5cb;
-  height: 200px;
-  font-size: 18px;
+  height: 250px;
+  font-size: 16px;
   border-radius: 0 10px 10px 0 ;
   transition: 0.6s;
   overflow: hidden;
