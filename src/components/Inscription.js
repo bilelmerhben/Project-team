@@ -38,10 +38,6 @@ export default function Inscription (){
     </div>
     
   </div>
-<<<<<<< HEAD
-  
-  <button class="inscription" type="submit">Valider l'inscription</button>
-=======
   <div className="form-group">
     <div className="form-check">
       <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required/>
@@ -52,7 +48,6 @@ export default function Inscription (){
     </div>
   </div>
   <button className="inscription" type="submit">Valider l'inscription</button>
->>>>>>> 4d070095faf0b582bf0aa55695bfe16dbc189d0a
 </form>
 
 
