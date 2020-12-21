@@ -9,6 +9,8 @@ import hands from "../img/wash-your-hands.png";
 import cough from "../img/cough.png";
 import hi from "../img/hi.png";
 import tissue from "../img/tissue-paper.png";
+import Footer from "./Footer";
+
 
 function Home() {
   return (
@@ -122,7 +124,10 @@ function Home() {
           </div>
         </div>
       </div>
+
     </div>
+  
+   
   );
 }
 export default Home;

@@ -12,7 +12,7 @@ import Contact from "./components/Contact";
 import Connexion from "./components/Connexion";
 import Test1 from "./components/Test1";
 import Inscription from "./components/Inscription";
-
+import Footer from "./components/Footer";
 
 function App() {
  
@@ -34,6 +34,7 @@ function App() {
        <Route  path="/Inscription" component={Inscription} />
        <Route  path="/Test1" component={Test1} />
        </Switch>
+       <Footer />
     </div>
 
 

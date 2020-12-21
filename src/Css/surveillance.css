@@ -111,9 +111,8 @@
   height : 500vh;
  }
  .questionsOptions2{
-  
-  padding: 47px 40px 11px;
-  align-items: flex-start;
+    padding: 47px 40px 11px;
+    align-items: flex-start;
     background-color: #fff;
     display: flex;
     flex-direction: column;
