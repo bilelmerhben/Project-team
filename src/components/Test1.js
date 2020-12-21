@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import "../Css/Test1.css";
-
 import toux from "../img/toux.png";
 import temperature from "../img/temperature.png";
 import informations from "../img/informations.png";

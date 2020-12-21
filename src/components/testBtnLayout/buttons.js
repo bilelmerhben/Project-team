@@ -3,6 +3,7 @@ import Box from "./Box";
 import test from "../../img/test.png";
 import labo from "../../img/Labo.png";
 import surv from "../../img/surv.png";
+import "../../Css/box.css";
 class Btns extends Component {
   render() {
     return (

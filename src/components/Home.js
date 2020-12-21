@@ -17,27 +17,31 @@ function Home() {
         <div className="firstLayerHome ">
           <div className="container">
             <div className="tp-caption home">
-              <center><p> Bienvenue à CoronaVirus.tn</p></center>
-           
-              </div>
-              <br/><br/>
-              <center><div>
-                <h2 >Informer, Analyser et Orienter</h2>
+              <center>
+                <p> Bienvenue à CoronaVirus.tn</p>
+              </center>
+            </div>
+            <br />
+            <br />
+            <center>
+              <div>
+                <h2>Informer, Analyser et Orienter</h2>
                 <p>
                   Des outils créés par l'Alliance Digitale contre le COVID-19 et
                   mis à la disposition de tous les citoyens, gratuitement, dans
                   le respect de leur vie privée.
                 </p>
-              
-            </div></center>
-          </div> 
+              </div>
+            </center>
+          </div>
           <Btns />
         </div>
       </div>
-<br/>
-<br/>
-<br/>
-<br/>
+      
+      <br />
+      <br />
+      <br />
+      <br />
       <div className="container">
         <div className="row align-items-center">
           <div className="col-md-2 col-lg-4 align-items-center justify-content-center d-flex lg-padding-right-60">
@@ -46,7 +50,8 @@ function Home() {
                 src={conseil}
                 href="conseil"
                 style={{ width: 200, height: 250 }}
-              alt=""/>
+                alt=""
+              />
             </div>
           </div>
           <div className="col-md-8 col-lg-7 offset-md-1 offset-lg-0">
