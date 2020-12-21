@@ -38,16 +38,7 @@ export default function Inscription (){
     </div>
     
   </div>
-  <div className="form-group">
-    <div className="form-check">
-      <input className="form-check-input" type="checkbox" value="" id="invalidCheck" required/>
-      <label className="form-check-label" for="invalidCheck">
-        Agree to terms and conditions
-      </label>
-      
-    </div>
-  </div>
-  <button className="inscription" type="submit">Valider l'inscription</button>
+
 </form>
 
 
