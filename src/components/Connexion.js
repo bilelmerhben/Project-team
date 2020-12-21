@@ -11,15 +11,15 @@ function Connexion() {
       <div className="form-group ">
         <div className="row">
           <div className="col">
-          <input type="radio" value="None" id="radioOne" name="account" checked />
-          <label for="radioOne" className="radio1" >Patient</label> </div>
+          <input type="radio" value="None" id="radioOne" name="account"  />
+          <label htmlFor="radioOne" className="radio1" >Patient</label> </div>
           <div className="col">
           <input type="radio" value="None" id="radioTwo" name="account" />
-          <label for="radioTwo" className="radio1">Laboratoire</label></div>
+          <label htmlFor="radioTwo" className="radio1">Laboratoire</label></div>
         </div>
       </div>
         <div className="form-group margin-input">
-        <label for="InputEmail1">Adresse Email</label>
+        <label htmlFor="InputEmail1">Adresse Email</label>
           <input
             type="email"
             className="form-control"
@@ -28,11 +28,11 @@ function Connexion() {
             placeholder="Entrer email"
           />
         </div>
-        <div class="form-group margin-input">
-          <label for="exampleInputPassword1">Mot de passe</label>
+        <div className="form-group margin-input">
+          <label htmlFor="exampleInputPassword1">Mot de passe</label>
           <input
             type="password"
-            class="form-control"
+            className="form-control"
             id="exampleInputPassword1"
             placeholder="Mot de passe"
           />
