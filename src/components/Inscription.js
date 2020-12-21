@@ -28,12 +28,12 @@ export default function Inscription (){
     </div>
     <div className="col-md mb-3">
       <label htmlFor="validationCustom04">Mot de passe</label>
-      <input type="password" className="form-control" id="validationCustom04" placeholder="mot de passe" required/>
+      <input type="password" className="form-control" id="validationCustom" placeholder="mot de passe" required/>
       
     </div>
     <div className="col-md mb-3">
       <label htmlFor="validationCustom04">Confirmer votre mot de passe</label>
-      <input type="password" className="form-control" id="validationCustom04" placeholder="mot de passe" required/>
+      <input type="password" className="form-control" id="validationCustom" placeholder="mot de passe" required/>
       
     </div>
     
