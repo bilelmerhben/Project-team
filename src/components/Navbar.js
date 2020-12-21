@@ -10,7 +10,7 @@ export default class Navbar extends Component {
      
   <nav className="navbar shadow  bg-white rounded fixed-top navbar-expand-lg navbar-light background-color:#6e6e6e">
   <div className="collapse navbar-collapse pt-0 pb-0 mt-0 mb-2" id="navbarText">
-    <a className="navbar-brand " href="/"/>
+    <a className="navbar-brand " href="/">{}</a>
     <ul className="navbar-nav mr-auto">
       <li className="nav-item rounded ">
         <a className="nav-link" href="/Test1/Question1"> Testez-Vous </a>
