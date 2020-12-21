@@ -97,7 +97,8 @@ function Question1() {
           />
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -106,15 +107,17 @@ function Question1() {
           <div className="banner-form-informations">
             <p className="banner-form-title">La temperature</p>
             <p>
-              La <b>température</b> se mesure avec un thermomètre.</p>
-              <p>Le thermomètre indiqueun nombre</p>
+              La <b>température</b> se mesure avec un thermomètre.
+            </p>
+            <p>Le thermomètre indiqueun nombre</p>
             <p>c'est la température de votre corps.</p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -157,7 +160,9 @@ function Question2() {
             />
           </div>
         </form>
-      </div><br/><br/>
+      </div>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -174,7 +179,8 @@ function Question2() {
         <div className="banner-form-logo2">
           <img src={informations} alt="logo falc" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -221,7 +227,8 @@ function Question3() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -230,10 +237,13 @@ function Question3() {
           <div className="banner-form-informations">
             <p className="banner-form-title">La perte du goût</p>
             <p>
-              La <b>perte du goût</b>, c'est quand vous ne pouvez plus reconnaître le goût d'un aliment.</p>
-              <p>Par exemple, le poulet a le même goût que le poisson.</p>
+              La <b>perte du goût</b>, c'est quand vous ne pouvez plus
+              reconnaître le goût d'un aliment.
+            </p>
+            <p>Par exemple, le poulet a le même goût que le poisson.</p>
           </div>
-        </div><hr/>
+        </div>
+        <hr />
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={odorat} alt="" />
@@ -241,14 +251,20 @@ function Question3() {
           <div className="banner-form-informations">
             <p className="banner-form-title">La perte de l'odorat</p>
             <p>
-              La <b>perte de l'odorat</b>,c'est quand vous ne sentez plus les odeurs.</p>
-              <p>Par exemple, vous ne pouvez plus sentir l'odeur du poulet qui sort du four.</p>
+              La <b>perte de l'odorat</b>,c'est quand vous ne sentez plus les
+              odeurs.
+            </p>
+            <p>
+              Par exemple, vous ne pouvez plus sentir l'odeur du poulet qui sort
+              du four.
+            </p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -286,7 +302,7 @@ function Question4() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -295,7 +311,8 @@ function Question4() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -304,11 +321,13 @@ function Question4() {
           <div className="banner-form-informations">
             <p className="banner-form-title">Le mal de gorge</p>
             <p>
-            Le <b>mal de gorge</b>,</p>
+              Le <b>mal de gorge</b>,
+            </p>
             <p>c’est quand vous ressentez un irritation</p>
-              <p>ou une gêne au niveau de votre gorge.</p>
+            <p>ou une gêne au niveau de votre gorge.</p>
           </div>
-        </div><hr/>
+        </div>
+        <hr />
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={courbature} alt="" />
@@ -316,17 +335,18 @@ function Question4() {
           <div className="banner-form-informations">
             <p className="banner-form-title">La courbature</p>
             <p>
-              La <b> courbature</b>, c'est une douleur musculaire.</p>
-              <p>On peut ressentir des courbatures</p>
-              <p>quand on a fait trop de sport ou quand on est malade.</p>
-              <p>Les muscles du corps sont fatigués,donc ils font mal</p>
-           
+              La <b> courbature</b>, c'est une douleur musculaire.
+            </p>
+            <p>On peut ressentir des courbatures</p>
+            <p>quand on a fait trop de sport ou quand on est malade.</p>
+            <p>Les muscles du corps sont fatigués,donc ils font mal</p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -360,7 +380,7 @@ function Question5() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -369,7 +389,8 @@ function Question5() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -378,8 +399,12 @@ function Question5() {
           <div className="banner-form-informations">
             <p className="banner-form-title">La diarrhée</p>
             <p>
-              La <b>diarrhée</b> c'est aller aux toilettes plus souvent que  d'habitude</p>
-              <p>Il faut être allé aux toilettes au moins 3 fois dans la journée</p>
+              La <b>diarrhée</b> c'est aller aux toilettes plus souvent que
+              d'habitude
+            </p>
+            <p>
+              Il faut être allé aux toilettes au moins 3 fois dans la journée
+            </p>
             <p>La consistance de votre caca est molle ou liquide.</p>
             <p>La quantité est plus importante.</p>
           </div>
@@ -387,8 +412,8 @@ function Question5() {
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
-     
+      </div>
+      <br />
     </div>
   );
 }
@@ -421,7 +446,7 @@ function Question6() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -430,7 +455,8 @@ function Question6() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -438,9 +464,11 @@ function Question6() {
           </div>
           <div className="banner-form-informations">
             <p className="banner-form-title">La fatigue inhabituelle</p>
-            
-            <p>La <b>fatigue inhabituelle</b>, c'est une forme de fatigue</p>
-              <p>que vous n'avez pas l'habitude de ressentir.</p>
+
+            <p>
+              La <b>fatigue inhabituelle</b>, c'est une forme de fatigue
+            </p>
+            <p>que vous n'avez pas l'habitude de ressentir.</p>
             <p>Votre corps est plus faible.</p>
             <p>Les douleurs liées à cette fatigue sont plus importantes.</p>
           </div>
@@ -448,7 +476,8 @@ function Question6() {
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -483,7 +512,7 @@ function Question7() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -492,7 +521,6 @@ function Question7() {
           </div>
         </form>
       </div>
-      
     </div>
   );
 }
@@ -526,7 +554,7 @@ function Question8() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -534,26 +562,32 @@ function Question8() {
             />
           </div>
         </form>
-       
-      </div> <br/><br/>
+      </div>{" "}
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={impossible} alt="" />
           </div>
           <div className="banner-form-informations">
-            <p className="banner-form-title">L'impossibilité de manger ou de boire</p>
+            <p className="banner-form-title">
+              L'impossibilité de manger ou de boire
+            </p>
             <p>
-            Être dans<b> l'impossibilité de manger ou de boire</b> ,</p>
-              <p>c'est que vous n'arrivez plus à avaler ni nourriture ni boisson.</p>
+              Être dans<b> l'impossibilité de manger ou de boire</b> ,
+            </p>
+            <p>
+              c'est que vous n'arrivez plus à avaler ni nourriture ni boisson.
+            </p>
             <p>Vous ressentez du dégoût quand vous voyez de la nourriture.</p>
-
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -588,7 +622,7 @@ function Question9() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -596,9 +630,9 @@ function Question9() {
             />
           </div>
         </form>
-      
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -607,8 +641,9 @@ function Question9() {
           <div className="banner-form-informations">
             <p className="banner-form-title">Le manque de souffle</p>
             <p>
-            Un manque de  <b>souffle est inhabituel</b> ,</p>
-              <p>quand vous avez plus de mal à respirer que les autres jours.</p>
+              Un manque de <b>souffle est inhabituel</b> ,
+            </p>
+            <p>quand vous avez plus de mal à respirer que les autres jours.</p>
             <p>Par exemple vous êtes plus essouflé quand vous parlez</p>
             <p>ou quand vous montez l'escalier.</p>
           </div>
@@ -616,7 +651,8 @@ function Question9() {
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -643,7 +679,6 @@ function Question10() {
                   min="1"
                   max="110"
                   step="1"
-                  
                   autoFocus
                   required
                 />
@@ -659,8 +694,9 @@ function Question10() {
             value=" Enregistrer et Continuer"
           />
         </form>
-       
-      </div> <br/><br/>
+      </div>{" "}
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -669,17 +705,20 @@ function Question10() {
           <div className="banner-form-informations">
             <p className="banner-form-title">L'âge</p>
             <p>
-              Votre<b>âge</b> peut être un <b>facteur de risque</b></p>
-              <p>Un facteur de risque est quelque chose qui augmente la possibilité d’avoir une maladie.</p>
-            <p>Plus votre âge est élevé
-
-et plus vous êtes fragile..</p>
+              Votre<b>âge</b> peut être un <b>facteur de risque</b>
+            </p>
+            <p>
+              Un facteur de risque est quelque chose qui augmente la possibilité
+              d’avoir une maladie.
+            </p>
+            <p>Plus votre âge est élevé et plus vous êtes fragile..</p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -707,7 +746,6 @@ function Question11() {
                   min="80"
                   max="250"
                   step="1"
-                  
                   autoFocus
                   required
                 />{" "}
@@ -723,9 +761,9 @@ function Question11() {
             value=" Enregistrer et Continuer"
           />
         </form>
-       
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -734,25 +772,29 @@ function Question11() {
           <div className="banner-form-informations">
             <p className="banner-form-title">La taille</p>
             <p>
-            Vous avez votre  <b>taille</b> en vous mesurant des pieds à la tête.</p>
-            <br/>
-              <p>Votre poids et votre taille sont des facteurs de risque.
-
-Il faut calculer votre <b>Indice de Masse Corporelle (IMC)</b>.</p>
-            <p>L’IMC donne votre corpulence en faisant un calcul
-
-avec votre poids et votre taille.</p>
-            <p>L’IMC permet de dire
-
-si vous être trop gros ou trop maigre,
-
-et donc plus ou moins fragile.</p>
+              Vous avez votre <b>taille</b> en vous mesurant des pieds à la
+              tête.
+            </p>
+            <br />
+            <p>
+              Votre poids et votre taille sont des facteurs de risque. Il faut
+              calculer votre <b>Indice de Masse Corporelle (IMC)</b>.
+            </p>
+            <p>
+              L’IMC donne votre corpulence en faisant un calcul avec votre poids
+              et votre taille.
+            </p>
+            <p>
+              L’IMC permet de dire si vous être trop gros ou trop maigre, et
+              donc plus ou moins fragile.
+            </p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -781,7 +823,6 @@ function Question12() {
                   min="20"
                   max="250"
                   step="1"
-                  
                   autoFocus
                   required
                 />
@@ -797,9 +838,9 @@ function Question12() {
             value=" Enregistrer et Continuer"
           />
         </form>
-      
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -808,21 +849,29 @@ function Question12() {
           <div className="banner-form-informations">
             <p className="banner-form-title">Le poids</p>
             <p>
-            Vous avez votre<b>poids</b>en vous pesant sur une balance.</p>
-              <br/>
-              <p> Votre poids et votre taille sont des facteurs de risque.</p>
-            <p>Il faut calculer votre <b>Indice de Masse Corporelle (IMC)</b>.</p>
+              Vous avez votre<b>poids</b>en vous pesant sur une balance.
+            </p>
+            <br />
+            <p> Votre poids et votre taille sont des facteurs de risque.</p>
+            <p>
+              Il faut calculer votre <b>Indice de Masse Corporelle (IMC)</b>.
+            </p>
             <p>La quantité est plus importante.</p>
-            <p>L’IMC donne votre corpulence en faisant un calcul avec votre poids et votre taille.</p>
-          <p>L’IMC permet de dire
-
-si vous être trop gros ou trop maigre,et donc plus ou moins fragile.</p>
+            <p>
+              L’IMC donne votre corpulence en faisant un calcul avec votre poids
+              et votre taille.
+            </p>
+            <p>
+              L’IMC permet de dire si vous être trop gros ou trop maigre,et donc
+              plus ou moins fragile.
+            </p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -873,9 +922,9 @@ function Question13() {
             />
           </div>
         </form>
-   
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -884,34 +933,41 @@ function Question13() {
           <div className="banner-form-informations">
             <p className="banner-form-title">L'hypertension artérielle</p>
             <p>
-              Une <b>hypertension artérielle</b>, mal équilibrée,</p>
-              <p>c'est une augmentation trop importante de la tension artérielle.</p>
-              <p>La circulation du sang est trop rapide,</p>
-              <p>donc le sang exerce une trop forte pression sur les artères.</p>
+              Une <b>hypertension artérielle</b>, mal équilibrée,
+            </p>
+            <p>
+              c'est une augmentation trop importante de la tension artérielle.
+            </p>
+            <p>La circulation du sang est trop rapide,</p>
+            <p>donc le sang exerce une trop forte pression sur les artères.</p>
           </div>
-        </div><hr/>
+        </div>
+        <hr />
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={cardiaque} alt="" />
           </div>
           <div className="banner-form-informations">
-            <p className="banner-form-title">La maladie cardiaque ou vasculairet</p>
+            <p className="banner-form-title">
+              La maladie cardiaque ou vasculairet
+            </p>
             <p>
-            L'augmentation de la tension artérielle
-
-peut entraîner des <b>maladies cardiaques ou vasculaires</b>,
-
-c'est-à-dire des maladies du cœur.</p>
-              <p>Ces maladies sont liées à un mauvais fonctionnement du cœur ou des vaisseaux sanguins qui alimentent le cœur.</p>
-          <p>Le cœur est un muscle,
-
-ce muscle devient faible.</p>
+              L'augmentation de la tension artérielle peut entraîner des{" "}
+              <b>maladies cardiaques ou vasculaires</b>, c'est-à-dire des
+              maladies du cœur.
+            </p>
+            <p>
+              Ces maladies sont liées à un mauvais fonctionnement du cœur ou des
+              vaisseaux sanguins qui alimentent le cœur.
+            </p>
+            <p>Le cœur est un muscle, ce muscle devient faible.</p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -945,7 +1001,7 @@ function Question14() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -954,7 +1010,8 @@ function Question14() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -963,26 +1020,29 @@ function Question14() {
           <div className="banner-form-informations">
             <p className="banner-form-title">Le diabète</p>
             <p>
-              Être <b>diabètique</b> c'est avoir trop de sucre dans le sang.</p>
-              <p>Quand vous avez du diabète, c'est que votre corps</p>
+              Être <b>diabètique</b> c'est avoir trop de sucre dans le sang.
+            </p>
+            <p>Quand vous avez du diabète, c'est que votre corps</p>
             <p>ne sait plus réguler le sucre dans le sang.</p>
             <p>Il a des difficultés à utiliser le sucre consommé.</p>
             <p>Ce n'est pas parce que vous avez mangé trop de sucre.</p>
-            <br/>
+            <br />
             <p>Le sucre est nécessaire au fonctionnement de votre corps.</p>
-            <p>Si votre corps n'utilise pas bien ce sucre,
-
-il reste dans votre sang.</p>
-<br/>
-<p>Le diabète abîme les autres organes
-
-et on peut avoir des maladies.</p>
+            <p>
+              Si votre corps n'utilise pas bien ce sucre, il reste dans votre
+              sang.
+            </p>
+            <br />
+            <p>
+              Le diabète abîme les autres organes et on peut avoir des maladies.
+            </p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -1016,7 +1076,7 @@ function Question15() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -1025,7 +1085,8 @@ function Question15() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -1034,17 +1095,25 @@ function Question15() {
           <div className="banner-form-informations">
             <p className="banner-form-title">Le cancer</p>
             <p>
-              Le <b>cancer</b> c'est une maladie
-
-liée à une trop grande et trop rapide multiplication des cellules dans le corps.</p>
-              <p>Elles sont donc trop nombreuses
-
-et inutiles au fonctionnement du corps.</p>
+              {" "}
+              Le <b>cancer</b> c'est une maladie liée à une trop grande et trop
+              rapide multiplication des cellules dans le corps.
+            </p>
+            <p>
+              Elles sont donc trop nombreuses et inutiles au fonctionnement du
+              corps.
+            </p>
             <p>Elles sont cancéreuses.</p>
-            <br/>
-            <p>Ces cellules cancéreuses peuvent toucher différentes parties du corps,</p>
-            <p>par exemple l'estomac, les poumons, les seins, la peau, les os, ...</p>
-            <br/>
+            <br />
+            <p>
+              Ces cellules cancéreuses peuvent toucher différentes parties du
+              corps,
+            </p>
+            <p>
+              par exemple l'estomac, les poumons, les seins, la peau, les os,
+              ...
+            </p>
+            <br />
             <p>Il faut répondre oui à cette question,</p>
             <p>si vous avez encore un cancer,</p>
             <p>ou vous avez eu un cancer il y a 3 ans maximum.</p>
@@ -1053,7 +1122,8 @@ et inutiles au fonctionnement du corps.</p>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -1088,7 +1158,7 @@ function Question16() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -1097,7 +1167,8 @@ function Question16() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -1106,19 +1177,20 @@ function Question16() {
           <div className="banner-form-informations">
             <p className="banner-form-title">La maladie respiratoire</p>
             <p>
-              Une<b> maladie respiratoire</b>,  c'est une maladie
-
-qui empêche de bien respirer.</p>
-              <p>Cette maladie touche les organes
-
-qui sont nécessaires pour la respiration
-
-comme les poumons.</p>
-<p>Par exemple, on est vite essouflé
-
-quand on fait du sport et on tousse.</p>
+              Une<b> maladie respiratoire</b>, c'est une maladie qui empêche de
+              bien respirer.
+            </p>
+            <p>
+              Cette maladie touche les organes qui sont nécessaires pour la
+              respiration comme les poumons.
+            </p>
+            <p>
+              Par exemple, on est vite essouflé quand on fait du sport et on
+              tousse.
+            </p>
           </div>
-        </div><hr/>
+        </div>
+        <hr />
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={pneumologue} alt="" />
@@ -1126,16 +1198,19 @@ quand on fait du sport et on tousse.</p>
           <div className="banner-form-informations">
             <p className="banner-form-title">Le pneumologue</p>
             <p>
-              Un <b> pneumologue</b>,c'est le médecin des poumons,et des maladies liées aux poumons.</p>
-              <p>Quand on a une maladie respiratoire,
-
-on va voir le pneumologue.</p>
+              Un <b> pneumologue</b>,c'est le médecin des poumons,et des
+              maladies liées aux poumons.
+            </p>
+            <p>
+              Quand on a une maladie respiratoire, on va voir le pneumologue.
+            </p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -1169,7 +1244,7 @@ function Question17() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -1178,7 +1253,8 @@ function Question17() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -1187,19 +1263,32 @@ function Question17() {
           <div className="banner-form-informations">
             <p className="banner-form-title">L'insuffisance rénale chronique</p>
             <p>
-              Une <b>insuffisance rénale chronique</b>  c'est une maladie des reins.</p>
-              <p>Les reins ne fonctionnent plus correctement, ils filtrent mal le sang.</p>
+              Une <b>insuffisance rénale chronique</b> c'est une maladie des
+              reins.
+            </p>
+            <p>
+              Les reins ne fonctionnent plus correctement, ils filtrent mal le
+              sang.
+            </p>
             <p>Les reins n'éliminent plus les déchets qui sont dans le sang.</p>
-            <p>Les déchets sont de plus en plus nombreux dans le sang,et le corps s'empoisonne.</p>
-            <p>Ça nécessite un traitement par une <b>dialyse</b>.</p>
+            <p>
+              Les déchets sont de plus en plus nombreux dans le sang,et le corps
+              s'empoisonne.
+            </p>
+            <p>
+              Ça nécessite un traitement par une <b>dialyse</b>.
+            </p>
             <p>Une dialyse est une machine qui peut filtrer le sang.</p>
-            <p>La dialyse filtre le sang à la place des reins de la personne.</p>
+            <p>
+              La dialyse filtre le sang à la place des reins de la personne.
+            </p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -1230,7 +1319,7 @@ function Question18() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -1239,7 +1328,8 @@ function Question18() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -1248,17 +1338,26 @@ function Question18() {
           <div className="banner-form-informations">
             <p className="banner-form-title">La maladie chronique du foie</p>
             <p>
-              La <b>maladie chronique du foie</b> c'est lorsque notre foie ou une partie de notre foie ne fonctionne plus.</p>
-              <br/>
-              <p>Le foie nettoie le sang et donc le corps,et fabrique ce qui est essentiel pour la digestion</p>
+              La <b>maladie chronique du foie</b> c'est lorsque notre foie ou
+              une partie de notre foie ne fonctionne plus.
+            </p>
+            <br />
+            <p>
+              Le foie nettoie le sang et donc le corps,et fabrique ce qui est
+              essentiel pour la digestion
+            </p>
             <p>et pour la bonne santé des muscles, de la peau, des os.</p>
-            <p>Par exemple quand on boit beaucoup d'alcool ça peut abîmer notre foie.</p>
+            <p>
+              Par exemple quand on boit beaucoup d'alcool ça peut abîmer notre
+              foie.
+            </p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -1298,7 +1397,7 @@ function Question19() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -1307,7 +1406,8 @@ function Question19() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -1316,13 +1416,15 @@ function Question19() {
           <div className="banner-form-informations">
             <p className="banner-form-title">Enceinte</p>
             <p>
-              Une femme est <b>enceinte</b> quand elle attend un bébé.</p>
+              Une femme est <b>enceinte</b> quand elle attend un bébé.
+            </p>
           </div>
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -1367,7 +1469,7 @@ function Question20() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -1376,7 +1478,8 @@ function Question20() {
           </div>
         </form>
       </div>
-      <br/><br/>
+      <br />
+      <br />
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -1385,12 +1488,15 @@ function Question20() {
           <div className="banner-form-informations">
             <p className="banner-form-title">Les défenses immunitaires</p>
             <p>
-              Les <b> défenses immunitaires</b> ce sont les défenses du corps.</p>
-              <p>Le corps a un système qui le protège contre</p>
+              Les <b> défenses immunitaires</b> ce sont les défenses du corps.
+            </p>
+            <p>Le corps a un système qui le protège contre</p>
             <p>toutes les infections, des microbes : bactéries, virus, ...</p>
             <p>C'est le système immunitaire.</p>
-            <br/>
-            <p>Si vous avez une maladie qui diminue vos défenses immunitaires,</p>
+            <br />
+            <p>
+              Si vous avez une maladie qui diminue vos défenses immunitaires,
+            </p>
             <p>vous avez plus de risque de tomber malade,</p>
             <p>car le corps gère déjà une autre infection,</p>
             <p>il a du mal à se protéger.</p>
@@ -1399,7 +1505,8 @@ function Question20() {
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
         </div>
-      </div><br/>
+      </div>
+      <br />
     </div>
   );
 }
@@ -1435,7 +1542,7 @@ function Question21() {
               </div>
             </div>
             <br />
-<input
+            <input
               className="btn btn-primary bt1"
               type="submit"
               name="submit"
@@ -1443,9 +1550,7 @@ function Question21() {
             />
           </div>
         </form>
-       
       </div>
-      
     </div>
   );
 }
@@ -1473,7 +1578,6 @@ function Question22() {
                   min="1000"
                   max="9999"
                   step="1"
-                  
                   autoFocus
                 />{" "}
                 votre code postal
@@ -1499,7 +1603,6 @@ function Question22() {
           />
         </form>
       </div>
-     
     </div>
   );
 }
