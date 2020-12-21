@@ -58,67 +58,402 @@ class Surveillance extends Component {
   };
   render() {
     return (
-     <div>
-        {(this.state.count ===9)?(<div className="card-body cad card border-info mb-3 mb-3 container-lg"
-style={{ maxWidth: 900 ,marginTop:200}}>
-  <p className="card-text">
-  La recommandation affichée peut évoluer suivant les informations en provenance des autorités de santé et des chercheurs. Elle ne constitue pas un avis médical. En cas de doute, demandez conseil à votre médecin ou pharmacien.
-  </p>
-  <p className="card-text">
-  Votre situation nécessite l'avis immédiat d'un médecin.Contactez immédiatement votre médecin traitant par téléphone pour lui faire part de votre situation et organiser un rendez-vous de consultation. Vous pouvez également essayer d'obtenir un rendez-vous de téléconsultation.Si vous n'arrivez pas à joindre un médecin rapidement pour lui détailler vos symptômes, appelez le 190.</p>
-</div>):(
- <div className="surveille  container-lg">
-    <img className="fleche" onClick={this.comeback} src={back} alt=""></img>
-    <h4 className="d-inline">{obj.question[this.state.count]}</h4>
-   <h5>{obj.titre[this.state.count]}</h5>
-   <h5>{obj.contenu[this.state.count]}</h5><br/>
-<form className="inp  " onSubmit={this.changequestion}>
+      <div className="test1">
+        {this.state.count === 9 ? (
+          <div
+            className="card-body cad card border-info mb-3 mb-3 container-lg"
+            style={{ maxWidth: 900, marginTop: 200 }}
+          >
+            <p className="card-text">
+              La recommandation affichée peut évoluer suivant les informations
+              en provenance des autorités de santé et des chercheurs. Elle ne
+              constitue pas un avis médical. En cas de doute, demandez conseil à
+              votre médecin ou pharmacien.
+            </p>
+            <p className="card-text">
+              Votre situation nécessite l'avis immédiat d'un médecin.Contactez
+              immédiatement votre médecin traitant par téléphone pour lui faire
+              part de votre situation et organiser un rendez-vous de
+              consultation. Vous pouvez également essayer d'obtenir un
+              rendez-vous de téléconsultation.Si vous n'arrivez pas à joindre un
+              médecin rapidement pour lui détailler vos symptômes, appelez le
+              190.
+            </p>
+          </div>
+        ) : (
+          <div className="div1 container-lg">
+            <div className="question">          
+              <h4>
+                <img
+                className="fleche"
+                onClick={this.comeback}
+                src={back}
+                alt=""
+              ></img>
+              {obj.question[this.state.count]}
+              </h4><br/>
+              
+              <p className="questionsTitle">{obj.titre[this.state.count]}</p>
+              <p className="questionsIndication">
+                {obj.contenu[this.state.count]}{" "}
+              </p>
 
-   {(this.state.count ===0)?( <div >
-<input className="mr-2  " type="radio" name="radio" required /><label>{obj.label[0]}</label><br/>
-<input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[1]}</label><br/>
-<input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[2]}</label><br/>
-<input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[3]}</label><br/>
-</div> ):((this.state.count ===1) ? (
-          <div>
-          <input className="mr-2 " type="radio" name="radio2" required /><label>{obj.label[0]}</label><br/>
-          <input className="mr-2 " type="radio" name="radio2" required /><label>{obj.label[1]}</label><br/>
-          <input className="mr-2 " type="radio" name="radio2" required /><label>{obj.label[2]}</label><br/>
-          <input className="mr-2 " type="radio" name="radio2" required /><label>{obj.label[3]}</label><br/>
-          </div>):(  (this.state.count ===2) ? 
-           (<div>
-                <input type="number" name="Temperature" placeholder="37.0" min="34" max="42" step="0.1"  autoFocus required /> :Degrés <br />             
-           </div> )
-           :(   (this.state.count ===3) ?
-                (<div> 
-                 OUI : <input type="radio" name="radio" required />
-                   NON : <input type="radio" name="radio" required />
-                 </div>)
-            :((this.state.count ===4) ?
-            (<div> OUI : <input type="radio" name="radio" required />
-            NON : <input type="radio" name="radio" required />
-            </div>)
-            :((this.state.count ===5) ?(<div> OUI : <input type="radio" name="radio" required />
-            NON : <input type="radio" name="radio" required />
-            </div>):((this.state.count ===6)?(<div> OUI : <input type="radio" name="radio" required />
-            NON : <input type="radio" name="radio" required />
-            </div>):((this.state.count ===7) ?(<div>OUI : <input type="radio" name="radio" required />
-            NON : <input type="radio" name="radio" required /></div>) :( 
-(this.state.count ===8) ? (<div><input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[0]}</label><br/>
-<input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[1]}</label><br/>
-<input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[2]}</label><br/>
-<input className="mr-2 " type="radio" name="radio" required /><label>{obj.label[3]}</label><br/></div>):(
-   <></>
-)))))))))}
-  {(this.state.count ===9)?(<></>):
-(<input  className="bt  btn btn-primary" type="submit" name="submit" value="Continuer" /> )}
-           
-</form>
-
-   
-</div>)}
- </div>   
-    )
-   }
+              <form className=" " onSubmit={this.changequestion}>
+                {this.state.count === 0 ? (
+                  <div className="questionsOptions2">
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[0]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[1]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[2]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[3]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                  </div>
+                ) : 
+/***************************************************** Question 2 ***********************************************************/
+                this.state.count === 1 ? (
+                  <div className="questionsOptions2">
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[0]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[1]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[2]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[3]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                  </div>
+                ) : 
+/***************************************************** Question 3 ***********************************************************/
+                this.state.count === 2 ? (
+                  <div className="questionsOptions">
+                    <div className="customText">
+                      <input
+                        className="input-text"
+                        type="number"
+                        name="Temperature"
+                        placeholder="37.0"
+                        min="36"
+                        max="42"
+                        step="0.1"
+                        autoFocus
+                        required
+                      />
+                      degrés
+                    </div>
+                  </div>
+                ) : 
+/***************************************************** Question 4 ***********************************************************/
+                this.state.count === 3 ? (
+                  <div className="questionsOptions">
+                    <div className="flex-direction-row">
+                      <div className="custom-control custom-radio">
+                        <input
+                          id="radio-input"
+                          type="radio"
+                          name="radio"
+                          required
+                        />
+                        <label id="label-radio">
+                          Oui <span className="hover-border"></span>
+                        </label>
+                      </div>
+                      <div className="custom-control custom-radio">
+                        <input
+                          id="radio-input"
+                          type="radio"
+                          name="radio"
+                          required
+                        />
+                        <label id="label-radio">
+                          Non <span className="hover-border"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                ) : 
+/***************************************************** Question 5 ***********************************************************/
+                this.state.count === 4 ? (
+                  <div className="questionsOptions">
+                    <div className="flex-direction-row">
+                      <div className="custom-control custom-radio">
+                        <input
+                          id="radio-input"
+                          type="radio"
+                          name="radio"
+                          required
+                        />
+                        <label id="label-radio">
+                          Oui <span className="hover-border"></span>
+                        </label>
+                      </div>
+                      <div className="custom-control custom-radio">
+                        <input
+                          id="radio-input"
+                          type="radio"
+                          name="radio"
+                          required
+                        />
+                        <label id="label-radio">
+                          Non <span className="hover-border"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                ) : 
+/***************************************************** Question 6 ***********************************************************/
+                this.state.count === 5 ? (
+                  <div className="questionsOptions">
+                    <div className="flex-direction-row">
+                      <div className="custom-control custom-radio">
+                        <input
+                          id="radio-input"
+                          type="radio"
+                          name="radio"
+                          required
+                        />
+                        <label id="label-radio">
+                          Oui <span className="hover-border"></span>
+                        </label>
+                      </div>
+                      <div className="custom-control custom-radio">
+                        <input
+                          id="radio-input"
+                          type="radio"
+                          name="radio"
+                          required
+                        />
+                        <label id="label-radio">
+                          Non <span className="hover-border"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                ) : 
+/***************************************************** Question 7 ***********************************************************/
+                this.state.count === 6 ? (
+                  <div className="questionsOptions">
+                    <div className="flex-direction-row">
+                      <div className="custom-control custom-radio">
+                        <input
+                          id="radio-input"
+                          type="radio"
+                          name="radio"
+                          required
+                        />
+                        <label id="label-radio">
+                          Oui <span className="hover-border"></span>
+                        </label>
+                      </div>
+                      <div className="custom-control custom-radio">
+                        <input
+                          id="radio-input"
+                          type="radio"
+                          name="radio"
+                          required
+                        />
+                        <label id="label-radio">
+                          Non <span className="hover-border"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                ) : 
+/***************************************************** Question 8 ***********************************************************/
+                this.state.count === 7 ? (
+                  <div className="questionsOptions">
+                    <div className="flex-direction-row">
+                      <div className="custom-control custom-radio">
+                        <input
+                          id="radio-input"
+                          type="radio"
+                          name="radio"
+                          required
+                        />
+                        <label id="label-radio">
+                          Oui <span className="hover-border"></span>
+                        </label>
+                      </div>
+                      <div className="custom-control custom-radio">
+                        <input
+                          id="radio-input"
+                          type="radio"
+                          name="radio"
+                          required
+                        />
+                        <label id="label-radio">
+                          Non <span className="hover-border"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                ) :
+/***************************************************** Question 9 ***********************************************************/
+                this.state.count === 8 ? (
+                  <div className="questionsOptions2">
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[0]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[1]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[2]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                    <div className="custom-control custom-radio">
+                      <input
+                        className="m-2"
+                        type="radio"
+                        name="radio"
+                        id="radio-input"
+                        required
+                      />
+                      <label id="label-radio">
+                        {obj.label[3]}
+                        <span className="hover-border"></span>
+                      </label>
+                    </div>
+                  </div>
+                ) : (
+                  <></>
+                )}
+                {this.state.count === 9 ? (
+                  <></>
+                ) : (
+                  <div>
+                    <br />
+                    <input
+                      className="btn btn-primary bt1"
+                      type="submit"
+                      name="submit"
+                      value="Continuer"
+                    />
+                  </div>
+                )}
+              </form>
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
 }
 export default Surveillance;
