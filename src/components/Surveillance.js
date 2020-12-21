@@ -87,7 +87,7 @@ style={{ maxWidth: 900 ,marginTop:200}}>
           <input className="mr-2 " type="radio" name="radio2" required /><label>{obj.label[3]}</label><br/>
           </div>):(  (this.state.count ===2) ? 
            (<div>
-                <input type="number" name="Temperature" placeholder="37.0" min="34" max="42" step="0.1" autoComplete autoFocus required /> :Degrés <br />             
+                <input type="number" name="Temperature" placeholder="37.0" min="34" max="42" step="0.1"  autoFocus required /> :Degrés <br />             
            </div> )
            :(   (this.state.count ===3) ?
                 (<div> 

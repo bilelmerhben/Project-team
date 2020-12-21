@@ -644,7 +644,7 @@ function Question10() {
                   min="1"
                   max="110"
                   step="1"
-                  autoComplete
+                  
                   autoFocus
                   required
                 />
@@ -708,7 +708,7 @@ function Question11() {
                   min="80"
                   max="250"
                   step="1"
-                  autoComplete
+                  
                   autoFocus
                   required
                 />{" "}
@@ -782,7 +782,7 @@ function Question12() {
                   min="20"
                   max="250"
                   step="1"
-                  autoComplete
+                  
                   autoFocus
                   required
                 />
@@ -1474,7 +1474,7 @@ function Question22() {
                   min="1000"
                   max="9999"
                   step="1"
-                  autoComplete
+                  
                   autoFocus
                 />{" "}
                 votre code postal
