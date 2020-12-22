@@ -1,10 +1,17 @@
 import React, { Component } from "react";
 import "../Css/Navbar.css";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../actions/authActions";
 
 
 
 
-export default class Navbar extends Component {
+class Navbar extends Component {
+  onLogoutClick = e => {
+    e.preventDefault();
+    this.props.logoutUser();
+};
   render() {
     return (
      
@@ -35,8 +42,8 @@ export default class Navbar extends Component {
       </li>
     </ul>
     <div className="Buttons-nav">
-    <a className="btn connecter  " href="/Connexion">Se connecter</a>
-    <a className="btn inscription  " href="/Inscription">S'inscrire</a>
+    <a className="btn connecter  " href="/Connexion" onClick={this.props.auth.isAuthenticated===true ? this.onLogoutClick : ''}> {this.props.auth.isAuthenticated===true ? 'Déconnexion' : 'Se connecter'}</a>
+    <a className="btn inscription  " href="/Inscription" hidden={this.props.auth.isAuthenticated}>S'inscrire</a>
 
     </div>
   </div>
@@ -46,3 +53,14 @@ export default class Navbar extends Component {
     );
   }
 }
+Navbar.propTypes = {
+  logoutUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+export default connect(
+  mapStateToProps,
+  { logoutUser }
+)(Navbar);
