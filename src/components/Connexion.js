@@ -36,7 +36,7 @@ const userData = {
       email: this.state.email,
       password: this.state.password
     };
-console.log(userData);
+    this.props.loginUser(userData);
   };
 
 
@@ -117,7 +117,7 @@ const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
 });
-export default Connexion(
+export default connect(
   mapStateToProps,
   { loginUser }
 )(Connexion);

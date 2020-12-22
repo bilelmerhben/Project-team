@@ -145,7 +145,7 @@ const mapStateToProps = state => ({
   auth: state.auth,
   errors: state.errors
 });
-export default Inscription(
+export default connect(
   mapStateToProps,
   { registerUser }
 )(withRouter(Inscription));
