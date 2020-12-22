@@ -14,7 +14,7 @@ const obj = {
     " Question 9 sur 9",
   ],
   titre: [
-    "Si vous (ou votre proche) ressentez un manque de souffle quand vous parlez ou faites un petit effort, comment cela a-t-il évolué depuis hier (ou depuis la dernière connexion) ?",
+    "Si vous(ou votre proche) ressentez un manque de souffle quand vous parlez ou faites un petit effort, comment cela a-t-il évolué depuis hier (ou depuis la dernière connexion) ?",
     "Comment vous (ou votre proche) vous sentez-vous par rapport à hier (ou depuis la dernière connexion) ?",
     "Quelle a été la température maximale des 24 dernières heures ?",
     "Ressentez-vous (ou votre proche) des maux de tête intolérables qui résistent aux médicaments anti-douleurs (dont paracétamol) depuis hier (ou depuis la dernière connexion) ?",

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
 import "../Css/Test1.css";
+import back from "../img/back.png";
 import toux from "../img/toux.png";
 import temperature from "../img/temperature.png";
 import informations from "../img/informations.png";
@@ -25,80 +25,507 @@ import souffle from "../img/souffle.png";
 import impossible from "../img/impossible.png";
 import fatigue from "../img/fatigue.png";
 import cancer from "../img/cancer.png";
-
+const obj = {
+  question: [
+    " Question 1 sur 22",
+    " Question 2 sur 22",
+    " Question 3 sur 22",
+    " Question 4 sur 22",
+    " Question 5 sur 22",
+    " Question 6 sur 22",
+    " Question 7 sur 22",
+    " Question 8 sur 22",
+    " Question 9 sur 22",
+    " Question 10 sur 22",
+    " Question 11 sur 22",
+    " Question 12 sur 22",
+    " Question 13 sur 22",
+    " Question 14 sur 22",
+    " Question 15 sur 22",
+    " Question 16 sur 22",
+    " Question 17 sur 22",
+    " Question 18 sur 22",
+    " Question 19 sur 22",
+    " Question 20 sur 22",
+    " Question 21 sur 22",
+    " Question 22 sur 22"
+  ],
+  titre: [
+    "Ces dernières 48 heures, quelle a été votre température la plus élevée ?",
+    "Ces derniers jours, avez-vous une toux ou votre toux habituelle s’est-elle modifiée ?",
+    "Ces derniers jours, avez-vous noté une perte ou une forte diminution de votre goût ou de votre odorat ?",
+    "Ces derniers jours, avez-vous eu un mal de gorge et/ou des douleurs musculaires et/ou des courbatures inhabituelles et/ou des maux de tête inhabituels ?",
+    "Ces dernières 24 heures, avez-vous de la diarrhée ? Avec au moins 3 selles molles.",
+    "Ces derniers jours, avez-vous une fatigue inhabituelle ?",
+    "Cette fatigue vous oblige-t-elle à vous reposer plus de la moitié de la journée ?",
+    "Depuis 24 heures ou plus, êtes-vous dans l'impossibilité de vous alimenter ou de boire ?",
+    "Ces dernières 24 heures, avez-vous noté un manque de souffle inhabituel lorsque vous parlez ou faites un petit effort ?",
+    "Quel est votre âge ? Ceci, afin de calculer un facteur de risque spécifique.",
+    "Quel est votre taille ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection",
+    "Quel est votre poids ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.",
+    "Avez-vous des antécédents de maladie cardiovasculaire : hypertension artérielle compliquée (avec complications cardiaques,rénales), accident vasculaire cérébral, maladie coronaire (infarctus), chirurgie cardiaque, insuffisance cardiaque avec essoufflement au moindre effort ?",
+    "Avez-vous un diabète mal équilibré ou avec des complications (yeux, reins) ?",
+    "Avez-vous un cancer évolutif sous traitement (hors hormonothérapie) ?",
+    "Avez-vous une maladie respiratoire chronique (bronchopneumopathie obstructive, asthme sévère, fibrose pulmonaire, syndrome d’apnées du sommeil, mucoviscidose) ou êtes-vous suivi par un pneumologue ?",
+    "Avez-vous une insuffisance rénale chronique avec besoin de faire de la dialyse ?",
+    "Avez-vous une cirrhose ?",
+    "Ces derniers jours, avez-vous une toux ou votre toux habituelle s’est-elle modifiée ?",
+    "Avez-vous une immunodépression, par exemple : médicamenteuse (chimiothérapie anti cancéreuse, traitement immunosuppresseur, biothérapie et/ou corticothérapie à dose immunosuppressive depuis plus de 15 jours) ,Infection à VIH non contrôlée ou avec des CD4 200/mm3 , consécutive à une greffe d’organe solide ou de cellules souches hématopoïétiques , liée à une hémopathie maligne en cours de traitement ?",
+    "Avez-vous une drépanocytose homozygote (forme majeure) ou bénéficié d’une splénectomie (ablation de la rate) à cause de la drépanocytose ?",
+    "Quel est le code postal de votre résidence actuelle ? Cette information nous permet de réaliser un suivi épidémiologique."
+  ],
+  contenu: [
+    "Remplissez le champ :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Remplissez le champ :",
+    "Remplissez le champ :",
+    "Remplissez le champ :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Sélectionnez une option :",
+    "Remplissez le champ :"
+  ]
+};
 class Test1 extends Component {
+  state = {
+    count: 0,
+  };
+  changequestion = (e) => {
+    e.preventDefault();
+    if (this.state.count < 21) {
+     
+      this.setState({
+        count: this.state.count + 1,
+      });
+    }
+  };
+  comeback = () => {
+    if (this.state.count > 0) {
+      this.setState({
+        count: this.state.count - 1,
+      });
+    }
+  };
   render() {
     return (
-      <div>
-        <Switch>
-          <Route path="/Test1/Question1" component={Question1} />
-          <Route path="/Test1/Question2" component={Question2} />
-          <Route path="/Test1/Question3" component={Question3} />
-          <Route path="/Test1/Question4" component={Question4} />
-          <Route path="/Test1/Question5" component={Question5} />
-          <Route path="/Test1/Question6" component={Question6} />
-          <Route path="/Test1/Question7" component={Question7} />
-          <Route path="/Test1/Question8" component={Question8} />
-          <Route path="/Test1/Question9" component={Question9} />
-          <Route path="/Test1/Question10" component={Question10} />
-          <Route path="/Test1/Question11" component={Question11} />
-          <Route path="/Test1/Question12" component={Question12} />
-          <Route path="/Test1/Question13" component={Question13} />
-          <Route path="/Test1/Question14" component={Question14} />
-          <Route path="/Test1/Question15" component={Question15} />
-          <Route path="/Test1/Question16" component={Question16} />
-          <Route path="/Test1/Question17" component={Question17} />
-          <Route path="/Test1/Question18" component={Question18} />
-          <Route path="/Test1/Question19" component={Question19} />
-          <Route path="/Test1/Question20" component={Question20} />
-          <Route path="/Test1/Question21" component={Question21} />
-          <Route path="/Test1/Question22" component={Question22} />
-        </Switch>
-      </div>
-    );
-  }
-}
+      <div className="test1 ">
 
-function Question1() {
-  return (
-    <div className="test1 ">
-      <div className="div1 container-lg   ">
-        <h4>Question 1 sur 22</h4>
-        <form action="/Test1/Question2">
-          <div className="question">
-            <p className="questionsTitle">
-              Ces dernières 48 heures, quelle a été votre température la plus
-              élevée ?
-            </p>
-            <p className="questionsIndication">Remplissez le champ : </p>
+           <div className="div1 container-lg">
+                <h4>
+                <img
+                className="fleche"
+                onClick={this.comeback}
+                src={back}
+                alt=""
+              ></img>
+                  {obj.question[this.state.count]}</h4>
+               <form onSubmit={this.changequestion}>
+                      <div className="question">
+                         <p className="questionsTitle">{obj.titre[this.state.count]}</p>
+                         <p className="questionsIndication">{obj.contenu[this.state.count]} {" "}</p>
             <div className="questionsOptions">
-              <div className="customText">
+             
+              {(this.state.count === 0) ? (
+                 <div className="customText"> 
+                 <input className="input-text" type="number" name="Temperature" placeholder="37.0" min="36" max="42" step="0.1" autoFocus  required />degrés
+                 </div>
+                ):
+                this.state.count === 1 ?(
+                  <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>):
+              this.state.count === 2 ?(
+                <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ):
+              this.state.count === 3 ?(
+                <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ):
+              this.state.count === 4 ?(
+                <div className="flex-direction-row">
+              <div className="custom-control custom-radio">
+              <input id="radio-input" type="radio" name="radio" required />
+              <label id="label-radio">
+                Oui <span className="hover-border"></span>
+              </label>
+            </div>
+            <div className="custom-control custom-radio">
+              <input id="radio-input" type="radio" name="radio" required />
+              <label id="label-radio">
+                Non <span className="hover-border"></span>
+              </label>
+            </div>
+          </div>
+                
+              ) :
+              this.state.count === 5 ?(
+                <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ):
+              this.state.count === 6 ? (
+                <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ): 
+              this.state.count === 7 ?(
+                <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ): 
+              this.state.count === 8 ? (
+<div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ):
+              this.state.count === 9 ?(
+<div className="customText">
                 <input
                   className="input-text"
                   type="number"
-                  name="Temperature"
-                  placeholder="37.0"
-                  min="36"
-                  max="42"
-                  step="0.1"
+                  name="Age"
+                  placeholder=" Age"
+                  min="1"
+                  max="110"
+                  step="1"
                   autoFocus
                   required
                 />
-                degrés
+                ans
+              </div>
+              ):
+              this.state.count === 10 ?(
+
+                <div className="customText">
+                <input
+                  className="input-text"
+                  type="number"
+                  name="Taille"
+                  placeholder="Taille"
+                  min="80"
+                  max="250"
+                  step="1"
+                  autoFocus
+                  required
+                />{" "}
+                cm{" "}
+              </div>
+
+              ):
+              this.state.count === 11 ?(
+           <div className="customText">
+                {" "}
+                <input
+                  className="input-text"
+                  type="number"
+                  name="Poids"
+                  placeholder="Poids"
+                  min="20"
+                  max="250"
+                  step="1"
+                  autoFocus
+                  required
+                />
+                Kg
+              </div>
+              ):
+              this.state.count === 12 ?(
+<div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Je ne sais pas <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ):
+              this.state.count === 13 ?(
+             <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ):
+              this.state.count === 14 ?(
+                <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ):
+              this.state.count === 15 ?(
+                <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+
+              ):
+              this.state.count === 16 ?(
+              <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ):
+              this.state.count === 17 ?(
+                <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ):
+              this.state.count === 18 ?(
+                <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non applicable <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+              ):
+              this.state.count === 19 ?(
+                <div className="flex-direction-row">
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Oui <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Non <span className="hover-border"></span>
+                  </label>
+                </div>
+                <div className="custom-control custom-radio">
+                  <input id="radio-input" type="radio" name="radio" required />
+                  <label id="label-radio">
+                    Je ne sais <span className="hover-border"></span>
+                  </label>
+                </div>
+              </div>
+             ):
+             this.state.count === 20 ?(
+              <div className="flex-direction-row">
+              <div className="custom-control custom-radio">
+                <input id="radio-input" type="radio" name="radio" required />
+                <label id="label-radio">
+                  Oui <span className="hover-border"></span>
+                </label>
+              </div>
+              <div className="custom-control custom-radio">
+                <input id="radio-input" type="radio" name="radio" required />
+                <label id="label-radio">
+                  Non <span className="hover-border"></span>
+                </label>
               </div>
             </div>
+             ):(
+              <div className="customText">
+              <input
+                className="input-text"
+                type="number"
+                name="Code Postal"
+                placeholder="code"
+                min="1000"
+                max="9999"
+                step="1"
+                autoFocus
+              />{" "}
+              votre code postal
+              {" "}</div>
+              
+             )
+
+                }
+
+            </div>
+            {(this.state.count === 21) ?(
+           <div>
+             <br/>
+                <input
+              className="check-box"
+              type="checkbox"
+              name="check"
+              onClick={() => console.log("e.value")}
+            />
+            Je suis en dehors de la Tunisie ou je ne souhaite pas répondre.</div>):(<></>)
+              }
           </div>
-          <br />
-          <input
-            className=" btn btn-primary bt1"
-            type="submit"
-            name="submit"
-            value=" Enregistrer et Continuer"
-          />
+          <br/>
+          <input className=" btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
         </form>
       </div>
-      <br />
-      <br />
+      <br/>
+      <br/>
+
+
+      {
+      this.state.count === 0 ? (
       <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
@@ -115,55 +542,11 @@ function Question1() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question2() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg">
-        <h4>Question 2 sur 22</h4>
-
-        <form action="/Test1/Question3">
-          <div className="question">
-            <p className="questionsTitle">
-              Ces derniers jours, avez-vous une toux ou votre toux habituelle
-              s’est-elle modifiée ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 1 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={toux} alt="Icone toux" />
@@ -178,58 +561,11 @@ function Question2() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="logo falc" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question3() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <br />
-
-        <h4>Question 3 sur 22</h4>
-
-        <form action="/Test1/Question4">
-          <div className="question">
-            <p className="questionsTitle">
-              Ces derniers jours, avez-vous noté une perte ou une forte
-              diminution de votre goût ou de votre odorat ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 2 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={gout} alt="" />
@@ -262,58 +598,11 @@ function Question3() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div> <br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question4() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <br />
-
-        <h4>Question 4 sur 22</h4>
-
-        <form action="/Test1/Question5">
-          <div className="question">
-            <p className="questionsTitle">
-              Ces derniers jours, avez-vous eu un mal de gorge et/ou des
-              douleurs musculaires et/ou des courbatures inhabituelles et/ou des
-              maux de tête inhabituels ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 3 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={gorge} alt="" />
@@ -344,54 +633,12 @@ function Question4() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question5() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 5 sur 22</h4>
-        <form action="/Test1/Question6">
-          <div className="question">
-            <p className="questionsTitle">
-              Ces dernières 24 heures, avez-vous de la diarrhée ? Avec au moins
-              3 selles molles.
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      
+      ):
+      this.state.count === 4 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={diarhee} alt="" />
@@ -411,53 +658,11 @@ function Question5() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question6() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 6 sur 22</h4>
-        <form action="/Test1/Question7">
-          <div className="question">
-            <p className="questionsTitle">
-              Ces derniers jours, avez-vous une fatigue inhabituelle ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 5 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={fatigue} alt="" />
@@ -475,97 +680,14 @@ function Question6() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div> <br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question7() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 7 sur 22</h4>
-
-        <form action="/Test1/Question8">
-          <div className="question">
-            <p className="questionsTitle">
-              Cette fatigue vous oblige-t-elle à vous reposer plus de la moitié
-              de la journée ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
-
-function Question8() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 8 sur 22</h4>
-        <form action="/Test1/Question9">
-          <div className="question">
-            <p className="questionsTitle">
-              Depuis 24 heures ou plus, êtes-vous dans l'impossibilité de vous
-              alimenter ou de boire ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>{" "}
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 6 ?(
+       <></>
+      ):
+      this.state.count === 7 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={impossible} alt="" />
@@ -585,55 +707,11 @@ function Question8() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div> <br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question9() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 9 sur 22</h4>
-
-        <form action="/Test1/Question10">
-          <div className="question">
-            <p className="questionsTitle">
-              Ces dernières 24 heures, avez-vous noté un manque de souffle
-              inhabituel lorsque vous parlez ou faites un petit effort ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 8 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={souffle} alt="" />
@@ -650,54 +728,11 @@ function Question9() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question10() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 10 sur 22</h4>
-        <form action="/Test1/Question11">
-          <div className="question">
-            <p className="questionsTitle">
-              Quel est votre âge ? Ceci, afin de calculer un facteur de risque
-              spécifique.
-            </p>
-            <p className="questionsIndication">Remplissez le champ : </p>
-            <div className="questionsOptions">
-              <div className="customText">
-                <input
-                  className="input-text"
-                  type="number"
-                  name="Age"
-                  placeholder=" Age"
-                  min="1"
-                  max="110"
-                  step="1"
-                  autoFocus
-                  required
-                />
-                ans
-              </div>
-            </div>
-          </div>
-          <br />
-          <input
-            className="btn btn-primary bt1"
-            type="submit"
-            name="submit"
-            value=" Enregistrer et Continuer"
-          />
-        </form>
-      </div>{" "}
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 9 ?(
+<div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={age} alt="" />
@@ -705,7 +740,7 @@ function Question10() {
           <div className="banner-form-informations">
             <p className="banner-form-title">L'âge</p>
             <p>
-              Votre<b>âge</b> peut être un <b>facteur de risque</b>
+              Votre <b>âge</b> peut être un <b>facteur de risque</b>
             </p>
             <p>
               Un facteur de risque est quelque chose qui augmente la possibilité
@@ -716,55 +751,11 @@ function Question10() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question11() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 11 sur 22</h4>
-        <form action="/Test1/Question12">
-          <div className="question">
-            <p className="questionsTitle">
-              Quel est votre taille ? Afin de calculer l’indice de masse
-              corporelle qui est un facteur influençant le risque de
-              complications de l’infection
-            </p>
-            <p className="questionsIndication">Remplissez le champ : </p>
-            <div className="questionsOptions">
-              <div className="customText">
-                <input
-                  className="input-text"
-                  type="number"
-                  name="Taille"
-                  placeholder="Taille"
-                  min="80"
-                  max="250"
-                  step="1"
-                  autoFocus
-                  required
-                />{" "}
-                cm{" "}
-              </div>
-            </div>
-          </div>
-          <br />
-          <input
-            className="btn btn-primary bt1"
-            type="submit"
-            name="submit"
-            value=" Enregistrer et Continuer"
-          />
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 10 ?(
+<div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={taille} alt="" />
@@ -792,56 +783,12 @@ function Question11() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
 
-function Question12() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 12 sur 22</h4>
-        <form action="/Test1/Question13">
-          <div className="question">
-            <p className="questionsTitle">
-              Quel est votre poids ? Afin de calculer l’indice de masse
-              corporelle qui est un facteur influençant le risque de
-              complications de l’infection.
-            </p>
-            <p className="questionsIndication">Remplissez le champ : </p>
-            <div className="questionsOptions">
-              <div className="customText">
-                {" "}
-                <input
-                  className="input-text"
-                  type="number"
-                  name="Poids"
-                  placeholder="Poids"
-                  min="20"
-                  max="250"
-                  step="1"
-                  autoFocus
-                  required
-                />
-                Kg
-              </div>
-            </div>
-          </div>
-          <br />
-          <input
-            className="btn btn-primary bt1"
-            type="submit"
-            name="submit"
-            value=" Enregistrer et Continuer"
-          />
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 11 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={poids} alt="" />
@@ -849,7 +796,7 @@ function Question12() {
           <div className="banner-form-informations">
             <p className="banner-form-title">Le poids</p>
             <p>
-              Vous avez votre<b>poids</b>en vous pesant sur une balance.
+              Vous avez votre <b>poids </b>en vous pesant sur une balance.
             </p>
             <br />
             <p> Votre poids et votre taille sont des facteurs de risque.</p>
@@ -869,63 +816,11 @@ function Question12() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question13() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 13 sur 22</h4>
-        <form action="/Test1/Question14">
-          <div className="question">
-            <p className="questionsTitle">
-              Avez-vous des antécédents de maladie cardiovasculaire :
-              hypertension artérielle compliquée (avec complications cardiaques,
-              rénales), accident vasculaire cérébral, maladie coronaire
-              (infarctus), chirurgie cardiaque, insuffisance cardiaque avec
-              essoufflement au moindre effort ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Je ne sais pas <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 12 ?(
+<div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={hypertention} alt="" />
@@ -965,54 +860,12 @@ function Question13() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
 
-function Question14() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 14 sur 22</h4>
-        <form action="/Test1/Question15">
-          <div className="question">
-            <p className="questionsTitle">
-              Avez-vous un diabète mal équilibré ou avec des complications
-              (yeux, reins) ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 13 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={diabete} alt="" />
@@ -1040,54 +893,11 @@ function Question14() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question15() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 15 sur 22</h4>
-        <form action="/Test1/Question16">
-          <div className="question">
-            <p className="questionsTitle">
-              Avez-vous un cancer évolutif sous traitement (hors
-              hormonothérapie) ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 14 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={cancer} alt="" />
@@ -1121,55 +931,11 @@ function Question15() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
-      </div>
-      <br />
-    </div>
-  );
-}
-
-function Question16() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 16 sur 22</h4>
-        <form action="/Test1/Question17">
-          <div className="question">
-            <p className="questionsTitle">
-              Avez-vous une maladie respiratoire chronique (bronchopneumopathie
-              obstructive, asthme sévère, fibrose pulmonaire, syndrome d’apnées
-              du sommeil, mucoviscidose) ou êtes-vous suivi par un pneumologue ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+        </div><br/>
+      </div> 
+      ):
+      this.state.count === 15 ?(
+<div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={respire} alt="" />
@@ -1208,54 +974,11 @@ function Question16() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question17() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 17 sur 22</h4>
-        <form action="/Test1/Question18">
-          <div className="question">
-            <p className="questionsTitle">
-              Avez-vous une insuffisance rénale chronique avec besoin de faire
-              de la dialyse ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 16 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={dialyse} alt="" />
@@ -1286,51 +1009,12 @@ function Question17() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
 
-function Question18() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 18 sur 22</h4>
-        <form action="/Test1/Question19">
-          <div className="question">
-            <p className="questionsTitle">Avez-vous une cirrhose ?</p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 17 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={foie} alt="" />
@@ -1355,60 +1039,11 @@ function Question18() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question19() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 19 sur 22</h4>
-        <form action="/Test1/Question20">
-          <div className="question">
-            <p className="questionsTitle">
-              Ces derniers jours, avez-vous une toux ou votre toux habituelle
-              s’est-elle modifiée ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non applicable <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 18 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={enceinte} alt="" />
@@ -1422,65 +1057,11 @@ function Question19() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
-    </div>
-  );
-}
-
-function Question20() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 20 sur 22</h4>
-        <form action="/Test1/Question21">
-          <div className="question">
-            <p className="questionsTitle">
-              Avez-vous une immunodépression, par exemple : médicamenteuse
-              (chimiothérapie anti cancéreuse, traitement immunosuppresseur,
-              biothérapie et/ou corticothérapie à dose immunosuppressive depuis
-              plus de 15 jours) ,Infection à VIH non contrôlée ou avec des CD4
-              200/mm3 , consécutive à une greffe d’organe solide ou de cellules
-              souches hématopoïétiques , liée à une hémopathie maligne en cours
-              de traitement ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Je ne sais <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-      <br />
-      <br />
-      <div className="banner-form">
+      ):
+      this.state.count === 19 ?(
+        <div className="banner-form">
         <div className="banner-form-row">
           <div className="banner-form-icon">
             <img src={immunite} alt="" />
@@ -1504,131 +1085,17 @@ function Question20() {
         </div>
         <div className="banner-form-logo2">
           <img src={informations} alt="" />
-        </div>
+        </div><br/>
       </div>
-      <br />
+      ):
+      this.state.count === 20 ?(
+<></>
+      ):(<></>)
+      
+      }
+
     </div>
-  );
+    );
+  }
 }
-
-function Question21() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 21 sur 22</h4>
-
-        <form action="/Test1/Question22">
-          <div className="question">
-            <p className="questionsTitle">
-              Avez-vous une drépanocytose homozygote (forme majeure) ou
-              bénéficié d’une splénectomie (ablation de la rate) à cause de la
-              drépanocytose ?
-            </p>
-            <p className="questionsIndication">Sélectionnez une option :</p>
-            <div className="questionsOptions">
-              <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Oui <span className="hover-border"></span>
-                  </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Non <span className="hover-border"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-            <br />
-            <input
-              className="btn btn-primary bt1"
-              type="submit"
-              name="submit"
-              value=" Enregistrer et Continuer"
-            />
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-}
-
-function Question22() {
-  return (
-    <div className="test1">
-      <div className="div1 container-lg ">
-        <h4>Question 22 sur 22</h4>
-
-        <form>
-          <div className="question">
-            <p className="questionsTitle">
-              Quel est le code postal de votre résidence actuelle ? Cette
-              information nous permet de réaliser un suivi épidémiologique.
-            </p>
-            <p className="questionsIndication">Remplissez le champ :</p>{" "}
-            <div className="questionsOptions">
-              <div className="customText">
-                <input
-                  className="input-text"
-                  type="number"
-                  name="Code Postal"
-                  placeholder="code"
-                  min="1000"
-                  max="9999"
-                  step="1"
-                  autoFocus
-                />{" "}
-                votre code postal
-              </div>{" "}
-            </div>
-            <br />
-            <input
-              className="check-box"
-              type="checkbox"
-              name="check"
-              onClick={() => console.log("e.value")}
-            />
-            Je suis en dehors de la Tunisie ou je ne souhaite pas répondre.
-          </div>
-          <br />
-
-          <br />
-          <input
-            className="btn btn-primary bt1"
-            type="submit"
-            name="submit"
-            value=" Enregistrer et Continuer"
-          />
-        </form>
-      </div>
-    </div>
-  );
-}
-
-export {
-  Question1,
-  Question2,
-  Question3,
-  Question4,
-  Question5,
-  Question6,
-  Question7,
-  Question8,
-  Question9,
-  Question10,
-  Question11,
-  Question12,
-  Question13,
-  Question14,
-  Question15,
-  Question16,
-  Question17,
-  Question18,
-  Question19,
-  Question20,
-  Question21,
-  Question22,
-};
 export default Test1;
