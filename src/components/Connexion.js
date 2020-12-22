@@ -1,20 +1,69 @@
-import React from "react";
+import React, { Component } from "react";
 import "../Css/connexion.css";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { loginUser } from "../actions/authActions";
+import classnames from "classnames";
 
-function Connexion() {
+class Connexion extends Component {
+  constructor() {
+    super();
+    this.state = {
+      email: "",
+      password: "",
+      errors: {}
+    };
+  }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.auth.isAuthenticated) {
+      this.props.history.push("/"); 
+    }
+if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
+  }
+
+
+
+onChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
+onSubmit = e => {
+    e.preventDefault();
+const userData = {
+      email: this.state.email,
+      password: this.state.password
+    };
+    this.props.loginUser(userData);
+  };
+
+
+  render(){
+    const { errors } = this.state;
+
   return (
     <div className="login-card">
       <div className="login-content">
       <h1>Connectez-vous</h1>
-      <form>
+      <form noValidate onSubmit={this.onSubmit}>
       <hr/>
       <div className="form-group ">
         <div className="row">
           <div className="col">
-          <input type="radio" value="None" id="radioOne" name="account"  />
+          <input 
+          type="radio" 
+          value="None" 
+          id="radioOne" 
+          name="account"  />
           <label htmlFor="radioOne" className="radio1" >Patient</label> </div>
           <div className="col">
-          <input type="radio" value="None" id="radioTwo" name="account" />
+          <input 
+          type="radio" 
+          value="None" 
+          id="radioTwo" 
+          name="account" />
           <label htmlFor="radioTwo" className="radio1">Laboratoire</label></div>
         </div>
       </div>
@@ -23,9 +72,12 @@ function Connexion() {
           <input
             type="email"
             className="form-control"
-            id="Email"
+            id="email"
             aria-describedby="emailHelp"
             placeholder="Entrer email"
+            onChange={this.onChange}
+            value={this.state.email}
+            error={errors.email}
           />
         </div>
         <div className="form-group margin-input">
@@ -33,8 +85,12 @@ function Connexion() {
           <input
             type="password"
             className="form-control"
-            id="exampleInputPassword1"
+            id="password"
             placeholder="Mot de passe"
+            onChange={this.onChange}
+            value={this.state.password}
+            error={errors.password}
+
           />
         </div>
         
@@ -51,4 +107,17 @@ function Connexion() {
     </div>
   );
 }
-export default Connexion;
+}
+Connexion.propTypes = {
+  loginUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+export default connect(
+  mapStateToProps,
+  { loginUser }
+)(Connexion);
