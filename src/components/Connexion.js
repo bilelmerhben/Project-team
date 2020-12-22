@@ -1,5 +1,9 @@
 import React, { Component } from "react";
 import "../Css/connexion.css";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { loginUser } from "../actions/authActions";
+import classnames from "classnames";
 
 class Connexion extends Component {
   constructor() {
@@ -10,6 +14,19 @@ class Connexion extends Component {
       errors: {}
     };
   }
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.auth.isAuthenticated) {
+      this.props.history.push("/"); 
+    }
+if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
+  }
+
+
+
 onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
@@ -91,4 +108,16 @@ console.log(userData);
   );
 }
 }
-export default Connexion;
+Connexion.propTypes = {
+  loginUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+export default Connexion(
+  mapStateToProps,
+  { loginUser }
+)(Connexion);

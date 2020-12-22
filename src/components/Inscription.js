@@ -1,5 +1,11 @@
 
 import React, { Component } from "react"
+import { Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { registerUser } from "../actions/authActions";
+import classnames from "classnames";
+
 
 class Inscription extends Component {
   constructor() {
@@ -13,6 +19,16 @@ class Inscription extends Component {
       errors: {}
     };
   }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.errors) {
+      this.setState({
+        errors: nextProps.errors
+      });
+    }
+  }
+
+
   onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
@@ -25,8 +41,8 @@ const newUser = {
       password: this.state.password,
       password2: this.state.password2
     };
-console.log(newUser);
-  };
+    this.props.registerUser(newUser, this.props.history); 
+    };
 
 
 
@@ -120,4 +136,16 @@ console.log(newUser);
         </div>
     )
 }}
-export default Inscription;
+Inscription.propTypes = {
+  registerUser: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth,
+  errors: state.errors
+});
+export default Inscription(
+  mapStateToProps,
+  { registerUser }
+)(withRouter(Inscription));

@@ -9,6 +9,7 @@ import tel from "../img/tel.png";
 
 function Footer() {
   return (
+      <footer>
     <div className="container-fluid">
         <div  className="footer-top-holder">
         <div className="footer-left-alignement">
@@ -45,7 +46,7 @@ function Footer() {
 
         
         </div>
-    </div>
+    </div></footer>
   );
 }
 
