@@ -54,7 +54,8 @@ function App() {
        <Route  path="/Inscription" component={Inscription} />
        <Route  path="/Test1" component={Test1} />
        </Switch>
-       <Footer />
+      
+      
     </div>
 
 
