@@ -13,14 +13,18 @@ import Connexion from "./components/Connexion";
 import Test1 from "./components/Test1";
 import Inscription from "./components/Inscription";
 import Footer from "./components/Footer";
+import { Provider } from "react-redux";
+import store from "./store";
 
 function App() {
  
   return (
+    <Provider store={store}>
     <BrowserRouter>
 
     <div className="App">
        <Navbar/>
+       
        <Switch>
        <Route  exact path="/" component={Home} />
        <Route  path="/Test1/Question1" component={Test1} />
@@ -39,6 +43,7 @@ function App() {
 
 
     </BrowserRouter>
+    </Provider>
      
       
   );

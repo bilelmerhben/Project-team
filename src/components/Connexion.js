@@ -1,20 +1,52 @@
-import React from "react";
+import React, { Component } from "react";
 import "../Css/connexion.css";
 
-function Connexion() {
+class Connexion extends Component {
+  constructor() {
+    super();
+    this.state = {
+      email: "",
+      password: "",
+      errors: {}
+    };
+  }
+onChange = e => {
+    this.setState({ [e.target.id]: e.target.value });
+  };
+onSubmit = e => {
+    e.preventDefault();
+const userData = {
+      email: this.state.email,
+      password: this.state.password
+    };
+console.log(userData);
+  };
+
+
+  render(){
+    const { errors } = this.state;
+
   return (
     <div className="login-card">
       <div className="login-content">
       <h1>Connectez-vous</h1>
-      <form>
+      <form noValidate onSubmit={this.onSubmit}>
       <hr/>
       <div className="form-group ">
         <div className="row">
           <div className="col">
-          <input type="radio" value="None" id="radioOne" name="account"  />
+          <input 
+          type="radio" 
+          value="None" 
+          id="radioOne" 
+          name="account"  />
           <label htmlFor="radioOne" className="radio1" >Patient</label> </div>
           <div className="col">
-          <input type="radio" value="None" id="radioTwo" name="account" />
+          <input 
+          type="radio" 
+          value="None" 
+          id="radioTwo" 
+          name="account" />
           <label htmlFor="radioTwo" className="radio1">Laboratoire</label></div>
         </div>
       </div>
@@ -23,9 +55,12 @@ function Connexion() {
           <input
             type="email"
             className="form-control"
-            id="Email"
+            id="email"
             aria-describedby="emailHelp"
             placeholder="Entrer email"
+            onChange={this.onChange}
+            value={this.state.email}
+            error={errors.email}
           />
         </div>
         <div className="form-group margin-input">
@@ -33,8 +68,12 @@ function Connexion() {
           <input
             type="password"
             className="form-control"
-            id="exampleInputPassword1"
+            id="password"
             placeholder="Mot de passe"
+            onChange={this.onChange}
+            value={this.state.password}
+            error={errors.password}
+
           />
         </div>
         
@@ -50,5 +89,6 @@ function Connexion() {
       </div>
     </div>
   );
+}
 }
 export default Connexion;
