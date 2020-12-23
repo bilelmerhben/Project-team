@@ -13,6 +13,7 @@ import Connexion from "./components/Connexion";
 import Test1 from "./components/Test1";
 import Inscription from "./components/Inscription";
 import Footer from "./components/Footer";
+import Profile from "./components/Profile";
 import { Provider } from "react-redux";
 import store from "./store";
 import jwt_decode from "jwt-decode";
@@ -53,6 +54,7 @@ function App() {
        <Route  path="/Connexion" component={Connexion} />
        <Route  path="/Inscription" component={Inscription} />
        <Route  path="/Test1" component={Test1} />
+       <Route  path="/Profile" component={Profile} />
        </Switch>
       
       
