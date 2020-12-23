@@ -48,7 +48,6 @@ class Inscription extends Component {
     const { errors } = this.state;
     var visiblePatient = this.state.visiblePatient;
     var visibleLabo = this.state.visibleLabo;
-    console.log(visiblePatient);
     return (
       <div className="container-fluid mt-5">
         <br />
@@ -275,7 +274,6 @@ class Inscription extends Component {
             invisible: visibleLabo !== true,
           })}
         >
-          <InscriptionLabo />
         </div>
       </div>
     );

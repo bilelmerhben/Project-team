@@ -14,7 +14,7 @@ class InscriptionLabo extends Component {
       email: "",
       password: "",
       password2: "",
-      appointments:[],
+      appointments:[{User:{name:"",lastname:"",email:""},time:null}],
       errors: {},
       
     };
@@ -39,6 +39,7 @@ class InscriptionLabo extends Component {
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2,
+      appointments:this.state.appointments,
     };
     this.props.registerLabo(newLabo, this.props.history);
   };

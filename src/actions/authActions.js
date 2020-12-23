@@ -65,7 +65,7 @@ export const registerLabo = (laboData, history) => dispatch => {
 };
 export const loginLabo = laboData => dispatch => {
   axios
-    .post("/api/users/login/user", laboData)
+    .post("/api/users/login/labo", laboData)
     .then(res => {
 
       const { token } = res.data;
