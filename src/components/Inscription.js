@@ -61,26 +61,30 @@ const newUser = {
       <label htmlFor="validationCustom01">Nom</label>
       <input 
       type="text" 
-      className="form-control" 
+      className={classnames("form-control", {
+        "is-invalid": errors.name
+      })}  
       id="name" 
       placeholder="Nom" 
-      error={errors.name} 
       value={this.state.name} 
       onChange={this.onChange} 
       required/>
-      
+            <p className="text-danger">{errors.name} </p>
+
     </div>
     <div className="col-md mb-3">
       <label htmlFor="validationCustom02">Prénom</label>
       <input 
       type="text" 
-      className="form-control" 
+      className={classnames("form-control", {
+        "is-invalid": errors.lastname
+      })} 
       id="lastname" 
       placeholder="Prénom"
-      error={errors.lastname} 
       value={this.state.lastname} 
       onChange={this.onChange}  
       required/>
+      <p className="text-danger">{errors.lastname} </p>
       
     </div>
  
@@ -90,39 +94,48 @@ const newUser = {
       <label htmlFor="validationCustom03">Email</label>
       <input 
       type="email" 
-      className="form-control" 
+      className={classnames("form-control", {
+        "is-invalid": errors.email
+      })}  
       id="email" 
-      error={errors.email} 
       value={this.state.email} 
       onChange={this.onChange}  
       placeholder="Email" 
       required/>
+            <p className="text-danger">{errors.email} </p>
+
       
     </div>
     <div className="col-md mb-3">
       <label htmlFor="validationCustom04">Mot de passe</label>
       <input 
       type="password" 
-      className="form-control" 
+      className={classnames("form-control", {
+        "is-invalid": errors.password
+      })}  
       id="password" 
       placeholder="mot de passe" 
-      error={errors.password} 
       value={this.state.password} 
       onChange={this.onChange}
       required/>
+            <p className="text-danger">{errors.password} </p>
+
       
     </div>
     <div className="col-md mb-3">
       <label htmlFor="validationCustom04">Confirmer votre mot de passe</label>
       <input 
       type="password" 
-      className="form-control" 
+      className={classnames("form-control", {
+        "is-invalid": errors.password2
+      })}  
       id="password2" 
       placeholder="mot de passe" 
-      error={errors.password2} 
       value={this.state.password2} 
       onChange={this.onChange}
       required/>
+            <p className="text-danger">{errors.password2} </p>
+
       
     </div>
     
