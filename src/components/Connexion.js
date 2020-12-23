@@ -71,27 +71,34 @@ const userData = {
         <label htmlFor="InputEmail1">Adresse Email</label>
           <input
             type="email"
-            className="form-control"
+            className={classnames("form-control", {
+        "is-invalid": errors.email
+      })} 
             id="email"
             aria-describedby="emailHelp"
             placeholder="Entrer email"
             onChange={this.onChange}
             value={this.state.email}
-            error={errors.email}
           />
+                      <p className="text-danger">{errors.email} </p>
+                      <p className="text-danger">{} </p>
+
         </div>
         <div className="form-group margin-input">
           <label htmlFor="exampleInputPassword1">Mot de passe</label>
           <input
             type="password"
-            className="form-control"
+            className={classnames("form-control", {
+        "is-invalid": errors.password
+      })} 
             id="password"
             placeholder="Mot de passe"
             onChange={this.onChange}
             value={this.state.password}
-            error={errors.password}
 
           />
+                      <p className="text-danger">{errors.password} </p>
+
         </div>
         
         <button type="submit" className="connecter">
