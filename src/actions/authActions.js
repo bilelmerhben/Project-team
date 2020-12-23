@@ -51,3 +51,33 @@ export const logoutUser = () => dispatch => {
   setAuthToken(false);
   dispatch(setCurrentUser({}));
 };
+//labo
+export const registerLabo = (laboData, history) => dispatch => {
+  axios
+    .post("/api/users/register/labo", laboData)
+    .then(res => history.push("/Connexion"))
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
+export const loginLabo = laboData => dispatch => {
+  axios
+    .post("/api/users/login/user", laboData)
+    .then(res => {
+
+      const { token } = res.data;
+      localStorage.setItem("jwtToken", token);
+      setAuthToken(token);
+      const decoded = jwt_decode(token);
+      dispatch(setCurrentUser(decoded));
+    })
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};

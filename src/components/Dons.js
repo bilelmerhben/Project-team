@@ -1,12 +1,12 @@
 import React from "react";
 
 
-function Dons (props){
+function Dons (){
   
     return (
        
- <div className={props.className}>
-    
+ <div className="container-fluid">
+
  </div>
         
     );
