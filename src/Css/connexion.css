@@ -54,4 +54,86 @@ h1 {
   }
 
 
+  .btn-inscri{
+    width: 100%;
+    background-color:rgb(75, 91, 184);
+    border: none;
+    height: 100%;
+    color :white;
+  }
+
+  .btn-inscri-1{
+    width: 100%;
+    background-color:white ;
+    border: none;
+    height: 8vh;
+
+  }
+
+  .inscri{
+    background-color:rgb(75, 91, 184);
+  }
+  .inscri-1{
+    background-color:rgb(255, 255, 255);
+  }
+
   
+  .inscription-1{
+    background-color:#4a63af;
+    padding: 0 6px;
+    transition: background-color .1s linear,border-color .1s linear,color .1s linear;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0;
+    color:white;
+    justify-content: center;
+    height: 40px;
+    outline: none;
+    display: inline-flex;
+    width : 40% ;
+    vertical-align: middle;
+    align-items: center;
+    font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-tap-highlight-color: transparent;
+  
+  }
+  .inscription-1:hover{
+    background-color: #aebbe4;
+    text-decoration: none;
+  }
+
+  
+  .connecter-1{
+    background-color: rgba(64,87,109,.07);
+    padding: 0 6px;
+    transition: background-color .1s linear,border-color .1s linear,color .1s linear;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0;
+    color: #0e1318;
+    justify-content: center;
+    height: 40px;
+    outline: none;
+    display: inline-flex;
+    width: 40%;
+    vertical-align: middle;
+    align-items: center;
+    font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    font-family: Open Sans,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-tap-highlight-color: transparent;
+  
+  }
+  .connecter-1:hover{
+    background-color: #ebebe0;
+  }

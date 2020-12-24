@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser, registerLabo } from "../actions/authActions";
 import classnames from "classnames";
-
+import "../Css/connexion.css";
 class Inscription extends Component {
   constructor() {
     super();
@@ -65,20 +65,18 @@ class Inscription extends Component {
         <br />
         <br />
         <br />
-        <button
-          onClick={() => this.setState({visiblePatient:true,errors:{}})}
-        >
-          patient
-        </button>
-        <button onClick={() =>this.setState({visiblePatient:false,errors:{}})}
-        >
-          Labo
-        </button>
+        
+        
         <div className="sign-in-card">
             <div className="row text-center">
-              <div className="col mt-3 mb-3 rounded">Patient</div>
-              <div className="bg-white col rounded">
-              <div className="mt-3 mb-3  ">Laboratoire</div></div>
+              <div className="inscri col "><button className="btn-inscri"
+          onClick={() => this.setState({visiblePatient:true,errors:{}})}>
+          Patient
+        </button></div>
+             
+              <div className="inscri-1 col "><button className="btn-inscri-1" onClick={() =>this.setState({visiblePatient:false,errors:{}})}>
+          Laboratoire
+        </button></div>
             </div>
         <div
           className={classnames("sign-in-card ", {
@@ -92,7 +90,7 @@ class Inscription extends Component {
             noValidate
             onSubmit={this.onSubmit}
           >
-            <h1>Inscrivez-vous</h1>
+            <h1>Inscrivez-vous en tant que patient</h1>
             <hr />
             <div className="form-row">
               <div className="col-md mb-3">
@@ -100,7 +98,7 @@ class Inscription extends Component {
                 <input
                   type="text"
                   className={classnames("form-control", {
-                    "is-invalid": errors.name,
+                    "is-invalid": errors.lastname,
                   })}
                   id="name"
                   placeholder="Nom"
@@ -108,14 +106,14 @@ class Inscription extends Component {
                   onChange={this.onChange}
                   required
                 />
-                <p className="text-danger">{errors.name} </p>
+                <p className="text-danger">{errors.lastname} </p>
               </div>
               <div className="col-md mb-3">
                 <label htmlFor="validationCustom02">Prénom</label>
                 <input
                   type="text"
                   className={classnames("form-control", {
-                    "is-invalid": errors.lastname,
+                    "is-invalid": errors.name,
                   })}
                   id="lastname"
                   placeholder="Prénom"
@@ -123,7 +121,7 @@ class Inscription extends Component {
                   onChange={this.onChange}
                   required
                 />
-                <p className="text-danger">{errors.lastname} </p>
+                <p className="text-danger">{errors.name} </p>
               </div>
             </div>
             <div className="form-row">
@@ -175,23 +173,34 @@ class Inscription extends Component {
                 <p className="text-danger">{errors.password2} </p>
               </div>
             </div>
-            <button type="submit" className="inscription">
+            <button type="submit" className="inscription-1">
               Valider
             </button>
           </form>
         </div>
- 
+                    
         <div
           className={classnames("sign-in-card ", {
             invisible: visiblePatient === true,
           })}
-        >
+        > 
+        <div className="row text-center">
+      
+              <div className="inscri-1 col "><button className="btn-inscri-1"
+          onClick={() => this.setState({visiblePatient:true,errors:{}})}>
+          Patient
+        </button></div>
+              
+              <div className="inscri col"><button className="btn-inscri" onClick={() =>this.setState({visiblePatient:false,errors:{}})}>
+          Laboratoire
+        </button></div>
+            </div>
           <form
             className="needs-validation login-content"
             noValidate
             onSubmit={this.onSubmitLabo}
           >
-            <h1>Inscrivez-vous</h1>
+            <h1>Inscrivez-vous en tant que laboratoire</h1>
             <hr />
 
             <div className="form-row">
@@ -280,7 +289,7 @@ class Inscription extends Component {
                 <p className="text-danger">{errors.description} </p>
               </div>
             </div>
-            <button type="submit" className="inscription">
+            <button type="submit" className="inscription-1">
               Valider
             </button>
           </form>

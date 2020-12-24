@@ -116,11 +116,11 @@ const userLabo = {
 
         </div>
         
-        <button type="submit" className="connecter">
+        <button type="submit" className="connecter-1">
           Valider
         </button>
         <div className="form-group pt-2">
-          <a type="button" className="inscription" href="/Inscription">
+          <a type="button" className="inscription-1" href="/Inscription">
             S'inscrire
           </a>
         </div>
