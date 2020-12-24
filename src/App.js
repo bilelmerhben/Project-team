@@ -12,7 +12,6 @@ import Contact from "./components/Contact";
 import Connexion from "./components/Connexion";
 import Test1 from "./components/Test1";
 import Inscription from "./components/Inscription";
-import Footer from "./components/Footer";
 import ProfilePatient from "./components/ProfilePatient";
 import ProfileLabo from "./components/ProfileLabo";
 import { Provider } from "react-redux";
@@ -57,6 +56,8 @@ function App() {
        <Route  path="/Test1" component={Test1} />
        <Route  path="/ProfilePatient" component={ProfilePatient} />
        <Route  path="/ProfileLabo" component={ProfileLabo} />
+       <Route  path="/dons" component={Dons} />
+
        </Switch>
       
       

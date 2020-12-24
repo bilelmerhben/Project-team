@@ -9,10 +9,10 @@ import hands from "../img/wash-your-hands.png";
 import cough from "../img/cough.png";
 import hi from "../img/hi.png";
 import tissue from "../img/tissue-paper.png";
-import Footer from "./Footer";
 
 
 function Home() {
+  
   return (
     <div className="container-fluid ">
       <div className="container-fluid firstLayerHome">

@@ -1,5 +1,4 @@
 import React from "react";
-import InscriptionLabo from "./InscriptionLabo";
 
 
 function Dons (){
@@ -7,7 +6,7 @@ function Dons (){
     return (
        
  <div className="container-fluid">
-      <InscriptionLabo/>
+      
  </div>
         
     );

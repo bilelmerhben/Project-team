@@ -1,7 +1,13 @@
-import React from "react";
+import React, { Component } from "react";
 import "../Css/Profile.css";
+import PropTypes from "prop-types";
+import {connect} from "react-redux";
 
-function ProfileLabo() {
+
+class ProfileLabo extends Component{
+  render(){
+    const { user } = this.props.auth;
+    console.log(user);
   return (
     <div className="container emp-profile">
       <div className="row">
@@ -25,7 +31,7 @@ function ProfileLabo() {
                   <label>Nom du Labo</label>
                 </div>
                 <div className="col-md-6">
-                  <p>Labo abc</p>
+                  <p>{user.name}</p>
                 </div>
               </div>
               <div className="row">
@@ -33,7 +39,7 @@ function ProfileLabo() {
                   <label>Email</label>
                 </div>
                 <div className="col-md-6">
-                  <p>Laboabc@gmail.com</p>
+                  <p>{user.email}</p>
                 </div>
               </div>
               <div className="row">
@@ -41,7 +47,7 @@ function ProfileLabo() {
                   <label>Description</label>
                 </div>
                 <div className="col-md-6">
-                  <p> onzepinvpqjbvqeprinv</p>
+                  <p> {user.description}</p>
                 </div>
               </div>
              
@@ -77,5 +83,13 @@ function ProfileLabo() {
       
     </div>
   );
-}
-export default ProfileLabo;
+}}
+ProfileLabo.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+export default connect(
+  mapStateToProps
+)(ProfileLabo);

@@ -1,7 +1,14 @@
-import React from "react";
+import React, {Component} from "react";
 import "../Css/Profile.css";
+import PropTypes from "prop-types";
+import {connect} from "react-redux";
 
-function ProfilePatient() {
+
+class ProfilePatient extends Component {
+  render(){
+    const { user } = this.props.auth;
+    console.log(user);
+
   return (
     <div className="container emp-profile">
       <div className="row">
@@ -24,7 +31,7 @@ function ProfilePatient() {
                   <label>Id du patient</label>
                 </div>
                 <div className="col-md-6">
-                  <p>123</p>
+                  <p>{user.id}</p>
                 </div>
               </div>
               <div className="row">
@@ -32,7 +39,7 @@ function ProfilePatient() {
                   <label>Nom</label>
                 </div>
                 <div className="col-md-6">
-                  <p>Nom du patient</p>
+                  <p>{user.name}</p>
                 </div>
               </div>
               <div className="row">
@@ -40,7 +47,7 @@ function ProfilePatient() {
                   <label>Email</label>
                 </div>
                 <div className="col-md-6">
-                  <p>patient@gmail.com</p>
+                  <p>{user.email}</p>
                 </div>
               </div>
               <div className="row">
@@ -103,7 +110,7 @@ function ProfilePatient() {
                 </div>
                 <div className="col-md-6">
                   <p>Le 12/01/2012</p>
-                  <a className="btn bt" href="">Modifier date du rendez-vous</a>
+                  <a className="btn btn" href="">Modifier date du rendez-vous</a>
                 </div>
               </div>
             </div>
@@ -113,6 +120,14 @@ function ProfilePatient() {
       
       
     </div>
-  );
+  );}
 }
-export default ProfilePatient;
+ProfilePatient.propTypes = {
+  auth: PropTypes.object.isRequired
+};
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+export default connect(
+  mapStateToProps
+)(ProfilePatient);
