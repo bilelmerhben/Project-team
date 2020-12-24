@@ -101,8 +101,11 @@ const obj = {
 };
 class Test1 extends Component {
   state = {
-    count: 0,
+    count: 0
   };
+ 
+    
+ 
   changequestion = (e) => {
     e.preventDefault();
     if (this.state.count < 21) {
@@ -485,6 +488,7 @@ class Test1 extends Component {
               </div>
             </div>
              ):(
+               
               <div className="customText">
               <input
                 className="input-text"
@@ -497,7 +501,8 @@ class Test1 extends Component {
                 autoFocus
               />{" "}
               votre code postal
-              {" "}</div>
+              {" "}
+              </div>
               
              )
 
@@ -505,13 +510,15 @@ class Test1 extends Component {
 
             </div>
             {(this.state.count === 21) ?(
-           <div>
+              
+           <div >
              <br/>
                 <input
               className="check-box"
               type="checkbox"
               name="check"
-              onClick={() => console.log("e.value")}
+             
+            
             />
             Je suis en dehors de la Tunisie ou je ne souhaite pas répondre.</div>):(<></>)
               }

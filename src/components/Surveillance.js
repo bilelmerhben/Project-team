@@ -38,9 +38,49 @@ const obj = {
   label: ["Mieux", "Stable", "Un peu moins bien", "Beaucoup moins bien"],
 };
 class Surveillance extends Component {
+  
   state = {
     count: 0,
+    rep1:"",
+    rep2:"",
+    rep3:"",
+    rep4:"",
+    rep5:"",
+    rep6:"",
+    rep7:"",
+    rep8:"",
+    rep9:"",
   };
+
+  
+getRepons1 =(e)=>{
+  this.setState({rep1: e.target.value});
+}
+getRepons2 =(e)=>{
+  this.setState({rep2: e.target.value});
+}
+getRepons3 =(e)=>{
+  this.setState({rep3: e.target.value});
+}
+getRepons4 =(e)=>{
+  this.setState({rep4: e.target.value});
+}
+getRepons5 =(e)=>{
+  this.setState({rep5: e.target.value});
+}
+getRepons6 =(e)=>{
+  this.setState({rep6: e.target.value});
+}
+getRepons7 =(e)=>{
+  this.setState({rep7: e.target.value});
+}
+getRepons8 =(e)=>{
+  this.setState({rep8: e.target.value});
+}
+getRepons9 =(e)=>{
+  this.setState({rep9: e.target.value});
+}
+
   changequestion = (e) => {
     e.preventDefault();
     if (this.state.count < 9) {
@@ -48,6 +88,18 @@ class Surveillance extends Component {
         count: this.state.count + 1,
       });
     }
+    const reponses = {
+      rep1: this.state.rep1,
+      rep2: this.state.rep2,
+      rep3: this.state.rep3,
+      rep4: this.state.rep4,
+      rep5: this.state.rep5,
+      rep6: this.state.rep6,
+      rep7: this.state.rep7,
+      rep8: this.state.rep8,
+      rep9: this.state.rep9,
+    };
+    console.log(reponses);
   };
   comeback = () => {
     if (this.state.count > 0) {
@@ -56,6 +108,7 @@ class Surveillance extends Component {
       });
     }
   };
+  
   render() {
     return (
       <div className="test1">
@@ -71,13 +124,13 @@ class Surveillance extends Component {
               votre médecin ou pharmacien.
             </p>
             <p className="card-text">
-              Votre situation nécessite l'avis immédiat d'un médecin.Contactez
+              <b>Votre situation nécessite l'avis immédiat d'un médecin.Contactez
               immédiatement votre médecin traitant par téléphone pour lui faire
               part de votre situation et organiser un rendez-vous de
               consultation. Vous pouvez également essayer d'obtenir un
               rendez-vous de téléconsultation.Si vous n'arrivez pas à joindre un
               médecin rapidement pour lui détailler vos symptômes, appelez le
-              190.
+              190.</b>
             </p>
           </div>
         ) : (
@@ -98,61 +151,66 @@ class Surveillance extends Component {
                 {obj.contenu[this.state.count]}{" "}
               </p>
 
-              <form className=" " onSubmit={this.changequestion}>
+              <form  onSubmit={this.changequestion}>
                 {this.state.count === 0 ? (
-                  <div className="questionsOptions2">
-                    <div className="custom-control custom-radio">
+                  <div className="questionsOptions2 custom-control custom-radio">
+                    
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        name="question1"
+                        value="Mieux"
                         id="radio-input"
+                        onChange={this.getRepons1}
                         required
                       />
+                     
                       <label id="label-radio">
                         {obj.label[0]}
                         <span className="hover-border"></span>
                       </label>
-                    </div>
-                    <div className="custom-control custom-radio">
+                   <div style={{height:15}}></div>
+                  
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        name="question1"
+                        value="Stable"
                         id="radio-input"
-                        required
+                        onChange={this.getRepons1}
                       />
                       <label id="label-radio">
                         {obj.label[1]}
                         <span className="hover-border"></span>
                       </label>
-                    </div>
-                    <div className="custom-control custom-radio">
+                      <div style={{height:15}}></div>
+                    
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        name="question1"
+                        value="Un peu moins bien"
                         id="radio-input"
-                        required
+                        onChange={this.getRepons1}
                       />
                       <label id="label-radio">
                         {obj.label[2]}
                         <span className="hover-border"></span>
                       </label>
-                    </div>
-                    <div className="custom-control custom-radio">
+                      <div style={{height:15}}></div>
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        name="question1"
+                        value="Beaucoup moins bien"
                         id="radio-input"
-                        required
+                        onChange={this.getRepons1}
                       />
                       <label id="label-radio">
                         {obj.label[3]}
                         <span className="hover-border"></span>
                       </label>
-                    </div>
+                  <div style={{height:15}}></div>
                   </div>
                 ) : 
 /***************************************************** Question 2 ***********************************************************/
@@ -162,8 +220,10 @@ class Surveillance extends Component {
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        value="Mieux"
+                        name="question2"
                         id="radio-input"
+                        onChange={this.getRepons2}
                         required
                       />
                       <label id="label-radio">
@@ -175,9 +235,11 @@ class Surveillance extends Component {
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        value="Stable"
+                        name="question2"
                         id="radio-input"
-                        required
+                        onChange={this.getRepons2}
+                      
                       />
                       <label id="label-radio">
                         {obj.label[1]}
@@ -188,9 +250,11 @@ class Surveillance extends Component {
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        value="Un peu moins bien"
+                        name="question2"
                         id="radio-input"
-                        required
+                        onChange={this.getRepons2}
+                        
                       />
                       <label id="label-radio">
                         {obj.label[2]}
@@ -201,9 +265,10 @@ class Surveillance extends Component {
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        value="Beaucoup moins bien"
+                        name="question2"
                         id="radio-input"
-                        required
+                        onChange={this.getRepons2}
                       />
                       <label id="label-radio">
                         {obj.label[3]}
@@ -225,7 +290,9 @@ class Surveillance extends Component {
                         max="42"
                         step="0.1"
                         autoFocus
+                        value={this.state.reponsequestion3}
                         required
+                        onChange={this.getRepons3}
                       />
                       degrés
                     </div>
@@ -233,43 +300,48 @@ class Surveillance extends Component {
                 ) : 
 /***************************************************** Question 4 ***********************************************************/
                 this.state.count === 3 ? (
-                  <div className="questionsOptions">
-                    <div className="flex-direction-row">
-                      <div className="custom-control custom-radio">
+                  <div className="questionsOptions flex-direction-row custom-control custom-radio">
+                    
+                      
                         <input
                           id="radio-input"
                           type="radio"
-                          name="radio"
+                          name="question4"
+                          value="oui"
                           required
+                          onChange={this.getRepons4}
                         />
-                        <label id="label-radio">
+                        <label id="label-radio" style={{marginRight:20}}>
                           Oui <span className="hover-border"></span>
                         </label>
-                      </div>
-                      <div className="custom-control custom-radio">
+                     
+                  
                         <input
                           id="radio-input"
                           type="radio"
-                          name="radio"
-                          required
+                          value="non"
+                          name="question4"
+                          onChange={this.getRepons4}
                         />
                         <label id="label-radio">
                           Non <span className="hover-border"></span>
                         </label>
-                      </div>
+                     
                     </div>
-                  </div>
+                 
                 ) : 
 /***************************************************** Question 5 ***********************************************************/
                 this.state.count === 4 ? (
                   <div className="questionsOptions">
-                    <div className="flex-direction-row">
+                    <div className="flex-direction-row ">
                       <div className="custom-control custom-radio">
                         <input
                           id="radio-input"
                           type="radio"
-                          name="radio"
-                          required
+                          name="question5"
+                          value="oui"
+                          required 
+                          onChange={this.getRepons5}
                         />
                         <label id="label-radio">
                           Oui <span className="hover-border"></span>
@@ -279,8 +351,10 @@ class Surveillance extends Component {
                         <input
                           id="radio-input"
                           type="radio"
-                          name="radio"
-                          required
+                          name="question5"
+                          value="non"
+                          required 
+                          onChange={this.getRepons5}
                         />
                         <label id="label-radio">
                           Non <span className="hover-border"></span>
@@ -291,31 +365,32 @@ class Surveillance extends Component {
                 ) : 
 /***************************************************** Question 6 ***********************************************************/
                 this.state.count === 5 ? (
-                  <div className="questionsOptions">
-                    <div className="flex-direction-row">
-                      <div className="custom-control custom-radio">
+                  <div className="questionsOptions custom-control custom-radio flex-direction-row">
+                   
                         <input
                           id="radio-input"
                           type="radio"
-                          name="radio"
+                          name="question6"
+                          value="oui"
                           required
+                          onChange={this.getRepons6}
                         />
-                        <label id="label-radio">
+                        <label id="label-radio" style={{marginRight:20}}>
                           Oui <span className="hover-border"></span>
                         </label>
-                      </div>
-                      <div className="custom-control custom-radio">
+                    
+               
                         <input
                           id="radio-input"
                           type="radio"
-                          name="radio"
-                          required
+                          name="question6"
+                          value="non"
+                          onChange={this.getRepons6}
                         />
                         <label id="label-radio">
                           Non <span className="hover-border"></span>
                         </label>
-                      </div>
-                    </div>
+                     
                   </div>
                 ) : 
 /***************************************************** Question 7 ***********************************************************/
@@ -326,8 +401,10 @@ class Surveillance extends Component {
                         <input
                           id="radio-input"
                           type="radio"
-                          name="radio"
+                          name="question7"
                           required
+                          value="oui"
+                          onChange={this.getRepons7}
                         />
                         <label id="label-radio">
                           Oui <span className="hover-border"></span>
@@ -337,8 +414,9 @@ class Surveillance extends Component {
                         <input
                           id="radio-input"
                           type="radio"
-                          name="radio"
-                          required
+                          value="non"
+                          name="question7"
+                          onChange={this.getRepons7}
                         />
                         <label id="label-radio">
                           Non <span className="hover-border"></span>
@@ -349,31 +427,32 @@ class Surveillance extends Component {
                 ) : 
 /***************************************************** Question 8 ***********************************************************/
                 this.state.count === 7 ? (
-                  <div className="questionsOptions">
-                    <div className="flex-direction-row">
-                      <div className="custom-control custom-radio">
+                  <div className="questionsOptions custom-control custom-radio flex-direction-row">
+                    
                         <input
                           id="radio-input"
                           type="radio"
-                          name="radio"
+                          name="question8"
                           required
+                          value="oui"
+                          onChange={this.getRepons8}
                         />
-                        <label id="label-radio">
+                        <label id="label-radio" style={{marginRight:20}}>
                           Oui <span className="hover-border"></span>
                         </label>
-                      </div>
-                      <div className="custom-control custom-radio">
+                     
+                     
                         <input
                           id="radio-input"
                           type="radio"
-                          name="radio"
-                          required
+                          value="non"
+                          name="question8"
+                          onChange={this.getRepons8}
                         />
                         <label id="label-radio">
                           Non <span className="hover-border"></span>
                         </label>
-                      </div>
-                    </div>
+                   
                   </div>
                 ) :
 /***************************************************** Question 9 ***********************************************************/
@@ -383,9 +462,11 @@ class Surveillance extends Component {
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        value="Mieux"
+                        name="question9"
                         id="radio-input"
                         required
+                        onChange={this.getRepons9}
                       />
                       <label id="label-radio">
                         {obj.label[0]}
@@ -396,9 +477,10 @@ class Surveillance extends Component {
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        value="Stable"
+                        name="question9"
                         id="radio-input"
-                        required
+                        onChange={this.getRepons9}
                       />
                       <label id="label-radio">
                         {obj.label[1]}
@@ -409,9 +491,10 @@ class Surveillance extends Component {
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        value="Un peu moins bien"
+                        name="question9"
                         id="radio-input"
-                        required
+                        onChange={this.getRepons9}
                       />
                       <label id="label-radio">
                         {obj.label[2]}
@@ -422,9 +505,10 @@ class Surveillance extends Component {
                       <input
                         className="m-2"
                         type="radio"
-                        name="radio"
+                        name="question9"
                         id="radio-input"
-                        required
+                        value="Beaucoup moins bien"
+                        onChange={this.getRepons9}
                       />
                       <label id="label-radio">
                         {obj.label[3]}
@@ -445,13 +529,16 @@ class Surveillance extends Component {
                       type="submit"
                       name="submit"
                       value="Continuer"
+                      onSubmit={this.changequestion}
                     />
                   </div>
                 )}
+               
               </form>
             </div>
           </div>
         )}
+       
       </div>
     );
   }
