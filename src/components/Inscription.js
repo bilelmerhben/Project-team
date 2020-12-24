@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import {  withRouter } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { registerUser } from "../actions/authActions";
+import { registerUser, registerLabo } from "../actions/authActions";
 import classnames from "classnames";
-import InscriptionLabo from "./InscriptionLabo";
 
 class Inscription extends Component {
   constructor() {
@@ -12,12 +11,13 @@ class Inscription extends Component {
     this.state = {
       name: "",
       lastname: "",
+      description: "",
       email: "",
       password: "",
       password2: "",
       errors: {},
-      visiblePatient: false,
-      visibleLabo: false,
+      appointments:[{User:{name:"",lastname:"",email:""},time:null}],
+      visiblePatient: true,
     };
   }
 
@@ -29,10 +29,10 @@ class Inscription extends Component {
     }
   }
 
-  onChange = (e) => {
+  onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
-  onSubmit = (e) => {
+  onSubmit = e => {
     e.preventDefault();
     const newUser = {
       name: this.state.name,
@@ -43,34 +43,50 @@ class Inscription extends Component {
     };
     this.props.registerUser(newUser, this.props.history);
   };
+  onSubmitLabo = e => {
+    e.preventDefault();
+    const newLabo = {
+      name: this.state.name,
+      description: this.state.description,
+      email: this.state.email,
+      password: this.state.password,
+      password2: this.state.password2,
+      appointments:this.state.appointments,
+    };
+    this.props.registerLabo(newLabo, this.props.history);
+
+  };
 
   render() {
     const { errors } = this.state;
     var visiblePatient = this.state.visiblePatient;
-    var visibleLabo = this.state.visibleLabo;
     return (
       <div className="container-fluid mt-5">
         <br />
         <br />
         <br />
         <button
-          onClick={() => this.state.visibleLabo?
-            this.setState({visibleLabo:!visibleLabo,visiblePatient: !visiblePatient}):
-            this.setState({ visiblePatient: !visiblePatient })}
+          onClick={() => this.setState({visiblePatient:true,errors:{}})}
         >
           patient
         </button>
-        <button onClick={() => this.state.visiblePatient?
-            this.setState({visiblePatient:!visiblePatient,visibleLabo: !visibleLabo}):
-            this.setState({ visibleLabo: !visibleLabo })}
+        <button onClick={() =>this.setState({visiblePatient:false,errors:{}})}
         >
           Labo
         </button>
+        <div className="sign-in-card">
+            <div className="row text-center">
+              <div className="col mt-3 mb-3 rounded">Patient</div>
+              <div className="bg-white col rounded">
+              <div className="mt-3 mb-3  ">Laboratoire</div></div>
+            </div>
         <div
           className={classnames("sign-in-card ", {
             invisible: visiblePatient !== true,
           })}
         >
+          
+          </div>
           <form
             className="needs-validation login-content"
             noValidate
@@ -164,16 +180,16 @@ class Inscription extends Component {
             </button>
           </form>
         </div>
-
+ 
         <div
           className={classnames("sign-in-card ", {
-            invisible: visibleLabo !== true,
+            invisible: visiblePatient === true,
           })}
         >
           <form
             className="needs-validation login-content"
             noValidate
-            onSubmit={this.onSubmit}
+            onSubmit={this.onSubmitLabo}
           >
             <h1>Inscrivez-vous</h1>
             <hr />
@@ -269,12 +285,7 @@ class Inscription extends Component {
             </button>
           </form>
         </div>
-        <div
-          className={classnames("sign-in-card ", {
-            invisible: visibleLabo !== true,
-          })}
-        >
-        </div>
+        
       </div>
     );
   }
@@ -288,6 +299,6 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors,
 });
-export default connect(mapStateToProps, { registerUser })(
+export default connect(mapStateToProps, { registerUser, registerLabo })(
   withRouter(Inscription)
 );

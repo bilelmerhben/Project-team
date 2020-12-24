@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../Css/connexion.css";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { loginUser } from "../actions/authActions";
+import { loginUser, loginLabo } from "../actions/authActions";
 import classnames from "classnames";
 
 class Connexion extends Component {
@@ -11,7 +11,8 @@ class Connexion extends Component {
     this.state = {
       email: "",
       password: "",
-      errors: {}
+      errors: {},
+      submitUser : true
     };
   }
   componentWillReceiveProps(nextProps) {
@@ -38,6 +39,14 @@ const userData = {
     };
     this.props.loginUser(userData);
   };
+  onSubmitLabo = e => {
+    e.preventDefault();
+const userLabo = {
+      email: this.state.email,
+      password: this.state.password
+    };
+    this.props.loginLabo(userLabo);
+  };
 
 
   render(){
@@ -46,8 +55,12 @@ const userData = {
   return (
     <div className="login-card">
       <div className="login-content">
-      <h1>Connectez-vous</h1>
-      <form noValidate onSubmit={this.onSubmit}>
+  <h1>Connectez-vous </h1>
+      <form noValidate onSubmit={(e)=>{
+        if (this.state.submitUser)
+        this.onSubmit(e)
+        else this.onSubmitLabo(e)
+      }}>
       <hr/>
       <div className="form-group ">
         <div className="row">
@@ -56,14 +69,16 @@ const userData = {
           type="radio" 
           value="None" 
           id="radioOne" 
-          name="account"  />
+          name="account"
+          onClick={() => this.setState({submitUser:true})}  />
           <label htmlFor="radioOne" className="radio1" >Patient</label> </div>
           <div className="col">
           <input 
           type="radio" 
           value="None" 
           id="radioTwo" 
-          name="account" />
+          name="account" 
+          onClick={() =>this.setState({submitUser:false})} />
           <label htmlFor="radioTwo" className="radio1">Laboratoire</label></div>
         </div>
       </div>
@@ -126,5 +141,5 @@ const mapStateToProps = state => ({
 });
 export default connect(
   mapStateToProps,
-  { loginUser }
+  { loginUser , loginLabo}
 )(Connexion);
