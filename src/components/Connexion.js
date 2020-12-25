@@ -130,19 +130,6 @@ class Connexion extends Component {
             </div>
           </form>
         </div>
-<<<<<<< HEAD
-        
-        <button type="submit" className="connecter">
-          Valider
-        </button>
-        <div className="form-group pt-2">
-          <a type="button" className="inscription" href="/Inscription">
-            S'inscrire
-          </a>
-        </div>
-      </form>
-=======
->>>>>>> 57063a4fc42a4ece015755ffb9b8396d1141ff50
       </div>
     );
   }
