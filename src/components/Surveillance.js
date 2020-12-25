@@ -297,7 +297,7 @@ getRepons9 =(e)=>{
                       degrés
                     </div>
                   </div>
-                ) : 
+                ) :  
 /***************************************************** Question 4 ***********************************************************/
                 this.state.count === 3 ? (
                   <div className="questionsOptions flex-direction-row custom-control custom-radio">
