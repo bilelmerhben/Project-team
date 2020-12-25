@@ -6,7 +6,7 @@ function Laboratoire (){
   
     return (
        
- <div className="lab">
+ <div className="lab ">
     <h1>Laboratoires Disponibles </h1>
     <div className="container">
          <LocationMap/>

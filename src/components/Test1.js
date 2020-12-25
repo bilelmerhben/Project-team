@@ -101,19 +101,132 @@ const obj = {
 };
 class Test1 extends Component {
   state = {
-    count: 0
+    count: 0,
+    rep1:"",
+    rep2:"",
+    rep3:"",
+    rep4:"",
+    rep5:"",
+    rep6:"",
+    rep7:"",
+    rep8:"",
+    rep9:"",
+    rep10:"",
+    rep11:"",
+    rep12:"",
+    rep13:"",
+    rep14:"",
+    rep15:"",
+    rep16:"",
+    rep17:"",
+    rep18:"",
+    rep19:"",
+    rep20:"",
+    rep21:"",
+    rep22:"",
   };
+   
+getRepons1 =(e)=>{
+  this.setState({rep1: e.target.value});
+}
+getRepons2 =(e)=>{
+  this.setState({rep2: e.target.value});
+}
+getRepons3 =(e)=>{
+  this.setState({rep3: e.target.value});
+}
+getRepons4 =(e)=>{
+  this.setState({rep4: e.target.value});
+}
+getRepons5 =(e)=>{
+  this.setState({rep5: e.target.value});
+}
+getRepons6 =(e)=>{
+  this.setState({rep6: e.target.value});
+}
+getRepons7 =(e)=>{
+  this.setState({rep7: e.target.value});
+}
+getRepons8 =(e)=>{
+  this.setState({rep8: e.target.value});
+}
+getRepons9 =(e)=>{
+  this.setState({rep9: e.target.value});
+}
  
+getRepons10 =(e)=>{
+  this.setState({rep10: e.target.value});
+}
+getRepons11 =(e)=>{
+  this.setState({rep11: e.target.value});
+}
+getRepons12 =(e)=>{
+  this.setState({rep12: e.target.value});
+}
+getRepons13 =(e)=>{
+  this.setState({rep13: e.target.value});
+}
+getRepons14 =(e)=>{
+  this.setState({rep14: e.target.value});
+}
+getRepons15 =(e)=>{
+  this.setState({rep15: e.target.value});
+}
+getRepons16 =(e)=>{
+  this.setState({rep16: e.target.value});
+}
+getRepons17 =(e)=>{
+  this.setState({rep17: e.target.value});
+}
+getRepons18 =(e)=>{
+  this.setState({rep18: e.target.value});
+} 
+getRepons19 =(e)=>{
+  this.setState({rep19: e.target.value});
+}
+getRepons20 =(e)=>{
+  this.setState({rep20: e.target.value});
+}
+getRepons21 =(e)=>{
+  this.setState({rep21: e.target.value});
+}
+getRepons22 =(e)=>{
+  this.setState({rep22: e.target.value});
+}
     
  
   changequestion = (e) => {
     e.preventDefault();
-    if (this.state.count < 21) {
-     
+    if (this.state.count < 22) {
       this.setState({
         count: this.state.count + 1,
       });
     }
+    const reponses = {
+      rep1: this.state.rep1,
+      rep2: this.state.rep2,
+      rep3: this.state.rep3,
+      rep4: this.state.rep4,
+      rep5: this.state.rep5,
+      rep6: this.state.rep6,
+      rep7: this.state.rep7,
+      rep8: this.state.rep8,
+      rep9: this.state.rep9,
+      rep10: this.state.rep10,
+      rep11: this.state.rep11,
+      rep12: this.state.rep12,
+      rep13: this.state.rep13,
+      rep14: this.state.rep14,
+      rep15: this.state.rep15,
+      rep16: this.state.rep16,
+      rep17: this.state.rep17,
+      rep18: this.state.rep18,
+      rep19: this.state.rep19,
+      rep20: this.state.rep20,
+      rep21: this.state.rep21,
+      rep22: this.state.rep22,
+    };
+    console.log(reponses);
   };
   comeback = () => {
     if (this.state.count > 0) {
@@ -124,9 +237,36 @@ class Test1 extends Component {
   };
   render() {
     return (
+      <div>{this.state.count == 22 ?(
       <div className="test1 ">
+       <p>reponse1:{this.state.rep1}</p>
+       <p>reponse2:{this.state.rep2}</p>
+       <p>reponse3:{this.state.rep3}</p>
+       <p>reponse4:{this.state.rep4}</p>
+       <p>reponse5:{this.state.rep5}</p>
+       <p>reponse6:{this.state.rep6}</p>
+       <p>reponse7:{this.state.rep7}</p>
+       <p>reponse8:{this.state.rep8}</p>
+       <p>reponse9:{this.state.rep9}</p>
+       <p>reponse10:{this.state.rep10}</p>
+       <p>reponse11:{this.state.rep11}</p>
+       <p>reponse12:{this.state.rep12}</p>
+       <p>reponse13:{this.state.rep13}</p>
+       <p>reponse14:{this.state.rep14}</p>
+       <p>reponse15:{this.state.rep15}</p>
+       <p>reponse16:{this.state.rep16}</p>
+       <p>reponse17:{this.state.rep17}</p>
+       <p>reponse18:{this.state.rep18}</p>
+       <p>reponse19:{this.state.rep19}</p>
+       <p>reponse20:{this.state.rep20}</p>
+       <p>reponse21:{this.state.rep21}</p>
+       <p>reponse22:{this.state.rep22}</p>
+       
 
+      </div>):(
+      <div className="test1 ">
            <div className="div1 container-lg">
+          
                 <h4>
                 <img
                 className="fleche"
@@ -139,54 +279,60 @@ class Test1 extends Component {
                       <div className="question">
                          <p className="questionsTitle">{obj.titre[this.state.count]}</p>
                          <p className="questionsIndication">{obj.contenu[this.state.count]} {" "}</p>
-            <div className="questionsOptions">
+             <div className="questionsOptions">
              
               {(this.state.count === 0) ? (
                  <div className="customText"> 
-                 <input className="input-text" type="number" name="Temperature" placeholder="37.0" min="36" max="42" step="0.1" autoFocus  required />degrés
+                 <input 
+                 className="input-text"
+                  type="number" name="Temperature"
+                   placeholder="37.0" min="36" max="42" step="0.1"
+                    autoFocus  required 
+                    onChange={this.getRepons1}/>degrés
                  </div>
                 ):
                 this.state.count === 1 ?(
-                  <div className="flex-direction-row">
+                  
+                  <div className="flex-direction-row"> 
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" value="Oui" required onChange={this.getRepons2}/>
                   <label id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
                 </div>
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" value="Non" required onChange={this.getRepons2}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
                 </div>
               </div>):
               this.state.count === 2 ?(
-                <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
+                <div className="flex-direction-row custom-control custom-radio">
+               
+                  <input id="radio-input" type="radio" name="radio" value="Oui" required onChange={this.getRepons3} />
+                  <label style={{marginRight:20}} id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+               
+              
+                  <input id="radio-input" type="radio" name="radio" required value="Non" onChange={this.getRepons3}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
-                </div>
+             
               </div>
               ):
               this.state.count === 3 ?(
                 <div className="flex-direction-row">
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" value="Oui" required onChange={this.getRepons4}/>
                   <label id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
                 </div>
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" value="Non" required onChange={this.getRepons4}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
@@ -194,32 +340,32 @@ class Test1 extends Component {
               </div>
               ):
               this.state.count === 4 ?(
-                <div className="flex-direction-row">
-              <div className="custom-control custom-radio">
-              <input id="radio-input" type="radio" name="radio" required />
-              <label id="label-radio">
+                <div className="flex-direction-row custom-control custom-radio">
+            
+              <input id="radio-input" type="radio" name="radio" required value="Oui" onChange={this.getRepons5}/>
+              <label style={{marginRight:20}} id="label-radio">
                 Oui <span className="hover-border"></span>
               </label>
-            </div>
-            <div className="custom-control custom-radio">
-              <input id="radio-input" type="radio" name="radio" required />
+           
+        
+              <input id="radio-input" type="radio" name="radio" required value="Non" onChange={this.getRepons5} />
               <label id="label-radio">
                 Non <span className="hover-border"></span>
               </label>
-            </div>
+           
           </div>
                 
               ) :
               this.state.count === 5 ?(
                 <div className="flex-direction-row">
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" value="Oui" required onChange={this.getRepons6}/>
                   <label id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
                 </div>
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" value="Non" required onChange={this.getRepons6}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
@@ -227,31 +373,29 @@ class Test1 extends Component {
               </div>
               ):
               this.state.count === 6 ? (
-                <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
+                <div className="flex-direction-row custom-control custom-radio">
+                
+                  <input id="radio-input" type="radio" name="radio"value="Oui" required onChange={this.getRepons7}/>
+                  <label style={{marginRight:20}} id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" value="Non"required onChange={this.getRepons7}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
-                </div>
+                
               </div>
               ): 
               this.state.count === 7 ?(
                 <div className="flex-direction-row">
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio"value="Oui" required onChange={this.getRepons8}/>
                   <label id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
                 </div>
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio"value="Non" required onChange={this.getRepons8}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
@@ -259,19 +403,18 @@ class Test1 extends Component {
               </div>
               ): 
               this.state.count === 8 ? (
-<div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
+<div className="flex-direction-row custom-control custom-radio">
+               
+                  <input id="radio-input" type="radio" name="radio" value="Oui" required onChange={this.getRepons9}/>
+                  <label style={{marginRight:20}} id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+               
+                  <input id="radio-input" type="radio" name="radio" value="Non" required onChange={this.getRepons9}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
-                </div>
+               
               </div>
               ):
               this.state.count === 9 ?(
@@ -286,6 +429,7 @@ class Test1 extends Component {
                   step="1"
                   autoFocus
                   required
+                  onChange={this.getRepons10}
                 />
                 ans
               </div>
@@ -293,6 +437,7 @@ class Test1 extends Component {
               this.state.count === 10 ?(
 
                 <div className="customText">
+                  {" "}
                 <input
                   className="input-text"
                   type="number"
@@ -303,6 +448,7 @@ class Test1 extends Component {
                   step="1"
                   autoFocus
                   required
+                  onChange={this.getRepons11}
                 />{" "}
                 cm{" "}
               </div>
@@ -310,7 +456,7 @@ class Test1 extends Component {
               ):
               this.state.count === 11 ?(
            <div className="customText">
-                {" "}
+               
                 <input
                   className="input-text"
                   type="number"
@@ -321,6 +467,7 @@ class Test1 extends Component {
                   step="1"
                   autoFocus
                   required
+                  onChange={this.getRepons12}
                 />
                 Kg
               </div>
@@ -328,19 +475,19 @@ class Test1 extends Component {
               this.state.count === 12 ?(
 <div className="flex-direction-row">
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Oui" onChange={this.getRepons13}/>
                   <label id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
                 </div>
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Non"  onChange={this.getRepons13} />
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
                 </div>
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Je ne sais pas" onChange={this.getRepons13}/>
                   <label id="label-radio">
                     Je ne sais pas <span className="hover-border"></span>
                   </label>
@@ -348,31 +495,29 @@ class Test1 extends Component {
               </div>
               ):
               this.state.count === 13 ?(
-             <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
+             <div className="flex-direction-row custom-control custom-radio">
+               
+                  <input id="radio-input" type="radio" name="radio" required value="Oui" onChange={this.getRepons14}/>
+                  <label style={{marginRight:20}}  id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Non" onChange={this.getRepons14}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
-                </div>
+               
               </div>
               ):
               this.state.count === 14 ?(
                 <div className="flex-direction-row">
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Oui" onChange={this.getRepons15}/>
                   <label id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
                 </div>
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Non" onChange={this.getRepons15}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
@@ -380,32 +525,31 @@ class Test1 extends Component {
               </div>
               ):
               this.state.count === 15 ?(
-                <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
+                <div className="flex-direction-row custom-control custom-radio">
+             
+                  <input id="radio-input" type="radio" name="radio" required value="Oui" onChange={this.getRepons16}/>
+                  <label style={{marginRight:20}} id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+              
+                  <input id="radio-input" type="radio" name="radio" required value="Non" onChange={this.getRepons16}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
-                </div>
+               
               </div>
 
               ):
               this.state.count === 16 ?(
               <div className="flex-direction-row">
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Oui" onChange={this.getRepons17}/>
                   <label id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
                 </div>
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Non" onChange={this.getRepons17}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
@@ -413,37 +557,36 @@ class Test1 extends Component {
               </div>
               ):
               this.state.count === 17 ?(
-                <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
+                <div className="flex-direction-row custom-control custom-radio">
+                
+                  <input id="radio-input" type="radio" name="radio" required value="Oui" onChange={this.getRepons18}/>
+                  <label style={{marginRight:20}} id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+               
+                  <input id="radio-input" type="radio" name="radio" required value="Non" onChange={this.getRepons18}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
-                </div>
+              
               </div>
               ):
               this.state.count === 18 ?(
                 <div className="flex-direction-row">
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Oui" onChange={this.getRepons19} />
                   <label id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
                 </div>
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Non" onChange={this.getRepons19}/>
                   <label id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
                 </div>
                 <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
+                  <input id="radio-input" type="radio" name="radio" required value="Non applicable" onChange={this.getRepons19}/>
                   <label id="label-radio">
                     Non applicable <span className="hover-border"></span>
                   </label>
@@ -451,37 +594,37 @@ class Test1 extends Component {
               </div>
               ):
               this.state.count === 19 ?(
-                <div className="flex-direction-row">
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
+                <div className="flex-direction-row custom-control custom-radio">
+               
+                  <input id="radio-input" type="radio" name="radio" required value="Oui" onChange={this.getRepons20}/>
+                  <label style={{marginRight:20}} id="label-radio">
                     Oui <span className="hover-border"></span>
                   </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
+              
+                
+                  <input id="radio-input" type="radio" name="radio" required value="Non" onChange={this.getRepons20}/>
+                  <label style={{marginRight:20}} id="label-radio">
                     Non <span className="hover-border"></span>
                   </label>
-                </div>
-                <div className="custom-control custom-radio">
-                  <input id="radio-input" type="radio" name="radio" required />
-                  <label id="label-radio">
-                    Je ne sais <span className="hover-border"></span>
+              
+                
+                  <input id="radio-input" type="radio" name="radio" required value="Je ne sais " onChange={this.getRepons20}/>
+                  <label   id="label-radio">
+                    Je ne sais pas <span className="hover-border"></span>
                   </label>
-                </div>
+               
               </div>
              ):
              this.state.count === 20 ?(
               <div className="flex-direction-row">
               <div className="custom-control custom-radio">
-                <input id="radio-input" type="radio" name="radio" required />
+                <input id="radio-input" type="radio" name="radio" required value="Oui" onChange={this.getRepons21}/>
                 <label id="label-radio">
                   Oui <span className="hover-border"></span>
                 </label>
               </div>
               <div className="custom-control custom-radio">
-                <input id="radio-input" type="radio" name="radio" required />
+                <input id="radio-input" type="radio" name="radio" required value="Non" onChange={this.getRepons21}/>
                 <label id="label-radio">
                   Non <span className="hover-border"></span>
                 </label>
@@ -499,6 +642,7 @@ class Test1 extends Component {
                 max="9999"
                 step="1"
                 autoFocus
+                onChange={this.getRepons22}
               />{" "}
               votre code postal
               {" "}
@@ -517,7 +661,8 @@ class Test1 extends Component {
               className="check-box"
               type="checkbox"
               name="check"
-             
+              onChange={this.getRepons22}
+              value="impossible"
             
             />
             Je suis en dehors de la Tunisie ou je ne souhaite pas répondre.</div>):(<></>)
@@ -526,6 +671,7 @@ class Test1 extends Component {
           <br/>
           <input className=" btn btn-primary bt1" type="submit" name="submit" value=" Enregistrer et Continuer" />
         </form>
+     
       </div>
       <br/>
       <br/>
@@ -1102,6 +1248,10 @@ class Test1 extends Component {
       }
 
     </div>
+    
+    
+    
+    )}</div>
     );
   }
 }

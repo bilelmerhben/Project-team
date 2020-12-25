@@ -18,6 +18,7 @@ class Inscription extends Component {
       errors: {},
       appointments:[{User:{name:"",lastname:"",email:""},time:null}],
       visiblePatient: true,
+      tel : "",
     };
   }
 
@@ -40,6 +41,7 @@ class Inscription extends Component {
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2,
+      tel :this.state.tel,
     };
     this.props.registerUser(newUser, this.props.history);
   };
@@ -52,6 +54,7 @@ class Inscription extends Component {
       password: this.state.password,
       password2: this.state.password2,
       appointments:this.state.appointments,
+      tel :this.state.tel,
     };
     this.props.registerLabo(newLabo, this.props.history);
 
@@ -61,7 +64,9 @@ class Inscription extends Component {
     const { errors } = this.state;
     var visiblePatient = this.state.visiblePatient;
     return (
-      <div className="container-fluid mt-5 ">
+      
+      <div className="container-fluid mt-5">
+       
         <br />
         <br />
         <br />
@@ -141,6 +146,22 @@ class Inscription extends Component {
                 <p className="text-danger">{errors.email} </p>
               </div>
               <div className="col-md mb-3">
+                <label htmlFor="validationCustom03">Numéro de téléphone</label>
+                <input
+                  type="number"
+                  className={classnames("form-control", {
+                    "is-invalid": errors.tel,
+                  })}
+                  id="tel"
+                  value={this.state.tel}
+                  onChange={this.onChange}
+                  placeholder="Numéro de téléphone"
+                  required
+                />
+                <p className="text-danger">{errors.tel} </p>
+              </div></div>
+              <div className="form-row">
+              <div className="col-md mb-3">
                 <label htmlFor="validationCustom04">Mot de passe</label>
                 <input
                   type="password"
@@ -155,6 +176,7 @@ class Inscription extends Component {
                 />
                 <p className="text-danger">{errors.password} </p>
               </div>
+             
               <div className="col-md mb-3">
                 <label htmlFor="validationCustom04">
                   Confirmer votre mot de passe
@@ -205,14 +227,14 @@ class Inscription extends Component {
 
             <div className="form-row">
               <div className="col-md mb-3">
-                <label htmlFor="validationCustom01">Nom du labo</label>
+                <label htmlFor="validationCustom01">Nom du laboratoire</label>
                 <input
                   type="text"
                   className={classnames("form-control", {
                     "is-invalid": errors.name,
                   })}
                   id="name"
-                  placeholder="Nom"
+                  placeholder="Nom du laboratoire"
                   value={this.state.name}
                   onChange={this.onChange}
                   required
@@ -227,7 +249,7 @@ class Inscription extends Component {
                 <input
                   type="email"
                   className={classnames("form-control", {
-                    "is-invalid": errors.email,
+                    "is-invalid": errors.email, 
                   })}
                   id="email"
                   value={this.state.email}
@@ -237,6 +259,23 @@ class Inscription extends Component {
                 />
                 <p className="text-danger">{errors.email} </p>
               </div>
+              <div className="col-md mb-3">
+                <label htmlFor="validationCustom03">Numéro de téléphone</label>
+              
+                <input
+                  type="number"
+                  className={classnames("form-control", {
+                    "is-invalid": errors.tel,
+                  })}
+                  id="tel"
+                  value={this.state.tel}
+                  onChange={this.onChange}
+                  placeholder="Numéro de téléphone"
+                  required
+                />
+                <p className="text-danger">{errors.tel} </p>
+              </div></div>
+              <div className="form-row">
               <div className="col-md mb-3">
                 <label htmlFor="validationCustom04">Mot de passe</label>
                 <input
@@ -295,7 +334,7 @@ class Inscription extends Component {
           </form>
         </div>
         </div>
-      </div>
+    </div>
     );
   }
 }
