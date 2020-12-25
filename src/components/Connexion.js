@@ -16,7 +16,6 @@ class Connexion extends Component {
     };
   }
   componentWillReceiveProps(nextProps) {
-
     if (nextProps.auth.isAuthenticated) {
       this.props.history.push("/"); 
     }
@@ -117,11 +116,11 @@ const userLabo = {
 
         </div>
         
-        <button type="submit" className="connecter-1">
+        <button type="submit" className="connecter">
           Valider
         </button>
         <div className="form-group pt-2">
-          <a type="button" className="inscription-1" href="/Inscription">
+          <a type="button" className="inscription" href="/Inscription">
             S'inscrire
           </a>
         </div>

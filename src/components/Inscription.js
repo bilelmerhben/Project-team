@@ -61,12 +61,12 @@ class Inscription extends Component {
     const { errors } = this.state;
     var visiblePatient = this.state.visiblePatient;
     return (
-      <div className="container-fluid mt-5">
+      <div className="container-fluid mt-5 ">
         <br />
         <br />
         <br />
         
-        
+        <div className="container bg-aqua">
         <div className="sign-in-card">
             <div className="row text-center">
               <div className="inscri col "><button className="btn-inscri"
@@ -294,7 +294,7 @@ class Inscription extends Component {
             </button>
           </form>
         </div>
-        
+        </div>
       </div>
     );
   }
