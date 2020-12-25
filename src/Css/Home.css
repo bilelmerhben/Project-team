@@ -1,3 +1,4 @@
+/* Home */
 .container-fluid {
   padding-right: 0px;
   padding-left: 0px;
@@ -48,21 +49,24 @@
   vertical-align: baseline;
   outline: 0;
 }
-
+/**/
 .secondLayerHome {
   background: rgb(254, 254, 254);
   padding: 200px;
 }
-
+/**/
+/*Conseils*/
 .row {
   flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
     display: flex;
 }
+
 .section-advices-icon{
   text-align: left;
 }
+
 img{
   height: auto;
   max-width: 100%;
@@ -84,4 +88,24 @@ ul {
   font-weight: 500;
   padding-left: 80px;
   position: relative;
+}
+
+/*Protegez-vous*/
+.title-proteg{
+font-size: 60px;
+color: #43d5cb;
+font-style: bold;
+}
+
+.parag-row {
+  flex-direction: row;
+  display: flex;;
+  text-align: center;
+  position: relative;
+}
+.parag-info{
+  flex: 1;
+}
+.with-bg {
+  background-color: rgb(233, 233, 224);
 }
