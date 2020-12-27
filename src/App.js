@@ -48,7 +48,7 @@ function App() {
        <Route  path="/Test1/Question1" component={Test1} />
        <Route  path="/Auto-Surveillance" component={Surveillance} />
        <Route  path="/Laboratoires" component={Laboratoire} />
-       <Route  path="/Covid-19?" component={Covid19} />
+       <Route  path="/Covid-19" component={Covid19} />
        <Route  path="/Protégez-vous" component={Proteger} />
        <Route  path="/Dons" component={Dons} />
        <Route  path="/Contactez-nous" component={Contact} />
