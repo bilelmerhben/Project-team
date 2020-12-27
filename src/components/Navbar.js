@@ -26,7 +26,7 @@ class Navbar extends Component {
         <a className="nav-link" href="/Auto-Surveillance">Auto-Surveillance</a>
       </li>
       <li className="nav-item rounded">
-        <a className="nav-link" href="/Laboratoires">Laboratoires</a>
+        <a className="nav-link" href="/Laboratoires" hidden={this.props.auth.user.category==='Labo'}>Laboratoires</a>
       </li>
       <li className="nav-item rounded">
         <a className="nav-link" href="/Covid-19?">Covid-19?</a>
@@ -42,8 +42,11 @@ class Navbar extends Component {
       </li>
     </ul>
     <div className="Buttons-nav">
-    <a className="btn connecter  " href="/Connexion" onClick={this.props.auth.isAuthenticated===true ? this.onLogoutClick : ''}> {this.props.auth.isAuthenticated===true ? 'Déconnexion' : 'Se connecter'}</a>
-    <a className="btn inscription  " href="/Inscription" hidden={this.props.auth.isAuthenticated}>S'inscrire</a>
+    <a className="btn connecter  " href="/Connexion" onClick={this.props.auth.isAuthenticated===true ? this.onLogoutClick :null}> {this.props.auth.isAuthenticated===true ? 'Déconnexion' : 'Se connecter'}</a>
+    <a className="btn inscription  " href={this.props.auth.user.category==='patient'?'/ProfilePatient':
+                                           this.props.auth.user.category==='Labo'?'/ProfileLabo':'/Inscription' }>
+                                             {this.props.auth.user.category==='patient'?'':
+                                           this.props.auth.user.category==='Labo'?'/ProfileLabo':'/Inscription' }</a>
 
     </div>
   </div>

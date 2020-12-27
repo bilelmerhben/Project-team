@@ -110,7 +110,7 @@ class ProfilePatient extends Component {
                 </div>
                 <div className="col-md-6">
                   <p>Le 12/01/2012</p>
-                  <a className="btn btn" href="">Modifier date du rendez-vous</a>
+                  <button className="btn btn" >Modifier date du rendez-vous</button>
                 </div>
               </div>
             </div>
