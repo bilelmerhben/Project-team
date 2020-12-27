@@ -29,7 +29,7 @@ class Navbar extends Component {
         <a className="nav-link" href="/Laboratoires" hidden={this.props.auth.user.category==='Labo'}>Laboratoires</a>
       </li>
       <li className="nav-item rounded">
-        <a className="nav-link" href="/Covid-19?">Covid-19?</a>
+        <a className="nav-link" href="/Covid-19">Covid-19?</a>
       </li>
       <li className="nav-item rounded">
         <a className="nav-link" href="/Protégez-vous">Protégez-vous</a>
