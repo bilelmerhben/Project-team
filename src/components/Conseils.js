@@ -13,7 +13,7 @@ function Conseils (){
   
     return (
        
-        <div className="container with-bg">
+        <div className="with-bg">
         <div className="row align-items-center">
           <div className="col-md-2 col-lg-4 align-items-center justify-content-center d-flex lg-padding-right-60">
             <div className="section-advices-icon">

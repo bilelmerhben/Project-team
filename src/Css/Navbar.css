@@ -1,4 +1,4 @@
-li:hover {
+.nav-item:hover {
   background-color: #43d5cd;
   transition: 0.6s;
 }

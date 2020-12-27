@@ -5,9 +5,10 @@ import Conseils from "./Conseils";
 
 function Home() {
   return (
-    <div className="container-fluid ">
+    
+  
       <div className="container-fluid firstLayerHome">
-        <div className="firstLayerHome ">
+        <div className="">
           <div className="container">
             <div className="tp-caption home">
               <center>
@@ -29,13 +30,16 @@ function Home() {
           </div>
           <Btns />
         </div>
-      </div>
+     
       <br />
       <br />
       <br />
       <br />
+      
       <Conseils />
-    </div>
+    
+      </div>
+  
   );
 }
 export default Home;
