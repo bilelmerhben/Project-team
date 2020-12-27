@@ -45,8 +45,7 @@ class Navbar extends Component {
     <a className="btn connecter  " href="/Connexion" onClick={this.props.auth.isAuthenticated===true ? this.onLogoutClick :null}> {this.props.auth.isAuthenticated===true ? 'Déconnexion' : 'Se connecter'}</a>
     <a className="btn inscription  " href={this.props.auth.user.category==='patient'?'/ProfilePatient':
                                            this.props.auth.user.category==='Labo'?'/ProfileLabo':'/Inscription' }>
-                                             {this.props.auth.user.category==='patient'?'':
-                                           this.props.auth.user.category==='Labo'?'/ProfileLabo':'/Inscription' }</a>
+                                             {this.props.auth.isAuthenticated?this.props.auth.user.name:"S'inscrire" }</a>
 
     </div>
   </div>
