@@ -55,7 +55,7 @@ function App() {
        <Route  path="/Inscription" component={Inscription} />
        <Route  path="/Test1" component={Test1} />
        <Route  path="/ProfilePatient" component={ProfilePatient} />
-       <Route  path="/ProfileLabo" component={ProfileLabo} />
+       <Route  path="/ProfileLabo:repo" component={ProfileLabo} />
        <Route  path="/dons" component={Dons} />
 
        </Switch>

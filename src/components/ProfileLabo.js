@@ -5,9 +5,31 @@ import {connect} from "react-redux";
 
 
 class ProfileLabo extends Component{
+  constructor() {
+    super();
+    this.state = {
+      
+      labo: {},
+    };
+  }
+  componentDidMount(){
+    const email = window.location.href.substring(40)
+    fetch('http://localhost:5000/api/users/getthis/labo',{ 
+      headers: {
+        'Content-Type': 'application/json',
+      },
+     method : 'POST',
+     body : JSON.stringify({email:email})
+
+  })
+    .then(response =>  response.json())
+    .then(res => {this.setState({labo:res}) ;console.log(this.state.labo)})
+    .catch(err=> console.log(err))
+  }
   render(){
     const { user } = this.props.auth;
-    console.log(user);
+
+    
   return (
     <div className="container emp-profile">
       <div className="row">
@@ -15,7 +37,7 @@ class ProfileLabo extends Component{
         <div className="col-md-6">
           <div className="profile-head">
             <h5>Informations du Labo</h5>
-
+            
             <hr />
           </div>
         </div>
@@ -31,7 +53,7 @@ class ProfileLabo extends Component{
                   <label>Nom du Labo</label>
                 </div>
                 <div className="col-md-6">
-                  <p>{user.name}</p>
+                  <p>{this.state.labo.name}</p>
                 </div>
               </div>
               <div className="row">
@@ -39,7 +61,7 @@ class ProfileLabo extends Component{
                   <label>Email</label>
                 </div>
                 <div className="col-md-6">
-                  <p>{user.email}</p>
+                  <p>{this.state.labo.email}</p>
                 </div>
               </div>
               <div className="row">
@@ -47,7 +69,7 @@ class ProfileLabo extends Component{
                   <label>Description</label>
                 </div>
                 <div className="col-md-6">
-                  <p> {user.description}</p>
+                  <p> {this.state.labo.description}</p>
                 </div>
               </div>
              
