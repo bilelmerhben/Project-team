@@ -49,7 +49,7 @@ export const setUserLoading = () => {
 export const logoutUser = () => dispatch => {
   localStorage.removeItem("jwtToken");
   setAuthToken(false);
-  dispatch(setCurrentUser({}));
+  dispatch(setCurrentUser({}))
 };
 //labo
 export const registerLabo = (laboData, history) => dispatch => {

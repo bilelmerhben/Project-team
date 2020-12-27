@@ -19,6 +19,7 @@ import store from "./store";
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
+import Privateroute from "./Privateroute";
 
 if (localStorage.jwtToken) {
   const token = localStorage.jwtToken;
@@ -54,8 +55,9 @@ function App() {
        <Route  path="/Connexion" component={Connexion} />
        <Route  path="/Inscription" component={Inscription} />
        <Route  path="/Test1" component={Test1} />
-       <Route  path="/ProfilePatient" component={ProfilePatient} />
-       <Route  path="/ProfileLabo" component={ProfileLabo} />
+       <Privateroute path="/ProfilePatient" component={ProfilePatient} />
+       <Privateroute  path="/ProfileLabo:repo" component={ProfileLabo} />
+       <Privateroute  exact path="/ProfileLabo" component={ProfileLabo} />
        <Route  path="/dons" component={Dons} />
 
        </Switch>

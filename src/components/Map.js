@@ -46,7 +46,7 @@ export default function LocationMap() {
     
 
 
-  })
+  },[])
   return (
     <Map center={[latitude, longitude]} zoom={12}>
       <TileLayer
@@ -81,7 +81,8 @@ export default function LocationMap() {
           <div >
             <h2>{activeLabo.name}</h2>
             <p>{activeLabo.description}</p>
-            <button>Prendre un Rdv !</button>
+            <a
+            href={"/ProfileLabo"+"&email="+activeLabo.email}>Prendre un Rdv !</a>
           </div>
         </Popup>
       )}

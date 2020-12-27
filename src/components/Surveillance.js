@@ -41,6 +41,7 @@ class Surveillance extends Component {
   
   state = {
     count: 0,
+    situation:"",
     rep1:"",
     rep2:"",
     rep3:"",
@@ -51,10 +52,11 @@ class Surveillance extends Component {
     rep8:"",
     rep9:"",
   };
-
+ 
   
 getRepons1 =(e)=>{
   this.setState({rep1: e.target.value});
+
 }
 getRepons2 =(e)=>{
   this.setState({rep2: e.target.value});
@@ -100,7 +102,36 @@ getRepons9 =(e)=>{
       rep9: this.state.rep9,
     };
     console.log(reponses);
+/**partie intelligence */
+if(
+  ((reponses.rep1 === 'Un peu moins bien') ||( reponses.rep1 === 'Beaucoup moins bien'))
+  && ((reponses.rep2 === 'Un peu moins bien') ||( reponses.rep2 === 'Beaucoup moins bien')) 
+  && ( (reponses.rep3 >38 ))
+  ){
+    this.setState({situation:"Urgent"});
+    console.log(this.state.situation);
+  }
+
+  if(
+    (((reponses.rep4 === 'oui'))
+    && (((reponses.rep5 === 'oui') &&( reponses.rep6 === 'oui'))) 
+    || ( (reponses.rep7 === 'oui')&&( reponses.rep8 === 'oui')))
+
+    ||
+ (((reponses.rep4 === 'oui'))
+ || (((reponses.rep5 === 'oui') &&( reponses.rep6 === 'oui'))) 
+    || ( (reponses.rep7 === 'oui')&&( reponses.rep8 === 'oui')))
+
+    ||
+ ((reponses.rep6 === 'oui') &&  (reponses.rep7 === 'oui')&&( reponses.rep8 === 'oui'))
+    ){
+      this.setState({situation:"Pas Assez Urgent"});
+      console.log(this.state.situation);
+    }  
   };
+
+
+  /**counteur */
   comeback = () => {
     if (this.state.count > 0) {
       this.setState({
@@ -112,7 +143,31 @@ getRepons9 =(e)=>{
   render() {
     return (
       <div className="test1">
-        {this.state.count === 9 ? (
+        {((this.state.count === 8) &&(this.state.situation === 'Pas Assez Urgent'))?(
+          <div type="button" class="btn btn-warning" style={{ marginTop: 200,maxWidth:700 }} >
+            <h3>Pas Urgent!</h3>
+            <h2>Votre situation n'est assez critique !Vous devez consulter un médecin géneral.</h2>
+            <h1>Nous ésperons que vous serez bien</h1>
+      
+          </div>
+        ):
+        ((this.state.count === 6) &&(this.state.situation === 'Pas Assez Urgent'))?(
+          <div type="button" class="btn btn-warning" style={{ marginTop: 200,maxWidth:700 }} >
+            <h3>Pas Urgent!</h3>
+            <h2>Votre situation n'est assez critique !Vous devez consulter un médecin géneral.</h2>
+            <h1>Nous ésperons que vous serez bien</h1>
+      
+          </div>
+        ):
+        ((this.state.count === 3) &&(this.state.situation === 'Urgent'))?(
+          <div type="button" class="btn btn-danger" style={{ marginTop: 200,maxWidth:720 }} >
+            <h3>Urgent!</h3>
+            <h2>Votre situation est critique !Vous devez consulter un médecin immédiatement ou appelez 190 pour une intervention rapide.</h2>
+            <h1><b>N'oubliez pas toujours de suiver nos conseils!!</b></h1>
+            <h1><b>Vous pouvez reprendre un rendez-Vous en ligne</b></h1>
+          </div>
+        ):
+        this.state.count === 9 ? (
           <div
             className="card-body cad card border-info mb-3 mb-3 container-lg"
             style={{ maxWidth: 900, marginTop: 200 }}
@@ -300,6 +355,7 @@ getRepons9 =(e)=>{
                 ) :  
 /***************************************************** Question 4 ***********************************************************/
                 this.state.count === 3 ? (
+                  
                   <div className="questionsOptions flex-direction-row custom-control custom-radio">
                     
                       
