@@ -173,19 +173,9 @@ if(
             style={{ maxWidth: 900, marginTop: 200 }}
           >
             <p className="card-text">
-              La recommandation affichée peut évoluer suivant les informations
-              en provenance des autorités de santé et des chercheurs. Elle ne
-              constitue pas un avis médical. En cas de doute, demandez conseil à
-              votre médecin ou pharmacien.
-            </p>
-            <p className="card-text">
-              <b>Votre situation nécessite l'avis immédiat d'un médecin.Contactez
-              immédiatement votre médecin traitant par téléphone pour lui faire
-              part de votre situation et organiser un rendez-vous de
-              consultation. Vous pouvez également essayer d'obtenir un
-              rendez-vous de téléconsultation.Si vous n'arrivez pas à joindre un
-              médecin rapidement pour lui détailler vos symptômes, appelez le
-              190.</b>
+            Selon ces informations en provenance des autorités de santé et des chercheurs. 
+            Elle ne constitue pas un avis exacte. En cas de doute ou apparition de nouveaux
+             symptômes, demandez conseil à votre médecin ou pharmacien.
             </p>
           </div>
         ) : (

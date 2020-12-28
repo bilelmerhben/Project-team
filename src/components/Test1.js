@@ -102,6 +102,7 @@ const obj = {
 class Test1 extends Component {
   state = {
     count: 0,
+    situation:"",
     rep1:"",
     rep2:"",
     rep3:"",
@@ -227,6 +228,19 @@ getRepons22 =(e)=>{
       rep22: this.state.rep22,
     };
     console.log(reponses);
+    /**partie intelligence */
+    if
+      ((reponses.rep1 > 38) && ( reponses.rep2 === 'Oui') && (reponses.rep3 === 'Oui') && (reponses.rep4 === 'Oui'))
+      {
+        this.setState({situation:"Urgent"});
+        console.log(this.state.situation);
+      }
+      if
+      ((reponses.rep1 < 39) && ( reponses.rep2 === 'Non') && (reponses.rep5 === 'Oui') && ( reponses.rep6 === 'Oui') && (reponses.rep7 === 'Oui') && (reponses.rep8 === 'Oui') && (reponses.rep9 === 'Oui'))
+      {
+        this.setState({situation:"c pas covid"});
+      
+      }
   };
   comeback = () => {
     if (this.state.count > 0) {
@@ -263,7 +277,29 @@ getRepons22 =(e)=>{
        <p>reponse22:{this.state.rep22}</p>
        
 
-      </div>):(
+      </div>):((this.state.count === 4) &&(this.state.situation === 'Urgent'))?(
+        <div className="test1 ">
+          <div type="button" className="btn btn-danger " style={{ marginTop: 200 }} >
+            <h3>Urgent!</h3>
+            <h1>Vos symptômes sont similaires à un patient Covid</h1>
+            <h2>Votre situation est critique !Vous devez consulter un médecin immédiatement ou appelez 190 pour une intervention rapide.</h2>
+            <h1><b>N'oubliez pas toujours de suiver nos conseils!!</b></h1>
+            <h1><b>Vous pouvez prendre un rendez-Vous en ligne</b></h1>
+          </div></div>
+        ):
+        ((this.state.count === 9) &&(this.state.situation === 'c pas covid'))?(
+          <div className="test1 ">
+            <div type="button" className="btn btn-warning" style={{ marginTop: 200 }} >
+              <h3>Pas Urgent!</h3>
+              <h1>Vos symptômes ne sont pas liés comme aspect dangeureux Covid</h1>
+              <h2>Vous devez consulter un médecin géneral.</h2>
+              <h1><b>N'oubliez pas toujours de suiver nos conseils!!</b></h1>
+              <h1><b>En cas de doute , vous pouvez prendre un rendez-Vous en ligne</b></h1>
+            </div></div>
+          ):
+      
+      
+      (
       <div className="test1 ">
            <div className="div1 container-lg">
           
@@ -662,7 +698,7 @@ getRepons22 =(e)=>{
               type="checkbox"
               name="check"
               onChange={this.getRepons22}
-              value="impossible"
+              value="Pas en Tunisie"
             
             />
             Je suis en dehors de la Tunisie ou je ne souhaite pas répondre.</div>):(<></>)
