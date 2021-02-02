@@ -85,15 +85,15 @@ class ProfilePatient extends Component {
                   <label>Nom du Labo</label>
                 </div>
                 <div className="col-md-6">
-                  <p> Labo abc</p>
+                  <p>{user.appointment[0].Labo.name} </p>
                 </div>
               </div>
               <div className="row">
                 <div className="col-md-6">
-                  <label>Email</label>
+                  <label>Description</label>
                 </div>
                 <div className="col-md-6">
-                  <p>Laboabc@gmail.com</p>
+                  <p>{user.appointment[0].Labo.description}</p>
                 </div>
               </div>
               <div className="row">
@@ -101,7 +101,7 @@ class ProfilePatient extends Component {
                   <label>Telephone</label>
                 </div>
                 <div className="col-md-6">
-                  <p>123 456 7890</p>
+                  <p>{user.appointment[0].Labo.tel}</p>
                 </div>
               </div>
               <div className="row">
@@ -109,7 +109,7 @@ class ProfilePatient extends Component {
                   <label>Date du rendez-vous</label>
                 </div>
                 <div className="col-md-6">
-                  <p>Le 12/01/2012</p>
+                  <p>Le {user.appointment[0].time}</p>
                   <button className="btn btn" >Modifier date du rendez-vous</button>
                 </div>
               </div>

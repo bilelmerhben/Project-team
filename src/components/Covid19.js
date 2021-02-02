@@ -8,11 +8,10 @@ import spread from "../img/spread.png";
 import sneeze from "../img/sneeze.png";
 import sneeze2 from "../img/sneeze2.png";
 import calendar from "../img/calendar.png";
-import { Component } from "react";
 
 function Covid19() {
   return (
-    <div className="container-fluid-2 mt-5 with-bg">
+    <div className="container mt-5 with-bg">
       <br />
 
       <h1>

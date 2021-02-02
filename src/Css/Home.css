@@ -148,4 +148,5 @@ font-style: bold;
 }
 .with-bg {
   background-color: rgb(248, 248, 246);
+  width: 90%;
 }

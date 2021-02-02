@@ -59,7 +59,6 @@ function App() {
        <Privateroute  path="/ProfileLabo:repo" component={ProfileLabo} />
        <Privateroute  exact path="/ProfileLabo" component={ProfileLabo} />
        <Route  path="/dons" component={Dons} />
-
        </Switch>
       
       

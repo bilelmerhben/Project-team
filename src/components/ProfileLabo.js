@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "../Css/Profile.css";
 import PropTypes from "prop-types";
 import {connect} from "react-redux";
+import DatePicker from "./DatePicker";
 
 
 function ProfileLabo ({auth}){
@@ -47,7 +48,7 @@ function ProfileLabo ({auth}){
  
     const { user } = auth;
     
-    
+  
   return (
     <div className="container emp-profile">
       {console.log(longitude,"+++++++",latitude)}
@@ -137,30 +138,42 @@ function ProfileLabo ({auth}){
         </div>
       </div>
 
-  <br /><br/>
+  <br /><br/>{user.category==='patient'&&<div>
       <div className="row">
         <div className="col-md-4"></div>
         <div className="col-md-6">
           <div className="profile-head">
-            <h5>Calendrier des rendez-vous</h5>
+            <h5>Calendrier des rendez-vous</h5> 
+          </div>
+        </div>
+      </div>
 
-            <hr />
-          </div>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col-md-8">
-          <div className="tab-content profile-tab">
-            <div className="tab-pane fade show active" >
-              
-              
-              
+      
+      <DatePicker/></div>}
+      {user.category==='Labo'&&<div>
+      <div className="row ">
+        <div className="col-md-4"><h5>Vos rendez-vous : </h5></div>
+        <div style={{alignItems:"center"}}>
+{       
+    user.appointments.map(appointment =>
+   { return (
+     
+<div className="col" >
+            <div className="container rounded border shadow-sm border-blue  m-1 p-2 ">
+              <div className="col font-weight-bold">Patient : {appointment.User && appointment.User.name} </div>
+              <div className="col font-weight-bold">Email :{appointment.User && appointment.User.email} </div>
+              <div className="col font-weight-bold">Date :{appointment.User && appointment.time} </div>
             </div>
-          </div>
+                  
         </div>
+    )}
+    
+    )
+}
+</div>      
       </div>
       
-      
+      </div>}
     </div>
   );
 }
