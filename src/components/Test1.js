@@ -253,29 +253,16 @@ getRepons22 =(e)=>{
     return (
       <div>{this.state.count == 22 ?(
       <div className="test1 ">
-       <p>reponse1:{this.state.rep1}</p>
-       <p>reponse2:{this.state.rep2}</p>
-       <p>reponse3:{this.state.rep3}</p>
-       <p>reponse4:{this.state.rep4}</p>
-       <p>reponse5:{this.state.rep5}</p>
-       <p>reponse6:{this.state.rep6}</p>
-       <p>reponse7:{this.state.rep7}</p>
-       <p>reponse8:{this.state.rep8}</p>
-       <p>reponse9:{this.state.rep9}</p>
-       <p>reponse10:{this.state.rep10}</p>
-       <p>reponse11:{this.state.rep11}</p>
-       <p>reponse12:{this.state.rep12}</p>
-       <p>reponse13:{this.state.rep13}</p>
-       <p>reponse14:{this.state.rep14}</p>
-       <p>reponse15:{this.state.rep15}</p>
-       <p>reponse16:{this.state.rep16}</p>
-       <p>reponse17:{this.state.rep17}</p>
-       <p>reponse18:{this.state.rep18}</p>
-       <p>reponse19:{this.state.rep19}</p>
-       <p>reponse20:{this.state.rep20}</p>
-       <p>reponse21:{this.state.rep21}</p>
-       <p>reponse22:{this.state.rep22}</p>
        
+       <div type="button" className=" btn btn-success " style={{ marginTop: 200 }} >
+            
+            <h1>Vos symptômes ne  sont pas similaires à un patient Covid</h1>
+            <h2>En cas d'une doute n'hésitez pas de nous contacter et de prendre un rendez-vous en ligne 
+              
+            </h2>
+            <h1><b>Merci pour votre Visite</b></h1>
+           
+          </div>
 
       </div>):((this.state.count === 4) &&(this.state.situation === 'Urgent'))?(
         <div className="test1 ">
