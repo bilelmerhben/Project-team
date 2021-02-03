@@ -160,7 +160,7 @@ function ProfileLabo ({auth}){
      
 <div className="col" >
             <div className="container rounded border shadow-sm border-blue  m-1 p-2 ">
-              <div className="col font-weight-bold">Patient : {appointment.User && appointment.User.name} </div>
+              <div className="col font-weight-bold">Patient : {appointment.User && appointment.User.name} {appointment.User && appointment.User.lastname} </div>
               <div className="col font-weight-bold">Email :{appointment.User && appointment.User.email} </div>
               <div className="col font-weight-bold">Date :{appointment.User && appointment.time} </div>
             </div>

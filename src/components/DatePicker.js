@@ -76,33 +76,34 @@ const day6 = day(5);
 const day7 = day(6);
 var y =  d.getFullYear();
 function Time (actualDate,appointment){
-    if ((actualDate===(d.getDate())+"/"+m+"/"+y)&& d.getHours>appointment.substring(0,2)){
+    if ((actualDate===(d.getDate())+"/"+m+"/"+y)&& parseInt(d.getHours())>parseInt(appointment.substring(0,2))){
         return true
     }
     else return false
 }
-function onClickLabo(fullDate){
+
+async function onClickLabo(fullDate){
     
-        fetch('http://localhost:5000/api/users/add_appointment/labo',{ 
+        await fetch('http://localhost:5000/api/users/add_appointment/labo',{ 
           headers: {
             'Content-Type': 'application/json',
           },
          method : 'POST',
-         body : JSON.stringify({mail:email,appointment:{User:{name:user.name,lastname:user.lastname,email:user.email},time:fullDate}})
+         body : JSON.stringify({mail:email,appointment:{time:fullDate,User:{name:user.name,lastname:user.lastname,email:user.email}}})
     
       })
       .then(response =>  response.json())
       .then(alert("Votre Rendez-vous à été pris avec succéss !"))
       .catch(err=> console.log(err))
 }
-function onClickUser(fullDate,dataLabo){
+async function onClickUser(fullDate,dataLabo){
     
-    fetch('http://localhost:5000/api/users/add_appointment/User',{ 
+    await fetch('http://localhost:5000/api/users/add_appointment/user',{ 
       headers: {
         'Content-Type': 'application/json',
       },
      method : 'POST',
-     body : JSON.stringify({email:user.email,appointment:{Labo:{name:dataLabo.name,description:dataLabo.description,tel:dataLabo.tel},time:fullDate}})
+     body : JSON.stringify({email:user.email,appointment:{time:fullDate,Labo:{name:dataLabo.name,description:dataLabo.description,tel:dataLabo.tel}}})
 
   })
   .then(response =>  response.json())
@@ -142,13 +143,13 @@ function renderApp(i){
      else  (
          ArrayDate.push (
         <div className="col text-center">
-            <Popup modal nested trigger={<button className="btn btn-success m-1">{listAppointments[i]}</button>} position="right center">
+            <Popup modal nested trigger={<button  className="btn btn-success m-1">{listAppointments[i]}</button>} position="right center">
           <div className="container text-center">
             <h3 className="header">Confirmation</h3>
             
               <h4>Êtes vous sûre de vouloir continuer ? </h4><br></br>
               <h5>Date de rendez-vous :  {fullDate} </h5>
-              <button className="btn btn-success" onClick={()=>onClickLabo(fullDate)+onClickUser(fullDate,dataLabo)}>Confirmer</button>
+              <button className="btn btn-success" onClick={()=> {onClickLabo(fullDate);onClickUser(fullDate,dataLabo)}}>Confirmer</button>
             </div>
 
             </Popup>

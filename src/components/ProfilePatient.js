@@ -110,7 +110,7 @@ class ProfilePatient extends Component {
                 </div>
                 <div className="col-md-6">
                   <p>Le {user.appointment[0].time}</p>
-                  <button className="btn btn" >Modifier date du rendez-vous</button>
+                  <a className="btn btn-success" href="/Laboratoires">Modifier date du rendez-vous</a>
                 </div>
               </div>
             </div>
